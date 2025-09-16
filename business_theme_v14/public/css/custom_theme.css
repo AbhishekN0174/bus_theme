@@ -2559,7 +2559,7 @@ header * {
 .sidebar-section.filter-section input[type="text"],
 .sidebar-section.save-filter-section input[type="text"] {
     background: #f3f4f6 !important;
-    border: 1px solid #d1d5db !important;
+    border: none !important;
     border-radius: 6px !important;
     padding: 6px 8px !important;   /* tighter padding */
     font-size: 12px !important;    /* smaller font */
@@ -2570,8 +2570,8 @@ header * {
 /* Focus */
 .sidebar-section.filter-section .form-control:focus,
 .sidebar-section.save-filter-section .form-control:focus {
-    border-color: #2563eb !important;
-    box-shadow: 0 0 0 2px rgba(37,99,235,0.2) !important;
+       border: none !important;
+    box-shadow: none !important;
     background: #fff !important;
 }
 
@@ -2685,7 +2685,7 @@ header * {
   /* size & style */
   min-width: 160px !important;       /* compact popup */
   max-width: 220px !important;       
- max-height: 92px !important;      
+ max-height: 120px !important;      
 /*     height: 140px !important;  */
 /*   overflow-y: auto !important; */
     overflow: hidden !important; 
