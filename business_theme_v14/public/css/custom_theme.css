@@ -2723,6 +2723,12 @@ header * {
     padding: 0 !important;
     max-height: none !important;
 }
+
+
+
+
+
+
 /* Remove lines around each filter item */
 .sidebar-section.filter-section .list-group-by-fields .group-by-field.list-link {
     border: none !important;        /* removes the lines */
@@ -2752,17 +2758,15 @@ header * {
     box-shadow: none !important;
 }
 
-/* Tags dropdown popup size fix */
-/* Fix Tags dropdown popup */
 /* Compact Tags dropdown popup */
 .dropdown-menu.list-stats-dropdown.show {
-    width: 160px !important;       /* smaller width */
-    max-height: 60px !important;   /* just enough for one item */
+    width: 180px !important;       /* adjust width */
+    max-height: 100px !important;  /* enough space for search + 1 row */
     height: auto !important;
-    
-    overflow: hidden !important;   /* no scroll, no clipping below */
-    
-    padding: 4px 8px !important;   /* tight spacing */
+
+    overflow: hidden !important;   /* no scrolling */
+    padding: 6px 8px !important;   /* compact spacing */
+
     background: #fff !important;
     border: 1px solid #d1d5db !important;
     border-radius: 6px !important;
@@ -2770,12 +2774,16 @@ header * {
     z-index: 3000 !important;
 }
 
-/* Hide search input inside Tags popup */
+/* Keep search box visible but styled compact */
 .dropdown-menu.list-stats-dropdown.show .form-control {
-    display: none !important;
+    display: block !important;
+    margin-bottom: 6px !important;
+    height: 28px !important;
+    font-size: 13px !important;
+    padding: 2px 6px !important;
 }
 
-/* Style the single "No Tags" row */
+/* Style the "No Tags" row */
 .dropdown-menu.list-stats-dropdown.show .dropdown-item {
     padding: 6px 8px !important;
     font-size: 13px !important;
@@ -2783,6 +2791,7 @@ header * {
     background: transparent !important;
     border: none !important;
 }
+
 
 
 
