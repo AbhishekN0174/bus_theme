@@ -2723,6 +2723,19 @@ header * {
     padding: 0 !important;
     max-height: none !important;
 }
+/* Remove lines around each filter item */
+.sidebar-section.filter-section .list-group-by-fields .group-by-field.list-link {
+    border: none !important;        /* removes the lines */
+    background: transparent !important; /* remove gray background */
+    box-shadow: none !important;    /* kill subtle shadow if any */
+    padding: 0 !important;          /* optional: tighter layout */
+    margin: 0 0 8px 0 !important;   /* control spacing */
+}
+.sidebar-section.filter-section .list-group-by-fields .group-by-field.list-link select {
+    border: none !important;
+    background: #fff !important; /* or transparent if you want no box */
+    box-shadow: none !important;
+}
 
 
 
