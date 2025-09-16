@@ -2752,6 +2752,23 @@ header * {
     box-shadow: none !important;
 }
 
+/* Tags dropdown popup size fix */
+.dropdown-menu.list-stats-dropdown.show {
+    max-height: 120px !important;   /* smaller popup height */
+    overflow-y: auto !important;    /* allow scroll if items exceed */
+    overflow-x: hidden !important;  /* no horizontal scroll */
+    
+    margin-bottom: 0 !important;    /* remove extra gap */
+    padding: 6px !important;        /* tighter spacing */
+    
+    background: #ffffff !important; /* clean background */
+    border: 1px solid #d1d5db !important;
+    border-radius: 6px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,.12) !important;
+    z-index: 2000 !important;       /* always above fields */
+}
+
+
 
 
 
