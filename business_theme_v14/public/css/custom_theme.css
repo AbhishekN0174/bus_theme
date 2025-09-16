@@ -2754,21 +2754,36 @@ header * {
 
 /* Tags dropdown popup size fix */
 /* Fix Tags dropdown popup */
+/* Compact Tags dropdown popup */
 .dropdown-menu.list-stats-dropdown.show {
-    max-height: 100px !important;   /* smaller popup height */
-    height: auto !important;        /* shrink to content if less */
+    width: 160px !important;       /* smaller width */
+    max-height: 60px !important;   /* just enough for one item */
+    height: auto !important;
     
-    overflow: hidden !important;    /* prevent scrollbar and clipping below */
+    overflow: hidden !important;   /* no scroll, no clipping below */
     
-    margin-bottom: 0 !important;
-    padding: 6px !important;
-    
-    background: #ffffff !important;
+    padding: 4px 8px !important;   /* tight spacing */
+    background: #fff !important;
     border: 1px solid #d1d5db !important;
     border-radius: 6px !important;
     box-shadow: 0 4px 10px rgba(0,0,0,.15) !important;
-    z-index: 3000 !important;       /* stays above sidebar fields */
+    z-index: 3000 !important;
 }
+
+/* Hide search input inside Tags popup */
+.dropdown-menu.list-stats-dropdown.show .form-control {
+    display: none !important;
+}
+
+/* Style the single "No Tags" row */
+.dropdown-menu.list-stats-dropdown.show .dropdown-item {
+    padding: 6px 8px !important;
+    font-size: 13px !important;
+    color: #111 !important;
+    background: transparent !important;
+    border: none !important;
+}
+
 
 
 
