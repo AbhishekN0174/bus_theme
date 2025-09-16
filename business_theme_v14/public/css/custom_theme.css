@@ -2753,19 +2753,21 @@ header * {
 }
 
 /* Tags dropdown popup size fix */
+/* Fix Tags dropdown popup */
 .dropdown-menu.list-stats-dropdown.show {
-    max-height: 120px !important;   /* smaller popup height */
-    overflow-y: auto !important;    /* allow scroll if items exceed */
-    overflow-x: hidden !important;  /* no horizontal scroll */
+    max-height: 100px !important;   /* smaller popup height */
+    height: auto !important;        /* shrink to content if less */
     
-    margin-bottom: 0 !important;    /* remove extra gap */
-    padding: 6px !important;        /* tighter spacing */
+    overflow: hidden !important;    /* prevent scrollbar and clipping below */
     
-    background: #ffffff !important; /* clean background */
+    margin-bottom: 0 !important;
+    padding: 6px !important;
+    
+    background: #ffffff !important;
     border: 1px solid #d1d5db !important;
     border-radius: 6px !important;
-    box-shadow: 0 4px 12px rgba(0,0,0,.12) !important;
-    z-index: 2000 !important;       /* always above fields */
+    box-shadow: 0 4px 10px rgba(0,0,0,.15) !important;
+    z-index: 3000 !important;       /* stays above sidebar fields */
 }
 
 
