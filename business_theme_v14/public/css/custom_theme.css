@@ -2763,7 +2763,7 @@ header * {
 /* Force popup small and self-contained */
 .dropdown-menu.list-stats-dropdown.show {
     width: 200px !important;         /* adjust width */
-    max-height: 90px !important;     /* enough for Search + No Tags */
+    max-height: 75px !important;     /* enough for Search + No Tags */
     height: auto !important;
 
     overflow-y: hidden !important;   /* block scrolling */
