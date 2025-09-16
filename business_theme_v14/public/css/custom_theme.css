@@ -2414,6 +2414,8 @@ header * {
 
 /* ------------------------------------------------------------------------------------ */
 
+* ==================== REMOVE BOTTOM GAP: sidebar fits content but still scrolls if needed ==================== */
+/* Sidebar container smaller */
 .col-lg-2.layout-side-section,
 .col-lg-2.layout-side-section .list-sidebar.overlay-sidebar,
 .list-sidebar.overlay-sidebar {
@@ -2682,11 +2684,11 @@ header * {
 
   /* size & style */
   min-width: 160px !important;       /* compact popup */
-  max-width: 220px !important;      
+  max-width: 220px !important;       
  max-height: 105px !important;      
 /*     height: 140px !important;  */
 /*   overflow-y: auto !important; */
-    overflow: hidden !important;
+    overflow: hidden !important; 
   background: #ffffff !important;
   border: 1px solid #d1d5db !important;
   border-radius: 8px !important;
@@ -2731,6 +2733,11 @@ header * {
 
 
 /* hide */
+
+
+
+
+
 
 
 
@@ -2879,7 +2886,24 @@ header * {
 
 
 
+
+
+
+
+
+
+
+
+
+
 /* big container */
+
+
+
+
+
+
+
 
 
 
@@ -3029,4 +3053,3 @@ header * {
   width: 14px;
   height: 14px;
 }
-/* ---------------------------------------------------------------------------- */
