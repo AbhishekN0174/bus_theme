@@ -2738,6 +2738,22 @@ header * {
 }
 
 
+/* Remove border/box lines from ALL sidebar filter items */
+.sidebar-section.filter-section li,
+.sidebar-section.save-filter-section li,
+.sidebar-section.filter-section li button,
+.sidebar-section.save-filter-section li button,
+.sidebar-section.filter-section li select,
+.sidebar-section.save-filter-section li select,
+.sidebar-section.filter-section li input,
+.sidebar-section.save-filter-section li input {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+
+
 
 
 
