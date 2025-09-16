@@ -2758,32 +2758,35 @@ header * {
     box-shadow: none !important;
 }
 
-/* Compact Tags dropdown popup */
+
+
+/* Force popup small and self-contained */
 .dropdown-menu.list-stats-dropdown.show {
-    width: 180px !important;       /* adjust width */
-    max-height: 100px !important;  /* enough space for search + 1 row */
+    width: 200px !important;         /* adjust width */
+    max-height: 90px !important;     /* enough for Search + No Tags */
     height: auto !important;
 
-    overflow: hidden !important;   /* no scrolling */
-    padding: 6px 8px !important;   /* compact spacing */
+    overflow-y: hidden !important;   /* block scrolling */
+    overflow-x: hidden !important;
 
     background: #fff !important;
     border: 1px solid #d1d5db !important;
     border-radius: 6px !important;
     box-shadow: 0 4px 10px rgba(0,0,0,.15) !important;
     z-index: 3000 !important;
+    position: absolute !important;   /* ensures it floats, not push layout */
 }
 
-/* Keep search box visible but styled compact */
+/* Search box styling */
 .dropdown-menu.list-stats-dropdown.show .form-control {
     display: block !important;
-    margin-bottom: 6px !important;
+    margin: 4px 0 !important;
     height: 28px !important;
     font-size: 13px !important;
     padding: 2px 6px !important;
 }
 
-/* Style the "No Tags" row */
+/* Only show one row ("No Tags") */
 .dropdown-menu.list-stats-dropdown.show .dropdown-item {
     padding: 6px 8px !important;
     font-size: 13px !important;
@@ -2791,6 +2794,12 @@ header * {
     background: transparent !important;
     border: none !important;
 }
+
+/* Hide anything else below No Tags */
+.dropdown-menu.list-stats-dropdown.show > *:nth-child(n+3) {
+    display: none !important;
+}
+
 
 
 
