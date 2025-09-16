@@ -2711,6 +2711,7 @@ header * {
   color: #fff !important;
 }
 
+
 /* ///////////tagspace///// */
 /* Tighten gap between Show Tags and Save Filter */
 .sidebar-section.save-filter-section {
@@ -2803,6 +2804,13 @@ header * {
 .dropdown-menu.list-stats-dropdown.show > *:nth-child(n+3) {
     display: none !important;
 }
+
+/* Move "No Tags" closer to Search */
+.dropdown-menu.list-stats-dropdown.show .dropdown-item {
+    margin-top: -2px !important;   /* pull it up slightly */
+    padding-top: 2px !important;   /* keep it balanced */
+}
+
 
 
 
