@@ -32,15 +32,15 @@
     color: #ff0000 !important;
 }
 /* dta */
-.indicator-pill.gray, .indicator-pill-right.gray, .indicator-pill-round.gray {
+/* .indicator-pill.gray, .indicator-pill-right.gray, .indicator-pill-round.gray {
     color: #ff7f7f !important;
-}
+} */
 
 /* dta */
 
-/* .text-body, .text-muted, div#driver-popover-item .driver-popover-footer button.driver-close-btn {
+.text-body, .text-muted, div#driver-popover-item .driver-popover-footer button.driver-close-btn {
     color: #e14040 !important;
-} */
+}
 
 /* viewlist */
 
