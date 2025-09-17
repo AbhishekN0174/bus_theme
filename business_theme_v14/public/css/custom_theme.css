@@ -1851,6 +1851,13 @@ header .form-control:focus {
 .layout-main-section .widget span {
     font-size: 14px !important;
     line-height: 1.6 !important;
+/*     color: #ff7f7f !important; */
+}
+.layout-main-section .widget .widget-body a {
+   color: #ff7f7f !important; 
+}
+.layout-main-section .widget .widget-body{
+    color: #ff7f7f !important;
 }
 
 .layout-main-section .widget p,{
