@@ -23,7 +23,12 @@
 div.ce-block_content > div.ce-header {
     color: #ff0000 !important;   /* bright red */
 }
-
+[data-page-route="Workspaces"] .codex-editor .codex-editor__redactor .ce-block .ce-block__content .ce-header {
+    padding-left: 7px !important;
+    margin-bottom: 0px !important;
+    flex: 1 1 0%;
+    color: #ff0000 !important;   /* bright red */
+}
 
 
 
