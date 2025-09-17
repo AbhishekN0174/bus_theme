@@ -20,10 +20,10 @@
 .layout-main-section .widget .link-text {
     color: #a67c28 !important;
 }
-.ce-block.col-xs-12 .ce-header {
+/* .ce-block.col-xs-12 .ce-header {
     color: #c7290f !important;   /* deep red */
     font-weight: bold;
-}
+} */
 .ce-block.col-xs-12 .ce-header,
 .ce-block.col-xs-12 .ce-header span {
     color: #ff0000 !important;
