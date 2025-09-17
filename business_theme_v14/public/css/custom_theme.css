@@ -4,6 +4,17 @@
     box-shadow: none !important;
 }
 
+/* Make "No Tags" plain text */
+.dropdown-menu.list-stats-dropdown.show .dropdown-item {
+    all: unset !important;           /* remove all default styles */
+    display: block !important;       /* keep it as block text */
+    font-size: 13px !important;
+    color: #111 !important;
+    padding: 2px 0 !important;       /* tiny spacing */
+    margin: 0 !important;
+    cursor: default !important;      /* no pointer hand */
+}
+
 
 
 
