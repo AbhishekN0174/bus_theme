@@ -2943,7 +2943,7 @@ header * {
     gap: 8px !important;
 }
 
-/* ===================== HIDE SAVED BUTTON ===================== */
+/* ==================== HIDE SAVED BUTTON ===================== */
 .save-filter-section .sidebar-action {
     display: block !important;
     margin-top: 6px !important;
