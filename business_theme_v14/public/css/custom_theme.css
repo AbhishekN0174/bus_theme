@@ -31,16 +31,17 @@
 .ce-block.col-xs-12 .ce-header span {
     color: #ff0000 !important;
 }
-/* dta */
-/* .indicator-pill.gray, .indicator-pill-right.gray, .indicator-pill-round.gray {
+/* o open */
+.indicator-pill.gray, .indicator-pill-right.gray, .indicator-pill-round.gray {
     color: #ff7f7f !important;
-} */
-
+}
+/* o open */
 /* dta */
 
 .text-body, .text-muted, div#driver-popover-item .driver-popover-footer button.driver-close-btn {
     color: #e14040 !important;
 }
+/* dta */
 
 /* viewlist */
 
@@ -1848,9 +1849,12 @@ header .form-control:focus {
 .layout-main-section .widget .widget-body a,
 .layout-main-section .widget p,
 .layout-main-section .widget span {
-    color: #ff7f7f !important;
     font-size: 14px !important;
     line-height: 1.6 !important;
+}
+
+.layout-main-section .widget p,{
+    color: #ff7f7f !important;
 }
 
 /* Widget links */
