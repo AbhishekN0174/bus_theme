@@ -20,15 +20,15 @@
 .layout-main-section .widget .link-text {
     color: #a67c28 !important;
 }
-div.ce-block_content > div.ce-header {
-    color: #ff0000 !important;   /* bright red */
+.ce-block.col-xs-12 .ce-header {
+    color: #c7290f !important;   /* deep red */
+    font-weight: bold;
 }
-[data-page-route="Workspaces"] .codex-editor .codex-editor__redactor .ce-block .ce-block__content .ce-header {
-    padding-left: 7px !important;
-    margin-bottom: 0px !important;
-    flex: 1 1 0%;
-    color: #ff0000 !important;   /* bright red */
+.ce-block.col-xs-12 .ce-header,
+.ce-block.col-xs-12 .ce-header span {
+    color: #ff0000 !important;
 }
+
 
 
 
