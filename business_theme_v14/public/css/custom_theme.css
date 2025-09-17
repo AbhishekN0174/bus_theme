@@ -1,12 +1,9 @@
-/* Remove hover background for saved filter container */
-.list-filters.list-link:hover {
-    background-color: transparent !important;
-    box-shadow: none !important; /* if it also adds shadow */
+/* Target only the Save Filter section items */
+.sidebar-section.save-filter-section .list-filters.list-link:hover {
+    background: transparent !important;
+    box-shadow: none !important;
 }
-.list-filters.list-link {
-    background: none !important;
-    border: none !important;
-}
+
 
 
 
