@@ -2787,6 +2787,7 @@ header * {
     padding: 2px 6px !important;
     border: 1px solid #ccc !important;
     border-radius: 4px !important;
+     margin-bottom: 2px !important;   /* was bigger before */
 }
 
 /* "No Tags" row */
@@ -2798,6 +2799,9 @@ header * {
     background: transparent !important;
     border: none !important;
     margin: 0 !important;
+        margin-top: 0 !important;        /* remove any default gap */
+    padding-top: 2px !important;     /* tighter to search */
+    line-height: 1.2 !important;     /* compact line height */
 }
 
 /* Remove any unwanted extra container after "No Tags" */
