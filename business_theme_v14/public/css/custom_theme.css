@@ -20,10 +20,10 @@
 .layout-main-section .widget .link-text {
     color: #a67c28 !important;
 }
-.ce-block_content .ce-header {
-    color: #ff0000 !important;
-    font-weight: bold;
+div.ce-block_content > div.ce-header {
+    color: #ff0000 !important;   /* bright red */
 }
+
 
 
 
