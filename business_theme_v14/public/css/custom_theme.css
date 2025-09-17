@@ -1,3 +1,18 @@
+/* Remove hover background for saved filter container */
+.list-filters.list-link:hover {
+    background-color: transparent !important;
+    box-shadow: none !important; /* if it also adds shadow */
+}
+.list-filters.list-link {
+    background: none !important;
+    border: none !important;
+}
+
+
+
+
+
+
 /* ==================== ITCHAMPS DASHBOARD THEME ==================== */
 /* New CSS file for recreating the blue dashboard design */
 /* Preserves ITChamps branding while achieving Image 1 layout */
