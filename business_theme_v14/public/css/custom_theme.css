@@ -17,9 +17,15 @@
 
 
 /* 🎨 Change link text color ////container inside text color */
-.layout-main-section .widget .link-text {
+/* .layout-main-section .widget .link-text {
     color: #a67c28 !important;
+} */
+/* Apply dark gold to ALL widget text */
+.layout-main-section .widget,
+.layout-main-section .widget * {
+    color: #a67c28 !important;  /* deep bold gold */
 }
+
 
 span.link-content.ellipsis {
       color: #a67c28 !important;
