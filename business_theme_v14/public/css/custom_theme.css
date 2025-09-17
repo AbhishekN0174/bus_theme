@@ -17,8 +17,12 @@
 
 
 /* 🎨 Change link text color ////container inside text color */
-.layout-main-section .widget .link-text {
+/* .layout-main-section .widget .link-text {
     color: #a67c28 !important;
+} */
+
+span.link-content.ellipsis {
+      color: #a67c28 !important;
 }
 
 /* header red color */
