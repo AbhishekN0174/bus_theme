@@ -19,6 +19,14 @@
 .layout-main-section .widget a {
     color: #d5bf83 !important;
 }
+/* 🎨 Change link text color */
+.layout-main-section .widget .link-text {
+    color: #d5bf83 !important;
+}
+.widget span {
+    color: #c7290f;
+}
+
 
 
 
