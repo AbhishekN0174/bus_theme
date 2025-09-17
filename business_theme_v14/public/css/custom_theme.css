@@ -27,6 +27,12 @@
     font-weight: bold;
 }
 
+.ce-block.col-xs-12 .ce-header,
+.ce-block.col-xs-12 .ce-header span {
+    color: #ff0000 !important;
+}
+
+
 
 
 
