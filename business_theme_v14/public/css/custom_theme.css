@@ -42,7 +42,16 @@
     color: #e14040 !important;
 }
 
+/* viewlist */
 
+.widget.quick-list-widget-box .widget-footer .see-all {
+    width: 100%;
+    background-color: var(--btn-default-bg);
+    text-decoration: none;
+    color: #e14040 !important;
+}
+
+/* viewlist */
 
 
 
