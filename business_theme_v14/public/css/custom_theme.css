@@ -2873,6 +2873,18 @@ header * {
 }
 
 
+/* Make "No Tags" plain text only */
+.dropdown-menu.list-stats-dropdown.show .dropdown-item {
+    pointer-events: none !important;   /* disable hover/click */
+    background: transparent !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 13px !important;
+    color: #111 !important;
+    line-height: 1.4 !important;
+    box-shadow: none !important;
+}
 
 
 
@@ -3209,78 +3221,6 @@ header * {
   height: 14px;
 }
 
-
-/* -------------------------
-   Make "No Tags" purely plain text
-   ------------------------- */
-
-/* 1) Reset dropdown-item container so it has no box, no hover, no transition */
-.dropdown-menu.list-stats-dropdown.show .dropdown-item {
-  background: transparent !important;
-  border: 0 !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  min-height: 0 !important;
-  height: auto !important;
-  line-height: 1.2 !important;
-  display: block !important;
-  width: auto !important;
-  border-radius: 0 !important;
-  transition: none !important;
-  transform: none !important;
-  cursor: default !important;       /* no pointer hand */
-  color: inherit !important;
-  text-decoration: none !important;
-  outline: none !important;
-}
-
-/* 2) Remove hover / focus / active visual effects */
-.dropdown-menu.list-stats-dropdown.show .dropdown-item:hover,
-.dropdown-menu.list-stats-dropdown.show .dropdown-item:focus,
-.dropdown-menu.list-stats-dropdown.show .dropdown-item:active {
-  background: transparent !important;
-  color: inherit !important;
-  box-shadow: none !important;
-  transform: none !important;
-}
-
-/* 3) Remove styles from any nested elements, but keep text visible */
-.dropdown-menu.list-stats-dropdown.show .dropdown-item *,
-.dropdown-menu.list-stats-dropdown.show .dropdown-item *:hover,
-.dropdown-menu.list-stats-dropdown.show .dropdown-item *:focus {
-  background: transparent !important;
-  border: 0 !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  transition: none !important;
-  transform: none !important;
-  outline: none !important;
-  text-decoration: none !important;
-  color: inherit !important;
-}
-
-/* 4) If the "No Tags" is wrapped in an anchor/button, make it appear like plain text */
-.dropdown-menu.list-stats-dropdown.show .dropdown-item a,
-.dropdown-menu.list-stats-dropdown.show .dropdown-item button {
-  background: transparent !important;
-  border: 0 !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  text-decoration: none !important;
-  color: inherit !important;
-  cursor: default !important;
-}
-
-/* 5) Keep the search input functional and compact */
-.dropdown-menu.list-stats-dropdown.show .form-control {
-  display: block !important;
-  margin: 0 0 2px 0 !important;
-  height: 28px !important;
-  padding: 2px 6px !important;
-  border: 1px solid #ccc !important;
   border-radius: 4px !important;
   box-shadow: none !important;
   background: #fff !important;
