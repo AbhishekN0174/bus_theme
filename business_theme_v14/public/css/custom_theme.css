@@ -30,6 +30,14 @@
 color: #a67c28 !important;
 }
 
+/* Force all clickable field texts inside widget body */
+.layout-main-section .widget .widget-body a,
+.layout-main-section .widget .widget-body span,
+.layout-main-section .widget .widget-body p {
+    color: #a67c28 !important;
+}
+
+
 
 
 
