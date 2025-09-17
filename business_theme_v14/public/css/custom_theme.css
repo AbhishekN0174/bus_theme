@@ -2883,7 +2883,7 @@ header * {
     text-align: center !important;
 }
 .save-filter-section .sidebar-action .btn:hover {
-    background: #2563eb !important;
+/*     background: #2563eb !important; */
     color: #fff !important;
 }
 
