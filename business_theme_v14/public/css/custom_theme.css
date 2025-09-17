@@ -2807,7 +2807,7 @@ header * {
 
 /* Move "No Tags" closer to Search */
 .dropdown-menu.list-stats-dropdown.show .dropdown-item {
-    margin-top: -2px !important;   /* pull it up slightly */
+    margin-top: -4px !important;   /* pull it up slightly */
     padding-top: 2px !important;   /* keep it balanced */
 }
 
