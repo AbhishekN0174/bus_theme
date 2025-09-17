@@ -2592,7 +2592,7 @@ header * {
 }
 .sidebar-section.filter-section .btn:hover,
 .sidebar-section.save-filter-section .btn:hover {
-    background: #2563eb !important;
+/*     background: #2563eb !important; */
     color: #fff !important;
     border-color: #2563eb !important;
 }
@@ -2707,7 +2707,7 @@ header * {
 
 .dropdown-menu.group-by-dropdown.show .dropdown-item:hover,
 .dropdown-menu.list-stats-dropdown.show .dropdown-item:hover {
-  background: #2563eb !important;
+/*   background: #2563eb !important; */
   color: #fff !important;
 }
 
