@@ -14,7 +14,7 @@
     margin: 0 !important;
     cursor: default !important;      /* no pointer hand */
 }
-
+/* filter sectin */
 
 /* 🎨 Change link text color ////container inside text color */
 .layout-main-section .widget .link-text {
@@ -36,14 +36,14 @@ color: #a67c28 !important;
 .layout-main-section .widget .widget-body p {
     color: #a67c28 !important;
 }
-
-
-
-
-
 span.link-content.ellipsis {
       color: #a67c28 !important;
 }
+
+/* container inside text color */
+
+
+
 
 /* header red color */
 .ce-block.col-xs-12 .ce-header {
@@ -77,6 +77,13 @@ span.link-content.ellipsis {
 }
 
 /* viewlist */
+
+/* side small line */
+
+.widget.onboarding-widget-box .widget-head .widget-subtitle {
+    color: #a67c28 !important
+}
+
 
 
 
