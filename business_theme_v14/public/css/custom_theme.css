@@ -1,4 +1,4 @@
-/* Target only the Save Filter section items */
+/* Target only the Save Filter section items filteeeerrrrr */
 .sidebar-section.save-filter-section .list-filters.list-link:hover {
     background: transparent !important;
     box-shadow: none !important;
@@ -16,7 +16,7 @@
 }
 
 
-/* 🎨 Change link text color container inside text color */
+/* 🎨 Change link text color ////container inside text color */
 .layout-main-section .widget .link-text {
     color: #a67c28 !important;
 }
@@ -31,7 +31,7 @@
 .ce-block.col-xs-12 .ce-header span {
     color: #ff0000 !important;
 }
-
+/* dta */
 .indicator-pill.gray, .indicator-pill-right.gray, .indicator-pill-round.gray {
     color: #ff7f7f !important;
 }
@@ -3207,4 +3207,82 @@ header * {
 .modal-header.search-header .modal-actions svg {
   width: 14px;
   height: 14px;
+}
+
+
+/* -------------------------
+   Make "No Tags" purely plain text
+   ------------------------- */
+
+/* 1) Reset dropdown-item container so it has no box, no hover, no transition */
+.dropdown-menu.list-stats-dropdown.show .dropdown-item {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  min-height: 0 !important;
+  height: auto !important;
+  line-height: 1.2 !important;
+  display: block !important;
+  width: auto !important;
+  border-radius: 0 !important;
+  transition: none !important;
+  transform: none !important;
+  cursor: default !important;       /* no pointer hand */
+  color: inherit !important;
+  text-decoration: none !important;
+  outline: none !important;
+}
+
+/* 2) Remove hover / focus / active visual effects */
+.dropdown-menu.list-stats-dropdown.show .dropdown-item:hover,
+.dropdown-menu.list-stats-dropdown.show .dropdown-item:focus,
+.dropdown-menu.list-stats-dropdown.show .dropdown-item:active {
+  background: transparent !important;
+  color: inherit !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/* 3) Remove styles from any nested elements, but keep text visible */
+.dropdown-menu.list-stats-dropdown.show .dropdown-item *,
+.dropdown-menu.list-stats-dropdown.show .dropdown-item *:hover,
+.dropdown-menu.list-stats-dropdown.show .dropdown-item *:focus {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  transition: none !important;
+  transform: none !important;
+  outline: none !important;
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+/* 4) If the "No Tags" is wrapped in an anchor/button, make it appear like plain text */
+.dropdown-menu.list-stats-dropdown.show .dropdown-item a,
+.dropdown-menu.list-stats-dropdown.show .dropdown-item button {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  text-decoration: none !important;
+  color: inherit !important;
+  cursor: default !important;
+}
+
+/* 5) Keep the search input functional and compact */
+.dropdown-menu.list-stats-dropdown.show .form-control {
+  display: block !important;
+  margin: 0 0 2px 0 !important;
+  height: 28px !important;
+  padding: 2px 6px !important;
+  border: 1px solid #ccc !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+  background: #fff !important;
+  pointer-events: auto !important; /* ensure search stays usable */
 }
