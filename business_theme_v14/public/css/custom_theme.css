@@ -15,6 +15,10 @@
     cursor: default !important;      /* no pointer hand */
 }
 
+.layout-main-section .widget span,
+.layout-main-section .widget a {
+    color: #d5bf83 !important;
+}
 
 
 
