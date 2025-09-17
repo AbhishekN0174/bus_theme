@@ -21,10 +21,16 @@
     color: #a67c28 !important;
 } */
 /* Apply dark gold to ALL widget text */
-.layout-main-section .widget,
+/* .layout-main-section .widget,
 .layout-main-section .widget * {
     color: #a67c28 !important;  /* deep bold gold */
+} */
+
+/* 🎨 Only change the report link texts */
+.layout-main-section .widget a.link-item .link-text {
+    color: #a67c28 !important;  /* dark gold */
 }
+
 
 
 span.link-content.ellipsis {
