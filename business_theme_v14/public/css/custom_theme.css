@@ -89,13 +89,17 @@ span.link-content.ellipsis {
 .widget.dashboard-widget-box .widget-subtitle.widget.dashboard-widget-box .widget-subtitle{
 color: #e14040 !important;
 }
-
+/* chart of home h1 */
 .widget.onboarding-widget-box .widget-body .onboarding-step-preview h1{
 color: #e14040 !important;
 }
 
-
-
+/* synk */
+.widget.dashboard-widget-box .widget-subtitle {
+    font-size: 0.75rem;
+    color: #e14040 !important;
+    margin-top: var(--margin-xs);
+}
 
 
 
