@@ -26,8 +26,8 @@
     color: #a67c28 !important;  /* deep bold gold */
 } */
 
-.widget.links-widget-box .link-item .disabled-link {
-    color: #a67c28 !important;
+.widget.links-widget-box .link-item .link-content{
+color: #a67c28 !important;
 }
 
 
