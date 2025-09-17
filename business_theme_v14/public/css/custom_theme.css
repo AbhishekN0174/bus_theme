@@ -26,10 +26,13 @@
     color: #a67c28 !important;  /* deep bold gold */
 } */
 
-/* 🎨 Only change the report link texts */
-.layout-main-section .widget a.link-item .link-text {
-    color: #a67c28 !important;  /* dark gold */
+//* Force all clickable field texts inside widget body */
+.layout-main-section .widget .widget-body a,
+.layout-main-section .widget .widget-body span,
+.layout-main-section .widget .widget-body p {
+    color: #a67c28 !important;
 }
+
 
 
 
