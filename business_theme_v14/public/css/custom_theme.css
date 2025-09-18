@@ -1,25 +1,45 @@
-/* Target only the Save Filter section */
-.sidebar-section.save-filter-section {
-    background: transparent !important;
-    box-shadow: none !important;
-    border: none !important;
-}
-
-/* Remove any background / border from children inside */
-.sidebar-section.save-filter-section * {
-    background: transparent !important;
-    box-shadow: none !important;
-    border: none !important;
-}
-
-/* Remove hover / active effects */
+/* 🚫 Strip ALL background/border/hover from Save Filter section */
+.sidebar-section.save-filter-section,
+.sidebar-section.save-filter-section *,
 .sidebar-section.save-filter-section *:hover,
 .sidebar-section.save-filter-section *:focus,
 .sidebar-section.save-filter-section *:active {
     background: transparent !important;
-    box-shadow: none !important;
     border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    color: #111 !important;   /* keep text visible */
 }
+
+/* Keep input readable */
+.sidebar-section.save-filter-section input,
+.sidebar-section.save-filter-section input:focus {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    padding: 0 !important;
+}
+
+/* Make buttons look like plain text links */
+.sidebar-section.save-filter-section button,
+.sidebar-section.save-filter-section .btn {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    width: auto !important;
+    color: #111 !important;
+    cursor: pointer;
+}
+
+/* Kill hover highlight on buttons */
+.sidebar-section.save-filter-section button:hover,
+.sidebar-section.save-filter-section .btn:hover {
+    background: transparent !important;
+    color: #111 !important;
+}
+
 
 
 
