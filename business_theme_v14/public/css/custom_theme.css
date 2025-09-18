@@ -3,6 +3,7 @@
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
+   margin-top: 10px !important;
 }
 
 /* remove borders and background from fields inside */
