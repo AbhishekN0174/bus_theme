@@ -2942,6 +2942,26 @@ header * {
     line-height: 1.4 !important;
     box-shadow: none !important;
 }
+/* sidebar line */
+
+/* 🚫 Remove sidebar divider lines completely */
+.sidebar-section,
+.sidebar-section * {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* If it's a thin horizontal line */
+.sidebar-section hr,
+.sidebar-section::before,
+.sidebar-section::after,
+.sidebar-section li::before,
+.sidebar-section li::after {
+    display: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
 
 
 
