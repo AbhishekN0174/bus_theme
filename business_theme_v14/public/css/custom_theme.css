@@ -97,7 +97,8 @@ color: #e14040 !important;
 /* synk */
 .widget.dashboard-widget-box .widget-subtitle {
     font-size: 0.75rem;
-    color: #e14040 !important;
+/*     color: #e14040 !important; */
+    color: #ff7f7f !important;
     margin-top: var(--margin-xs);
 }
 
