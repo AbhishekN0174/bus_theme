@@ -2944,28 +2944,74 @@ header * {
 }
 /* sidebar line */
 
-/* 🚫 Remove sidebar horizontal divider lines */
-.desk-sidebar li,
-.desk-sidebar .sidebar-item-container {
+/* =========================
+   REMOVE SIDEBAR OUTER LINES
+   ========================= */
+
+/* Target the exact sidebar containers seen in your DOM */
+html body .col-lg-2.layout-side-section,
+html body .col-lg-2.layout-side-section .list-sidebar,
+html body .list-sidebar.overlay-sidebar,
+html body .list-sidebar.overlay-sidebar.hidden-xs,
+html body .desk-sidebar.list-unstyled.sidebar-menu,
+html body .overlay-sidebar {
+    border: 0 !important;
+    border-right: 0 !important;
+    border-bottom: 0 !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+}
+
+/* Remove separators on each list item (horizontal lines) */
+html body .list-sidebar .sidebar-item-container,
+html body .desk-sidebar li,
+html body .desk-sidebar .sidebar-item-container,
+html body .desk-sidebar .sidebar-item {
+    border: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    outline: none !important;
+}
+
+/* Hide any pseudo-elements that add thin lines */
+html body .list-sidebar::before,
+html body .list-sidebar::after,
+html body .overlay-sidebar::before,
+html body .overlay-sidebar::after,
+html body .col-lg-2.layout-side-section::before,
+html body .col-lg-2.layout-side-section::after,
+html body .sidebar-item-container::before,
+html body .sidebar-item-container::after {
+    display: none !important;
+    content: none !important;
     border: none !important;
     box-shadow: none !important;
 }
 
-/* In case they come from pseudo elements */
-.desk-sidebar li::before,
-.desk-sidebar li::after,
-.desk-sidebar .sidebar-item-container::before,
-.desk-sidebar .sidebar-item-container::after {
+/* Remove any HRs inside sidebar */
+html body .list-sidebar hr,
+html body .sidebar hr,
+html body .layout-side-section hr {
     display: none !important;
     border: none !important;
-}
-/* Clean background and remove borders from sidebar items */
-.desk-sidebar .sidebar-item-container,
-.desk-sidebar .standard-sidebar-section {
-    background: transparent !important;
-    border: none !important;
+    margin: 0 !important;
 }
 
+/* Make scrollbar track transparent (removes thin track line in Chrome/Webkit browsers) */
+html body .list-sidebar.overlay-sidebar::-webkit-scrollbar-track,
+html body .desk-sidebar::-webkit-scrollbar-track,
+html body .overlay-sidebar::-webkit-scrollbar-track {
+    background: transparent !important;
+}
+
+/* optional: reduce container padding that might reveal underlying page edge */
+html body .col-lg-2.layout-side-section .list-sidebar,
+html body .layout-side-section .list-sidebar {
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+}
 
 
 
