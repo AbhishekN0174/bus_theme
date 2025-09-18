@@ -1,17 +1,26 @@
-/* Remove background from container */
-.sidebar-section.save-filter-section,
+/* Target only the Save Filter section */
+.sidebar-section.save-filter-section {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Remove any background / border from children inside */
 .sidebar-section.save-filter-section * {
     background: transparent !important;
     box-shadow: none !important;
+    border: none !important;
 }
 
-/* Ensure hover doesn't add any background */
-.sidebar-section.save-filter-section .list-filters.list-link:hover,
-.sidebar-section.save-filter-section .list-filters.list-link:focus,
-.sidebar-section.save-filter-section .list-filters.list-link:active {
+/* Remove hover / active effects */
+.sidebar-section.save-filter-section *:hover,
+.sidebar-section.save-filter-section *:focus,
+.sidebar-section.save-filter-section *:active {
     background: transparent !important;
     box-shadow: none !important;
+    border: none !important;
 }
+
 
 
 
