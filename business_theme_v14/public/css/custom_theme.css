@@ -2962,6 +2962,12 @@ header * {
     box-shadow: none !important;
 }
 
+/* Target common sidebar list borders */
+.list-unstyled.sidebar-menu li,
+.list-group-item {
+    border: none !important;
+    box-shadow: none !important;
+}
 
 
 
