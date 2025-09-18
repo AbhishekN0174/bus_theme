@@ -2945,29 +2945,34 @@ header * {
 /* sidebar line */
 
 
-/* ================== REMOVE ONLY SIDEBAR BORDER LINES ================== */
-.col-lg-2.layout-side-section,
-.col-lg-2.layout-side-section .list-sidebar.overlay-sidebar {
+/* 🚫 Kill sidebar right + bottom lines completely */
+.list-sidebar.overlay-sidebar {
     border: none !important;
     border-right: none !important;
     border-bottom: none !important;
     box-shadow: none !important;
+    outline: none !important;
 }
 
-/* In case lines come from pseudo-elements */
-.col-lg-2.layout-side-section::before,
-.col-lg-2.layout-side-section::after,
+/* Sometimes Frappe adds it on the parent too */
+.col-lg-2.layout-side-section {
+    border: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Remove any pseudo-element drawing the line */
 .list-sidebar.overlay-sidebar::before,
-.list-sidebar.overlay-sidebar::after {
-    display: none !important;
+.list-sidebar.overlay-sidebar::after,
+.col-lg-2.layout-side-section::before,
+.col-lg-2.layout-side-section::after {
     content: none !important;
+    display: none !important;
     border: none !important;
 }
 
-/* Remove thin scrollbar track line on Webkit browsers */
-.list-sidebar.overlay-sidebar::-webkit-scrollbar-track {
-    background: transparent !important;
-}
 
 
 
