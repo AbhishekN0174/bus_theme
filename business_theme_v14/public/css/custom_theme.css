@@ -30,28 +30,29 @@
   box-shadow: none !important;
 }
 
-/* Make Save Filter look like plain text */
-.sidebar-section.save-filter-section .btn,
-.sidebar-section.save-filter-section button {
+
+.sidebar-section.save-filter-section .sidebar-label {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
   padding: 0 !important;
   margin: 0 !important;
-  color: inherit !important;   /* keep same text color */
-  cursor: pointer;             /* still clickable */
+  font-weight: 600 !important;   /* keep bold text */
+  color: #111 !important;        /* plain readable text */
+  text-transform: none !important;
+  cursor: default !important;    /* normal text cursor */
 }
 
-/* Remove hover/focus styles */
-.sidebar-section.save-filter-section .btn:hover,
-.sidebar-section.save-filter-section .btn:focus,
-.sidebar-section.save-filter-section button:hover,
-.sidebar-section.save-filter-section button:focus {
+/* Kill hover/focus/active states */
+.sidebar-section.save-filter-section .sidebar-label:hover,
+.sidebar-section.save-filter-section .sidebar-label:focus,
+.sidebar-section.save-filter-section .sidebar-label:active {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
-  color: inherit !important;
+  color: #111 !important;
 }
+
 
 
 
