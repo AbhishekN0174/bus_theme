@@ -2562,7 +2562,7 @@ header * {
     font-size: 16px !important;
     font-weight: 600 !important;
     color: #374151 !important;
-    margin-bottom: 0px !important;
+    margin-top: -10px !important;
     text-transform: none !important;
 }
 
