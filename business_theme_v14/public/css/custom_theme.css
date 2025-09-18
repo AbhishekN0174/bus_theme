@@ -2830,12 +2830,28 @@ header * {
 }
 
 /* ===================== LAYOUT: STACK INPUT + ACTION ===================== */
-.save-filter-section .list-filters.list-link {
+/* .save-filter-section .list-filters.list-link {
+    display: flex !important;
+    flex-direction: column !important;   /* stack vertically */
+    align-items: flex-start !important;
+    gap: 8px !important;
+} */
+/* Remove default background */
+.sidebar-section.save-filter-section .list-filters.list-link {
+    background: transparent !important;
+    box-shadow: none !important;
     display: flex !important;
     flex-direction: column !important;   /* stack vertically */
     align-items: flex-start !important;
     gap: 8px !important;
 }
+
+/* Remove hover effect */
+.sidebar-section.save-filter-section .list-filters.list-link:hover {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
 
 /* ==================== HIDE SAVED BUTTON ===================== */
 .save-filter-section .sidebar-action {
@@ -3132,10 +3148,10 @@ header * {
 
 /* text color */
 /* Target only the Save Filter section items filteeeerrrrr */
-.sidebar-section.save-filter-section .list-filters.list-link:hover {
+/* .sidebar-section.save-filter-section .list-filters.list-link:hover {
     background: transparent !important;
     box-shadow: none !important;
-}
+} */
  
 /* Make "No Tags" plain text */
 .dropdown-menu.list-stats-dropdown.show .dropdown-item {
