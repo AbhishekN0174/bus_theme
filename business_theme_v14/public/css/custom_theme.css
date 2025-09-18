@@ -1,116 +1,34 @@
-/* -------------------------
-   Strong reset for Save Filter area
-   Paste this at the END of your CSS
-   ------------------------- */
-
-/* main container + more-specific path to override Frappe defaults */
-.col-lg-2.layout-side-section .list-sidebar.overlay-sidebar .sidebar-section.save-filter-section,
-.list-sidebar.overlay-sidebar .sidebar-section.save-filter-section,
+/* remove the red/grey container background from Save Filter block */
 .sidebar-section.save-filter-section {
   background: transparent !important;
-  background-image: none !important;
-  background-color: transparent !important;
   border: none !important;
   box-shadow: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  border-radius: 0 !important;
-  overflow: visible !important;
 }
 
-/* remove any pseudo decorations */
-.sidebar-section.save-filter-section::before,
-.sidebar-section.save-filter-section::after,
-.list-sidebar.overlay-sidebar .sidebar-section.save-filter-section::before,
-.list-sidebar.overlay-sidebar .sidebar-section.save-filter-section::after {
-  content: none !important;
-  display: none !important;
-}
-
-/* reset everything inside (li, buttons, inputs, selects, labels, spans) */
-.sidebar-section.save-filter-section *,
-.sidebar-section.save-filter-section *::before,
-.sidebar-section.save-filter-section *::after {
-  background: transparent !important;
-  background-image: none !important;
-  background-color: transparent !important;
-  border: none !important;
-  border-color: transparent !important;
-  box-shadow: none !important;
-  outline: none !important;
-  color: inherit !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  border-radius: 0 !important;
-  -webkit-appearance: none !important;
-  -moz-appearance: none !important;
-  appearance: none !important;
-}
-
-/* keep inputs usable but visually plain */
+/* remove borders and background from fields inside */
 .sidebar-section.save-filter-section input,
-.sidebar-section.save-filter-section textarea,
-.sidebar-section.save-filter-section select,
-.sidebar-section.save-filter-section .input-with-feedback,
-.sidebar-section.save-filter-section .form-control {
-  background: transparent !important;
-  background-image: none !important;
-  border: 1px solid transparent !important;
-  box-shadow: none !important;
-  outline: none !important;
-  padding: 6px 8px !important;    /* small usable padding */
-  margin: 6px 0 !important;
-  width: 100% !important;
-  color: #111 !important;
-}
-
-/* make buttons plain text (no shape) */
-.sidebar-section.save-filter-section .btn,
 .sidebar-section.save-filter-section button,
-.sidebar-section.save-filter-section .sidebar-action .btn,
-.sidebar-section.save-filter-section .sidebar-action button {
+.sidebar-section.save-filter-section .btn,
+.sidebar-section.save-filter-section .list-link {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
-  padding: 0 !important;
-  margin: 4px 0 !important;
-  color: #111 !important;
-  width: auto !important;
 }
 
-/* kill hover / focus / active highlights */
-.sidebar-section.save-filter-section *,
-.sidebar-section.save-filter-section *:hover,
-.sidebar-section.save-filter-section *:focus,
-.sidebar-section.save-filter-section *:active {
-  background-color: transparent !important;
-  background-image: none !important;
-  border-color: transparent !important;
-  box-shadow: none !important;
-  color: #111 !important;
-  cursor: auto !important;
-}
-
-/* target common Frappe/link/list classes inside the block */
-.sidebar-section.save-filter-section .list-link,
-.sidebar-section.save-filter-section .group-by-field,
-.sidebar-section.save-filter-section .list-group-by-fields .group-by-field,
-.sidebar-section.save-filter-section .pill-label,
-.sidebar-section.save-filter-section .pill,
-.sidebar-section.save-filter-section .dropdown-item {
+/* remove hover/focus background */
+.sidebar-section.save-filter-section input:hover,
+.sidebar-section.save-filter-section input:focus,
+.sidebar-section.save-filter-section button:hover,
+.sidebar-section.save-filter-section button:focus,
+.sidebar-section.save-filter-section .btn:hover,
+.sidebar-section.save-filter-section .btn:focus,
+.sidebar-section.save-filter-section .list-link:hover,
+.sidebar-section.save-filter-section .list-link:focus {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
 }
 
-/* ensure parent sidebar doesn't re-impose gradient */
-.col-lg-2.layout-side-section,
-.list-sidebar.overlay-sidebar {
-  background: transparent !important;
-  background-image: none !important;
-}
 
 
 
