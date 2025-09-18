@@ -30,17 +30,27 @@
   box-shadow: none !important;
 }
 
+/* save filter text */
 
+
+/* Style Save Filter text */
 .sidebar-section.save-filter-section .sidebar-label {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  font-weight: 600 !important;   /* keep bold text */
-  color: #111 !important;        /* plain readable text */
-  text-transform: none !important;
-  cursor: default !important;    /* normal text cursor */
+
+  font-weight: 600 !important;   /* bold */
+  font-size: 16px !important;    /* increase size (adjust as needed) */
+  color: #111 !important;        /* readable dark color */
+
+  margin-top: 8px !important;    /* move it down */
+  padding: 2px 0 !important;     /* small vertical spacing */
+  cursor: default !important;    /* make it behave like text */
+}
+
+.sidebar-section.save-filter-section .sidebar-label:hover {
+  background: transparent !important;
+  color: #111 !important;
 }
 
 /* Kill hover/focus/active states */
