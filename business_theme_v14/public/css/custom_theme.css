@@ -2557,14 +2557,33 @@ header * {
 }
 
 /* Labels */
-.sidebar-section.filter-section .sidebar-label,
+/* .sidebar-section.filter-section .sidebar-label,
 .sidebar-section.save-filter-section .sidebar-label {
     font-size: 16px !important;
     font-weight: 600 !important;
     color: #374151 !important;
     margin-top: -10px !important;
     text-transform: none !important;
+} */
+
+/* Keep normal Filter labels as they are */
+.sidebar-section.filter-section .sidebar-label {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: #374151 !important;
+    margin-top: -10px !important;
+    text-transform: none !important;
 }
+
+/* Adjust only Save Filter */
+.sidebar-section.save-filter-section .sidebar-label {
+    font-size: 14px !important;   /* smaller font */
+    font-weight: 500 !important;  /* slightly lighter */
+    color: #374151 !important;
+    margin-top: 8px !important;   /* push down */
+    text-transform: none !important;
+}
+
 
 /* Inputs & selects */
 .sidebar-section.filter-section .form-control,
