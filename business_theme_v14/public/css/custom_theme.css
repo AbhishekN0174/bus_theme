@@ -2944,30 +2944,28 @@ header * {
 }
 /* sidebar line */
 
-/* 🚫 Remove sidebar divider lines completely */
-.sidebar-section,
-.sidebar-section * {
+/* 🚫 Remove sidebar horizontal divider lines */
+.desk-sidebar li,
+.desk-sidebar .sidebar-item-container {
     border: none !important;
     box-shadow: none !important;
 }
 
-/* If it's a thin horizontal line */
-.sidebar-section hr,
-.sidebar-section::before,
-.sidebar-section::after,
-.sidebar-section li::before,
-.sidebar-section li::after {
+/* In case they come from pseudo elements */
+.desk-sidebar li::before,
+.desk-sidebar li::after,
+.desk-sidebar .sidebar-item-container::before,
+.desk-sidebar .sidebar-item-container::after {
     display: none !important;
     border: none !important;
-    box-shadow: none !important;
+}
+/* Clean background and remove borders from sidebar items */
+.desk-sidebar .sidebar-item-container,
+.desk-sidebar .standard-sidebar-section {
+    background: transparent !important;
+    border: none !important;
 }
 
-/* Target common sidebar list borders */
-.list-unstyled.sidebar-menu li,
-.list-group-item {
-    border: none !important;
-    box-shadow: none !important;
-}
 
 
 
