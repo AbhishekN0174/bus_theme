@@ -1,17 +1,19 @@
-/* === Make "Edit Filters" plain text === */
+/* === Make "Edit Filters" look like a field (same as Tags/Created By) === */
 li.add-list-group-by.sidebar-action,
 li.add-list-group-by.sidebar-action * {
-    background: transparent !important;
-    border: none !important;
+    background: #ffffff !important;   /* white field */
+    border: 1px solid #ddd !important;
+    border-radius: 4px !important;
+    padding: 6px 10px !important;
+    margin: 5px 0 !important;
+    color: #000 !important;
+    width: 100% !important;
+    display: block !important;
     box-shadow: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    display: inline !important;
-    width: auto !important;
-    cursor: default !important;
+    text-align: left !important;
 }
 
-/* === Remove red container from filter sections === */
+/* === Remove red container completely === */
 .sidebar-section.filter-section,
 .sidebar-section.filter-section .list-tags {
     background: transparent !important;
@@ -21,13 +23,13 @@ li.add-list-group-by.sidebar-action * {
     margin: 0 !important;
 }
 
-/* === Standardize all dropdowns/inputs to look like "Created By" === */
+/* === Standardize all dropdowns/inputs/buttons to clean white fields === */
 .sidebar-section.filter-section select,
 .sidebar-section.filter-section input,
 .sidebar-section.filter-section .control-input,
 .sidebar-section.filter-section .list-tags button,
 .sidebar-section.filter-section .list-tags a {
-    background: #f8f9fa !important;   /* light grey like your image */
+    background: #ffffff !important;   /* pure white */
     border: 1px solid #ddd !important;
     border-radius: 4px !important;
     padding: 6px 10px !important;
@@ -39,17 +41,20 @@ li.add-list-group-by.sidebar-action * {
     display: block !important;
 }
 
-/* === Remove hover/focus effects === */
+/* === Remove hover/focus styles (keep white always) === */
 .sidebar-section.filter-section select:hover,
 .sidebar-section.filter-section input:hover,
 .sidebar-section.filter-section .control-input:hover,
 .sidebar-section.filter-section .list-tags button:hover,
-.sidebar-section.filter-section .list-tags a:hover {
-    background: #f8f9fa !important;
+.sidebar-section.filter-section .list-tags a:hover,
+li.add-list-group-by.sidebar-action:hover,
+li.add-list-group-by.sidebar-action *:hover {
+    background: #ffffff !important;
     color: #000 !important;
     border: 1px solid #ddd !important;
     box-shadow: none !important;
 }
+
 
 
 
