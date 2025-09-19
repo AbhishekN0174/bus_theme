@@ -43,6 +43,131 @@ li.add-list-group-by.sidebar-action *:hover {
     box-shadow: none !important;
 }
 
+/* ----------------------------
+   Match everything to "Assigned To" style
+   Paste in custom.css and hard-reload the page
+   ---------------------------- */
+
+/* Base style used by Assigned/Created — mimic it */
+.sidebar-section.filter-section .frappe-control,
+.sidebar-section.filter-section .form-control,
+.sidebar-section.filter-section .control-input,
+.sidebar-section.filter-section .input-with-icon,
+.sidebar-section.filter-section .dropdown-toggle,
+.sidebar-section.filter-section .select-wrapper,
+.sidebar-section.filter-section .list-tags,
+.sidebar-section.filter-section .list-tags .pill,
+.sidebar-section.filter-section .list-tags .pill-label,
+.sidebar-section.filter-section li.add-list-group-by.sidebar-action,
+.sidebar-section.filter-section li.add-list-group-by.sidebar-action > a,
+.sidebar-section.filter-section li.add-list-group-by.sidebar-action button,
+.sidebar-section.filter-section .list-tags button,
+.sidebar-section.filter-section .list-tags a,
+.sidebar-section.filter-section .tag,
+.sidebar-section.filter-section .tag .pill-label {
+  box-sizing: border-box !important;
+  background: #ffffff !important;            /* pure white field */
+  border: 1px solid #e6e6e6 !important;     /* light grey border */
+  border-radius: 6px !important;            /* rounded corners like Assigned */
+  height: 38px !important;                  /* same visual height */
+  line-height: 38px !important;
+  padding: 0 12px !important;               /* horizontal padding */
+  margin: 6px 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;/* text left, caret right */
+  width: 100% !important;
+  color: #2b2b2b !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  text-overflow: ellipsis !important;
+}
+
+/* Ensure inner spans/labels fill the left area */
+.sidebar-section.filter-section .list-tags .pill-label,
+.sidebar-section.filter-section .tag > span,
+.sidebar-section.filter-section .control-input > span,
+.sidebar-section.filter-section li.add-list-group-by.sidebar-action > a > span,
+.sidebar-section.filter-section li.add-list-group-by.sidebar-action button > span {
+  display: block !important;
+  flex: 1 1 auto !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  margin-right: 8px !important;
+}
+
+/* Add a dropdown caret on the right for anchors/buttons (matches Assigned) */
+.sidebar-section.filter-section .dropdown-toggle:after,
+.sidebar-section.filter-section li.add-list-group-by.sidebar-action > a:after,
+.sidebar-section.filter-section li.add-list-group-by.sidebar-action button:after {
+  content: "\25BE" !important; /* small down-triangle */
+  font-size: 12px !important;
+  color: #999 !important;
+  margin-left: 8px !important;
+  flex: 0 0 auto !important;
+}
+
+/* Ensure buttons / anchors don't show button background or inner containers */
+.sidebar-section.filter-section li.add-list-group-by.sidebar-action > a,
+.sidebar-section.filter-section li.add-list-group-by.sidebar-action button,
+.sidebar-section.filter-section .list-tags a,
+.sidebar-section.filter-section .list-tags button {
+  background: transparent !important; /* outer rule handles white background */
+  border: none !important;
+  width: 100% !important;
+  text-align: left !important;
+  padding: 0 !important;
+}
+
+/* Remove red panel background on parent containers so white fields stand out */
+.sidebar-section.filter-section,
+.sidebar-section.filter-section .panel,
+.sidebar-section.filter-section .panel-body {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Hover/focus look exactly the same */
+.sidebar-section.filter-section .frappe-control:hover,
+.sidebar-section.filter-section .frappe-control:focus,
+.sidebar-section.filter-section .list-tags a:hover,
+.sidebar-section.filter-section .list-tags button:hover,
+.sidebar-section.filter-section li.add-list-group-by.sidebar-action:hover,
+.sidebar-section.filter-section .dropdown-toggle:hover {
+  background: #ffffff !important;
+  border-color: #e6e6e6 !important;
+  box-shadow: none !important;
+  color: #2b2b2b !important;
+}
+
+/* If any inner icons exist (e.g. caret inside element), push them to the right */
+.sidebar-section.filter-section .frappe-control .octicon,
+.sidebar-section.filter-section .frappe-control .caret,
+.sidebar-section.filter-section li.add-list-group-by.sidebar-action .octicon,
+.sidebar-section.filter-section .list-tags .icon {
+  margin-left: 8px !important;
+  flex: 0 0 auto !important;
+}
+
+/* Last fallback: if a very specific element still looks different, override with extreme specificity */
+div.sidebar-section.filter-section li.add-list-group-by.sidebar-action > a,
+div.sidebar-section.filter-section .list-tags .pill-label,
+div.sidebar-section.filter-section .form-control {
+  background: #fff !important;
+  border: 1px solid #e6e6e6 !important;
+  height: 38px !important;
+  line-height: 38px !important;
+}
+
+
 
 
 
