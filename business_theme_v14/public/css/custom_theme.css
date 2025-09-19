@@ -3006,7 +3006,7 @@ header * {
 /* Remove ONLY the extra space after "Hide Saved" */
 /* Sidebar section: remove extra gap but allow full scroll */
 .sidebar-section.save-filter-section {
-/*     margin: 0 !important; */
+     margin-top: 20 !important;
     padding: 0 !important;
     height: auto !important;
     min-height: 0 !important;
