@@ -3,7 +3,7 @@
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
-   margin-top: -10px !important;
+/*    margin-top: -10px !important; */
 }
 
 /* remove borders and background from fields inside */
@@ -43,7 +43,7 @@
   font-size: 16px !important;    /* increase size (adjust as needed) */
   color: #111 !important;        /* readable dark color */
 
-  margin-top: 8px !important;    /* move it down */
+/*   margin-top: 8px !important;     */
   padding: 2px 0 !important;     /* small vertical spacing */
   cursor: default !important;    /* make it behave like text */
 }
@@ -70,7 +70,7 @@
 
 /* Final cleaned Save Filter positioning */
 .sidebar-section.save-filter-section {
-    margin-top: 19px !important;   /* controls space from above */
+    margin-top: 10px !important;   /* controls space from above */
     margin-bottom: 0 !important;   /* no extra gap below */
     padding: 0 !important;
     background: transparent !important;
