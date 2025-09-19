@@ -1,16 +1,4 @@
-/* Remove border and hover background from "Edit Filters" button */
-li.add-list-group-by.sidebar-action {
-    border: none !important;
-    background: transparent !important;
-    box-shadow: none !important;
-}
 
-/* Remove hover background specifically */
-li.add-list-group-by.sidebar-action:hover {
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-}
 
 
 
@@ -2684,12 +2672,12 @@ header * {
     margin-bottom: 6px !important;
     width: 100% !important;
 }
-.sidebar-section.filter-section .btn:hover,
+/* .sidebar-section.filter-section .btn:hover,
 .sidebar-section.save-filter-section .btn:hover {
 /*     background: #2563eb !important; */
     color: #fff !important;
     border-color: #2563eb !important;
-}
+} */
 
 /* Dropdowns */
 /* ================== DROPDOWN POPUP ================== */
