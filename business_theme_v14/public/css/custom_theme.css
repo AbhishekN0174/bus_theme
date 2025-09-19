@@ -2561,7 +2561,7 @@ header * {
 
 
 
-/* Hover effect */
+/* /* Hover effect */
 .list-sidebar.overlay-sidebar .standard-sidebar-item:hover,
 .list-sidebar.overlay-sidebar .sidebar-item:hover,
 .list-sidebar .module-sidebar-item:hover {
@@ -2569,7 +2569,7 @@ header * {
     color: #fff !important;
     transform: scale(1.02);
     border-radius: 10px !important;
-}
+} */
 
 /* ==================== FILTER SIDEBAR COMPACT GLASS THEME ==================== */
 
@@ -3007,10 +3007,10 @@ header * {
     width: auto !important;
     text-align: center !important;
 }
-.save-filter-section .sidebar-action .btn:hover {
+/* .save-filter-section .sidebar-action .btn:hover {
 /*     background: #2563eb !important; */
     color: #fff !important;
-}
+} */
 
 
 
