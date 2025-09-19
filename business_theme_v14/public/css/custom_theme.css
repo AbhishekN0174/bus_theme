@@ -74,6 +74,35 @@ li.add-list-group-by.sidebar-action *::after {
   display: none !important;
 }
 
+/* Remove box + background from "Edit Filters" */
+li.add-list-group-by.sidebar-action,
+li.add-list-group-by.sidebar-action * {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: auto !important;
+}
+
+/* Remove the red container behind Tags / Show Tags */
+.sidebar-section.filter-section .list-tags {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Remove hover for "Show Tags" button */
+.sidebar-section.filter-section .list-tags li:hover,
+.sidebar-section.filter-section .list-tags li a:hover {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+
 
 
 
