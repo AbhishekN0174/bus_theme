@@ -94,7 +94,13 @@
     display: none !important;
     content: none !important;
 }
-
+.sidebar-section.save-filter-section .sidebar-label {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: #374151 !important;
+    margin-top: 18px !important;
+    text-transform: none !important;
+}
 
 
 
