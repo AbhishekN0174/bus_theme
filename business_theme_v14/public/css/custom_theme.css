@@ -68,14 +68,16 @@
     padding-top: 0 !important;
 } */
 
-/* Move Save Filter block lower */
+/* Final cleaned Save Filter positioning */
 .sidebar-section.save-filter-section {
-    margin-top: 16px !important; /* increase/decrease as needed */
+    margin-top: 19px !important;   /* controls space from above */
+    margin-bottom: 0 !important;   /* no extra gap below */
     padding: 0 !important;
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
 }
+
 
 
 
