@@ -55,6 +55,41 @@ li.add-list-group-by.sidebar-action *:hover {
     box-shadow: none !important;
 }
 
+/* === RESET ALL LIST ITEMS IN FILTER SIDEBAR === */
+.sidebar-section.filter-section li,
+.sidebar-section.filter-section li * {
+    background: #ffffff !important;   /* pure white fields */
+    border: 1px solid #ddd !important;
+    border-radius: 4px !important;
+    padding: 6px 10px !important;
+    margin: 5px 0 !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    width: 100% !important;
+    display: block !important;
+    text-align: left !important;
+}
+
+/* === REMOVE ANY RED BACKGROUND CONTAINERS === */
+.sidebar-section.filter-section,
+.sidebar-section.filter-section .list-tags {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* === KEEP HOVER EXACTLY SAME (NO CHANGE ON HOVER) === */
+.sidebar-section.filter-section li:hover,
+.sidebar-section.filter-section li *:hover {
+    background: #ffffff !important;
+    color: #000 !important;
+    border: 1px solid #ddd !important;
+    box-shadow: none !important;
+}
+
+
 
 
 
