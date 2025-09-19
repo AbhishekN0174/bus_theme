@@ -1,3 +1,23 @@
+/* Remove border and hover background from "Edit Filters" button */
+li.add-list-group-by.sidebar-action {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Remove hover background specifically */
+li.add-list-group-by.sidebar-action:hover {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+
+
+
+
+
+
 /* remove the red/grey container background from Save Filter block */
 .sidebar-section.save-filter-section {
   background: transparent !important;
