@@ -1,4 +1,4 @@
-/* === Completely remove container styles for Edit Filters, Tags, Show Tags === */
+/* === Remove container styles for all filter sections === */
 .sidebar-section.filter-section .list-group-by,
 .sidebar-section.filter-section .list-tags,
 .sidebar-section.filter-section .list-group-by > li,
@@ -10,24 +10,10 @@
     margin: 0 !important;
 }
 
-/* Edit Filters: make it plain text */
+/* === Style Edit Filters same as "Created By" field === */
 .sidebar-section.filter-section .list-group-by li.add-list-group-by.sidebar-action,
 .sidebar-section.filter-section .list-group-by li.add-list-group-by.sidebar-action * {
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    cursor: default !important;
-    display: inline !important;
-}
-
-/* Tags + Show Tags: style as plain inputs */
-.sidebar-section.filter-section .list-tags select,
-.sidebar-section.filter-section .list-tags input,
-.sidebar-section.filter-section .list-tags button,
-.sidebar-section.filter-section .list-tags a {
-    background: #f8f9fa !important;   /* clean input look */
+    background: #f8f9fa !important;   /* light grey background */
     border: 1px solid #ddd !important;
     border-radius: 4px !important;
     padding: 6px 10px !important;
@@ -36,9 +22,30 @@
     width: 100% !important;
     box-shadow: none !important;
     text-align: left !important;
+    display: block !important;
+    cursor: default !important;
 }
 
-/* Remove hover/focus effects */
+/* === Style Tags + Show Tags same as fields === */
+.sidebar-section.filter-section .list-tags select,
+.sidebar-section.filter-section .list-tags input,
+.sidebar-section.filter-section .list-tags button,
+.sidebar-section.filter-section .list-tags a {
+    background: #f8f9fa !important;
+    border: 1px solid #ddd !important;
+    border-radius: 4px !important;
+    padding: 6px 10px !important;
+    margin: 5px 0 !important;
+    color: #000 !important;
+    width: 100% !important;
+    box-shadow: none !important;
+    text-align: left !important;
+    display: block !important;
+}
+
+/* === Remove hover/focus effects === */
+.sidebar-section.filter-section .list-group-by li.add-list-group-by.sidebar-action:hover,
+.sidebar-section.filter-section .list-group-by li.add-list-group-by.sidebar-action *:hover,
 .sidebar-section.filter-section .list-tags button:hover,
 .sidebar-section.filter-section .list-tags a:hover,
 .sidebar-section.filter-section .list-tags select:hover,
@@ -48,6 +55,7 @@
     box-shadow: none !important;
     color: #000 !important;
 }
+
 
 
 
