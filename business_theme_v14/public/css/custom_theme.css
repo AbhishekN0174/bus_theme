@@ -62,6 +62,11 @@
   box-shadow: none !important;
   color: #111 !important;
 }
+/* Pull Save Filter container down below Show Tags */
+.sidebar-section.filter-section + .sidebar-section.save-filter-section {
+    margin-top: 12px !important; /* adjust 8px–16px as you like */
+    padding-top: 0 !important;
+}
 
 
 
