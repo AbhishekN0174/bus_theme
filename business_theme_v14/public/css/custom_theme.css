@@ -63,9 +63,18 @@
   color: #111 !important;
 }
 /* Pull Save Filter container down below Show Tags */
-.sidebar-section.filter-section + .sidebar-section.save-filter-section {
+/* .sidebar-section.filter-section + .sidebar-section.save-filter-section {
     margin-top: 12px !important; /* adjust 8px–16px as you like */
     padding-top: 0 !important;
+} */
+
+/* Move Save Filter block lower */
+.sidebar-section.save-filter-section {
+    margin-top: 16px !important; /* increase/decrease as needed */
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
 
@@ -2976,14 +2985,14 @@ header * {
 
 /* Remove ONLY the extra space after "Hide Saved" */
 /* Sidebar section: remove extra gap but allow full scroll */
-.sidebar-section.save-filter-section {
+/* .sidebar-section.save-filter-section {
     margin: 0 !important;
     padding: 0 !important;
     height: auto !important;
     min-height: 0 !important;
     max-height: none !important;       /* allow it to expand */
     overflow: visible !important;      /* don’t cut content */
-}
+} */
 
 /* Ensure the parent UL doesn’t force extra gap */
 .list-unstyled.sidebar-menu {
@@ -3144,9 +3153,9 @@ header * {
 }
 
 /* Pull the Save Filter section up */
-.sidebar-section.filter-section + .sidebar-section.save-filter-section {
+/* .sidebar-section.filter-section + .sidebar-section.save-filter-section {
     margin-top: 8px !important;  /* small clean gap */
-}
+} */
 /* ==================== FIX DROPDOWN/POPUP POSITION ==================== */
 
 /* Make sure parent container allows absolute positioning */
