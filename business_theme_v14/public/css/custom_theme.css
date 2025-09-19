@@ -1,3 +1,105 @@
+/* Remove box + background from "Edit Filters" */
+li.add-list-group-by.sidebar-action,
+li.add-list-group-by.sidebar-action * {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: auto !important;
+}
+
+/* Remove the red container behind Tags / Show Tags */
+.sidebar-section.filter-section .list-tags {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Remove hover for "Show Tags" button */
+.sidebar-section.filter-section .list-tags li:hover,
+.sidebar-section.filter-section .list-tags li a:hover {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+/* === Make "Edit Filters" plain text (no box / no hover) === */
+
+/* target the list item and any immediate inner elements */
+.layout-side-section
+.list-unstyled.sidebar-menu
+.sidebar-section.filter-section
+.list-group-by
+li.add-list-group-by.sidebar-action,
+.layout-side-section
+.list-unstyled.sidebar-menu
+.sidebar-section.filter-section
+.list-group-by
+li.add-list-group-by.sidebar-action * {
+  background: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: auto !important;
+  display: inline-block !important;
+  border-radius: 0 !important;
+}
+
+/* remove hover / focus styles */
+.layout-side-section
+.list-unstyled.sidebar-menu
+.sidebar-section.filter-section
+.list-group-by
+li.add-list-group-by.sidebar-action:hover,
+.layout-side-section
+.list-unstyled.sidebar-menu
+.sidebar-section.filter-section
+.list-group-by
+li.add-list-group-by.sidebar-action:hover * ,
+.layout-side-section
+.list-unstyled.sidebar-menu
+.sidebar-section.filter-section
+.list-group-by
+li.add-list-group-by.sidebar-action a:hover,
+.layout-side-section
+.list-unstyled.sidebar-menu
+.sidebar-section.filter-section
+.list-group-by
+li.add-list-group-by.sidebar-action button:hover {
+  background: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* remove pseudo-elements that might draw a box */
+.layout-side-section
+.list-unstyled.sidebar-menu
+.sidebar-section.filter-section
+.list-group-by
+li.add-list-group-by.sidebar-action::before,
+.layout-side-section
+.list-unstyled.sidebar-menu
+.sidebar-section.filter-section
+.list-group-by
+li.add-list-group-by.sidebar-action::after,
+.layout-side-section
+.list-unstyled.sidebar-menu
+.sidebar-section.filter-section
+.list-group-by
+li.add-list-group-by.sidebar-action *::before,
+.layout-side-section
+.list-unstyled.sidebar-menu
+.sidebar-section.filter-section
+.list-group-by
+li.add-list-group-by.sidebar-action *::after {
+  content: none !important;
+  display: none !important;
+}
 
 
 /* Remove box + background from "Edit Filters" */
