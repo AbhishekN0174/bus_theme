@@ -1,21 +1,8 @@
-/* === Make "Edit Filters" look like a field (same as Tags/Created By) === */
-li.add-list-group-by.sidebar-action,
-li.add-list-group-by.sidebar-action * {
-    background: #ffffff !important;   /* white field */
-    border: 1px solid #ddd !important;
-    border-radius: 4px !important;
-    padding: 6px 10px !important;
-    margin: 5px 0 !important;
-    color: #000 !important;
-    width: 100% !important;
-    display: block !important;
-    box-shadow: none !important;
-    text-align: left !important;
-}
-
-/* === Remove red container completely === */
-.sidebar-section.filter-section,
-.sidebar-section.filter-section .list-tags {
+/* === Completely remove container styles for Edit Filters, Tags, Show Tags === */
+.sidebar-section.filter-section .list-group-by,
+.sidebar-section.filter-section .list-tags,
+.sidebar-section.filter-section .list-group-by > li,
+.sidebar-section.filter-section .list-tags > li {
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
@@ -23,23 +10,45 @@ li.add-list-group-by.sidebar-action * {
     margin: 0 !important;
 }
 
-/* === Standardize all dropdowns/inputs/buttons to clean white fields === */
-.sidebar-section.filter-section select,
-.sidebar-section.filter-section input,
-.sidebar-section.filter-section .control-input,
+/* Edit Filters: make it plain text */
+.sidebar-section.filter-section .list-group-by li.add-list-group-by.sidebar-action,
+.sidebar-section.filter-section .list-group-by li.add-list-group-by.sidebar-action * {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    cursor: default !important;
+    display: inline !important;
+}
+
+/* Tags + Show Tags: style as plain inputs */
+.sidebar-section.filter-section .list-tags select,
+.sidebar-section.filter-section .list-tags input,
 .sidebar-section.filter-section .list-tags button,
 .sidebar-section.filter-section .list-tags a {
-    background: #ffffff !important;   /* pure white */
-   
+    background: #f8f9fa !important;   /* clean input look */
+    border: 1px solid #ddd !important;
     border-radius: 4px !important;
     padding: 6px 10px !important;
     margin: 5px 0 !important;
     color: #000 !important;
     width: 100% !important;
-    text-align: left !important;
     box-shadow: none !important;
-    display: block !important;
+    text-align: left !important;
 }
+
+/* Remove hover/focus effects */
+.sidebar-section.filter-section .list-tags button:hover,
+.sidebar-section.filter-section .list-tags a:hover,
+.sidebar-section.filter-section .list-tags select:hover,
+.sidebar-section.filter-section .list-tags input:hover {
+    background: #f8f9fa !important;
+    border: 1px solid #ddd !important;
+    box-shadow: none !important;
+    color: #000 !important;
+}
+
 
 
 
