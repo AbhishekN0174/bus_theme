@@ -30,7 +30,7 @@ li.add-list-group-by.sidebar-action * {
 .sidebar-section.filter-section .list-tags button,
 .sidebar-section.filter-section .list-tags a {
     background: #ffffff !important;   /* pure white */
-    border: 1px solid #ddd !important;
+   
     border-radius: 4px !important;
     padding: 6px 10px !important;
     margin: 5px 0 !important;
@@ -41,19 +41,7 @@ li.add-list-group-by.sidebar-action * {
     display: block !important;
 }
 
-/* === Remove hover/focus styles (keep white always) === */
-.sidebar-section.filter-section select:hover,
-.sidebar-section.filter-section input:hover,
-.sidebar-section.filter-section .control-input:hover,
-.sidebar-section.filter-section .list-tags button:hover,
-.sidebar-section.filter-section .list-tags a:hover,
-li.add-list-group-by.sidebar-action:hover,
-li.add-list-group-by.sidebar-action *:hover {
-    background: #ffffff !important;
-    color: #000 !important;
-    border: 1px solid #ddd !important;
-    box-shadow: none !important;
-}
+
 
 
 
