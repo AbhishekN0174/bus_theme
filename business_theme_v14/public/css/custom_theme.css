@@ -1,4 +1,4 @@
-/* Remove box + background from "Edit Filters" */
+/* === Make "Edit Filters" plain text === */
 li.add-list-group-by.sidebar-action,
 li.add-list-group-by.sidebar-action * {
     background: transparent !important;
@@ -6,10 +6,13 @@ li.add-list-group-by.sidebar-action * {
     box-shadow: none !important;
     padding: 0 !important;
     margin: 0 !important;
+    display: inline !important;
     width: auto !important;
+    cursor: default !important;
 }
 
-/* Remove the red container behind Tags / Show Tags */
+/* === Remove red container from filter sections === */
+.sidebar-section.filter-section,
 .sidebar-section.filter-section .list-tags {
     background: transparent !important;
     border: none !important;
@@ -18,117 +21,36 @@ li.add-list-group-by.sidebar-action * {
     margin: 0 !important;
 }
 
-/* Remove hover for "Show Tags" button */
-.sidebar-section.filter-section .list-tags li:hover,
-.sidebar-section.filter-section .list-tags li a:hover {
-    background: transparent !important;
-    border: none !important;
+/* === Standardize all dropdowns/inputs to look like "Created By" === */
+.sidebar-section.filter-section select,
+.sidebar-section.filter-section input,
+.sidebar-section.filter-section .control-input,
+.sidebar-section.filter-section .list-tags button,
+.sidebar-section.filter-section .list-tags a {
+    background: #f8f9fa !important;   /* light grey like your image */
+    border: 1px solid #ddd !important;
+    border-radius: 4px !important;
+    padding: 6px 10px !important;
+    margin: 5px 0 !important;
+    color: #000 !important;
+    width: 100% !important;
+    text-align: left !important;
+    box-shadow: none !important;
+    display: block !important;
+}
+
+/* === Remove hover/focus effects === */
+.sidebar-section.filter-section select:hover,
+.sidebar-section.filter-section input:hover,
+.sidebar-section.filter-section .control-input:hover,
+.sidebar-section.filter-section .list-tags button:hover,
+.sidebar-section.filter-section .list-tags a:hover {
+    background: #f8f9fa !important;
+    color: #000 !important;
+    border: 1px solid #ddd !important;
     box-shadow: none !important;
 }
-/* === Make "Edit Filters" plain text (no box / no hover) === */
 
-/* target the list item and any immediate inner elements */
-.layout-side-section
-.list-unstyled.sidebar-menu
-.sidebar-section.filter-section
-.list-group-by
-li.add-list-group-by.sidebar-action,
-.layout-side-section
-.list-unstyled.sidebar-menu
-.sidebar-section.filter-section
-.list-group-by
-li.add-list-group-by.sidebar-action * {
-  background: transparent !important;
-  background-image: none !important;
-  border: 0 !important;
-  box-shadow: none !important;
-  -webkit-box-shadow: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  width: auto !important;
-  display: inline-block !important;
-  border-radius: 0 !important;
-}
-
-/* remove hover / focus styles */
-.layout-side-section
-.list-unstyled.sidebar-menu
-.sidebar-section.filter-section
-.list-group-by
-li.add-list-group-by.sidebar-action:hover,
-.layout-side-section
-.list-unstyled.sidebar-menu
-.sidebar-section.filter-section
-.list-group-by
-li.add-list-group-by.sidebar-action:hover * ,
-.layout-side-section
-.list-unstyled.sidebar-menu
-.sidebar-section.filter-section
-.list-group-by
-li.add-list-group-by.sidebar-action a:hover,
-.layout-side-section
-.list-unstyled.sidebar-menu
-.sidebar-section.filter-section
-.list-group-by
-li.add-list-group-by.sidebar-action button:hover {
-  background: transparent !important;
-  box-shadow: none !important;
-  outline: none !important;
-}
-
-/* remove pseudo-elements that might draw a box */
-.layout-side-section
-.list-unstyled.sidebar-menu
-.sidebar-section.filter-section
-.list-group-by
-li.add-list-group-by.sidebar-action::before,
-.layout-side-section
-.list-unstyled.sidebar-menu
-.sidebar-section.filter-section
-.list-group-by
-li.add-list-group-by.sidebar-action::after,
-.layout-side-section
-.list-unstyled.sidebar-menu
-.sidebar-section.filter-section
-.list-group-by
-li.add-list-group-by.sidebar-action *::before,
-.layout-side-section
-.list-unstyled.sidebar-menu
-.sidebar-section.filter-section
-.list-group-by
-li.add-list-group-by.sidebar-action *::after {
-  content: none !important;
-  display: none !important;
-}
-
-
-/* Remove box + background from "Edit Filters" */
-li.add-list-group-by.sidebar-action,
-li.add-list-group-by.sidebar-action * {
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    width: auto !important;
-}
-
-/* Remove the red container behind Tags / Show Tags */
-.sidebar-section.filter-section .list-tags {
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
-/* Remove hover for "Show Tags" button */
-.sidebar-section.filter-section .list-tags li:hover,
-.sidebar-section.filter-section .list-tags li a:hover {
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-}
 
 
 
