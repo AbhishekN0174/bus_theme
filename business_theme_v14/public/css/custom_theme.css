@@ -78,6 +78,79 @@
     font-size: 13px !important;
     line-height: 1.3 !important;
 }
+/* ---------- container anchor: ensure dropdown is positioned relative to input ---------- */
+.sidebar-section.filter-section .list-tags {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* ---------- target common popup classes used by Frappe/tag plugins ---------- */
+.sidebar-section.filter-section .list-tags .awesomplete,
+.sidebar-section.filter-section .list-tags .awesomplete ul,
+.sidebar-section.filter-section .list-tags .ui-autocomplete,
+.sidebar-section.filter-section .list-tags .ui-autocomplete ul,
+.sidebar-section.filter-section .list-tags .tt-menu,
+.sidebar-section.filter-section .list-tags .typeahead,
+.sidebar-section.filter-section .list-tags .dropdown-menu,
+.sidebar-section.filter-section .list-tags .select2-dropdown {
+  position: absolute !important;
+  top: 100% !important;             /* sit below the input, without affecting layout */
+  left: 0 !important;
+  margin: 4px 0 0 0 !important;
+  width: calc(100% - 0px) !important; /* match input width */
+  max-height: 160px !important;     /* smaller popup; will scroll if more items */
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  background: #ffffff !important;
+  border: 1px solid #ddd !important;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08) !important;
+  padding: 4px 0 !important;
+  font-size: 13px !important;       /* compact text */
+  line-height: 1.2 !important;
+  z-index: 9999 !important;         /* appear above other fields */
+  -webkit-overflow-scrolling: touch !important;
+}
+
+/* ---------- make each dropdown item compact ---------- */
+.sidebar-section.filter-section .list-tags .awesomplete li,
+.sidebar-section.filter-section .list-tags .ui-menu-item,
+.sidebar-section.filter-section .list-tags .tt-suggestion,
+.sidebar-section.filter-section .list-tags .typeahead .suggestion,
+.sidebar-section.filter-section .list-tags .select2-results__option,
+.sidebar-section.filter-section .list-tags .dropdown-item {
+  padding: 6px 8px !important;      /* reduced item height */
+  font-size: 13px !important;
+  line-height: 1.2 !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ---------- ensure popup does not expand to full page width or add extra gap ---------- */
+.sidebar-section.filter-section .list-tags .awesomplete,
+.sidebar-section.filter-section .list-tags .ui-autocomplete,
+.sidebar-section.filter-section .list-tags .select2-dropdown {
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* ---------- if plugin appends dropdown to body (Select2 / choices), constrain it globally ---------- */
+body .select2-container--open .select2-dropdown,
+body .awesomplete,
+body .tt-menu {
+  max-height: 160px !important;
+  overflow-y: auto !important;
+  font-size: 13px !important;
+  z-index: 9999 !important;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08) !important;
+}
+
+/* ---------- small visual tweak if you want the popup to overlap the next field slightly (optional) ---------- */
+.sidebar-section.filter-section .list-tags .awesomplete,
+.sidebar-section.filter-section .list-tags .ui-autocomplete {
+  margin-top: 6px !important;
+}
+
 
 
 
