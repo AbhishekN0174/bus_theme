@@ -1,7 +1,12 @@
-/* === Make "Edit Filters" look like a field (same as Tags/Created By) === */
+/* === Standard field style (like "Assigned To") === */
+.sidebar-section.filter-section select,
+.sidebar-section.filter-section input,
+.sidebar-section.filter-section .control-input,
+.sidebar-section.filter-section .list-tags button,
+.sidebar-section.filter-section .list-tags a,
 li.add-list-group-by.sidebar-action,
 li.add-list-group-by.sidebar-action * {
-    background: #ffffff !important;   /* white field */
+    background: #ffffff !important;   /* white background */
     border: 1px solid #ddd !important;
     border-radius: 4px !important;
     padding: 6px 10px !important;
@@ -11,6 +16,7 @@ li.add-list-group-by.sidebar-action * {
     display: block !important;
     box-shadow: none !important;
     text-align: left !important;
+    font-weight: normal !important;
 }
 
 /* === Remove red container completely === */
@@ -23,25 +29,7 @@ li.add-list-group-by.sidebar-action * {
     margin: 0 !important;
 }
 
-/* === Standardize all dropdowns/inputs/buttons to clean white fields === */
-.sidebar-section.filter-section select,
-.sidebar-section.filter-section input,
-.sidebar-section.filter-section .control-input,
-.sidebar-section.filter-section .list-tags button,
-.sidebar-section.filter-section .list-tags a {
-    background: #ffffff !important;   /* pure white */
-    border: 1px solid #ddd !important;
-    border-radius: 4px !important;
-    padding: 6px 10px !important;
-    margin: 5px 0 !important;
-    color: #000 !important;
-    width: 100% !important;
-    text-align: left !important;
-    box-shadow: none !important;
-    display: block !important;
-}
-
-/* === Remove hover/focus styles (keep white always) === */
+/* === Keep hover same as normal === */
 .sidebar-section.filter-section select:hover,
 .sidebar-section.filter-section input:hover,
 .sidebar-section.filter-section .control-input:hover,
