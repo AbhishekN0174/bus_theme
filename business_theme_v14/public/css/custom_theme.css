@@ -2562,14 +2562,14 @@ header * {
 
 
 /* /* Hover effect */
-.list-sidebar.overlay-sidebar .standard-sidebar-item:hover,
+/* .list-sidebar.overlay-sidebar .standard-sidebar-item:hover,
 .list-sidebar.overlay-sidebar .sidebar-item:hover,
 .list-sidebar .module-sidebar-item:hover {
     background: #d5bf83 !important;    /* brighter hover color for sidebar menu item */
     color: #fff !important;
     transform: scale(1.02);
     border-radius: 10px !important;
-} */
+} */ */
 
 /* ==================== FILTER SIDEBAR COMPACT GLASS THEME ==================== */
 
