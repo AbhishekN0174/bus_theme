@@ -166,6 +166,48 @@ div.sidebar-section.filter-section .form-control {
   height: 38px !important;
   line-height: 38px !important;
 }
+/* === Force Tags and Show Tags to look like Assigned/Created fields === */
+.sidebar-section.filter-section .list-tags,
+.sidebar-section.filter-section .list-tags a,
+.sidebar-section.filter-section .list-tags button {
+    background: #ffffff !important;   /* same white background */
+    border: 1px solid #ddd !important;
+    border-radius: 6px !important;
+    height: 38px !important;
+    line-height: 38px !important;
+    padding: 0 12px !important;
+    margin: 6px 0 !important;
+    width: 100% !important;
+    display: block !important;
+    color: #2b2b2b !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    text-align: left !important;
+    box-shadow: none !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+}
+
+/* Ensure the inner "Show Tags" label behaves like field text */
+.sidebar-section.filter-section .list-tags a span,
+.sidebar-section.filter-section .list-tags button span {
+    display: block !important;
+    flex: 1 1 auto !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+}
+
+/* Add caret (down arrow) on the right for Show Tags to mimic dropdown */
+.sidebar-section.filter-section .list-tags a:after,
+.sidebar-section.filter-section .list-tags button:after {
+    content: "\25BE" !important; /* ▼ */
+    font-size: 12px !important;
+    color: #999 !important;
+    margin-left: 8px !important;
+    float: right !important;
+}
 
 
 
