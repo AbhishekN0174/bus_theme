@@ -160,14 +160,14 @@ body .tt-menu {
     background: #f8f9fa !important;   /* same background as other fields */
     border: none !important; /* same border as selects */
     border-radius: 6px !important;
-    padding: 6px 6px !important;     /* same padding as selects */
+    padding: 4px 8px !important;     /* same padding as selects */
     margin: 5px 0 !important;
     color: #000 !important;
-    width: 50% !important;
+    width: 100% !important;
     box-shadow: none !important;
     text-align: left !important;
     display: block !important;
-    line-height: 1 !important;
+    line-height: 1.2 !important;
     font-size: 13px !important;       /* same font size */
     height: auto !important;          /* let it size like selects */
     cursor: default !important;
