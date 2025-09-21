@@ -208,7 +208,7 @@ body .tt-menu {
 .sidebar-section.filter-section .list-tags .tt-suggestion:hover,
 .sidebar-section.filter-section .list-tags .select2-results__option:hover {
     background: #f1f1f1 !important;  /* light grey hover */
-    color: #000 !important;
+   
 }
 
 
