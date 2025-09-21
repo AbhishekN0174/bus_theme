@@ -1,3 +1,19 @@
+frappe.ready(() => {
+  // Close awesomplete / autocomplete dropdowns on blur
+  $(document).on("blur", ".sidebar-section.filter-section .list-tags input", function () {
+    // Hide any autocomplete / tag dropdowns
+    $(".awesomplete, .ui-autocomplete, .tt-menu, .select2-dropdown, .dropdown-menu").hide();
+  });
+
+  // Optional: also close if user clicks anywhere outside sidebar
+  $(document).on("click", function (e) {
+    if (!$(e.target).closest(".sidebar-section.filter-section .list-tags").length) {
+      $(".awesomplete, .ui-autocomplete, .tt-menu, .select2-dropdown, .dropdown-menu").hide();
+    }
+  });
+});
+
+
 // // Frappe HR Horizontal Navigation Creator
 // // Creates modern navigation cards like the reference image
 
