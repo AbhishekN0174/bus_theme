@@ -186,6 +186,18 @@ body .tt-menu {
     line-height: 1.3 !important;
     z-index: 9999 !important;            /* appear above fields */
 }
+.sidebar-section.filter-section .list-tags .dropdown-menu li,
+.sidebar-section.filter-section .list-tags .awesomplete li,
+.sidebar-section.filter-section .list-tags .ui-menu-item,
+.sidebar-section.filter-section .list-tags .tt-suggestion,
+.sidebar-section.filter-section .list-tags .select2-results__option {
+    background: transparent !important;
+    border: none !important;
+    padding: 6px 10px !important;
+    font-size: 13px !important;
+    color: #000 !important;
+    cursor: pointer;
+}
 
 
    
