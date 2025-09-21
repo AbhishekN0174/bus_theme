@@ -12,6 +12,22 @@ frappe.ready(() => {
     }
   });
 });
+// Close Tags popup when mouse leaves
+document.addEventListener("DOMContentLoaded", function() {
+  const tagField = document.querySelector(".sidebar-section.filter-section .list-tags");
+  const popup = tagField?.querySelector(".dropdown-menu, .awesomplete, .ui-autocomplete, .tt-menu, .select2-dropdown");
+
+  if (tagField) {
+    tagField.addEventListener("mouseleave", function() {
+      // hide popup when cursor leaves the tags field area
+      let openPopup = document.querySelector(".sidebar-section.filter-section .list-tags .dropdown-menu, .sidebar-section.filter-section .list-tags .awesomplete, .sidebar-section.filter-section .list-tags .ui-autocomplete, .sidebar-section.filter-section .list-tags .tt-menu, .sidebar-section.filter-section .list-tags .select2-dropdown");
+      if (openPopup) {
+        openPopup.style.display = "none";
+      }
+    });
+  }
+});
+
 
 
 // // Frappe HR Horizontal Navigation Creator
