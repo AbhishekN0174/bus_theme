@@ -10,7 +10,7 @@
     margin: 0 !important;
 }
 
-/* === Edit Filters styled like input but smaller height === */
+/* === Edit Filters styled like input but smaller height == */
 .sidebar-section.filter-section .list-group-by li.add-list-group-by.sidebar-action,
 .sidebar-section.filter-section .list-group-by li.add-list-group-by.sidebar-action * {
     background: #f8f9fa !important;   /* light grey background */
