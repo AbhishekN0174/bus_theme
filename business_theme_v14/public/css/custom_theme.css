@@ -210,50 +210,6 @@ body .tt-menu {
     background: #f1f1f1 !important;  /* light grey hover */
     color: #000 !important;
 }
-/* Edit Filters – same look/size as Created By */
-.sidebar-section.filter-section .list-group-by li.add-list-group-by.sidebar-action,
-.sidebar-section.filter-section .list-group-by li.add-list-group-by.sidebar-action * {
-    background: #f8f9fa !important;
-    border: 1px solid #ddd !important;
-    border-radius: 4px !important;
-    padding: 4px 8px !important;   /* smaller padding */
-    margin: 5px 0 !important;
-    color: #000 !important;
-    width: 100% !important;
-    height: 32px !important;       /* force smaller height */
-    line-height: 20px !important;  /* center text */
-    font-size: 13px !important;
-    box-shadow: none !important;
-}
-
-/* Remove border/hover effect */
-.sidebar-section.filter-section .list-group-by li.add-list-group-by.sidebar-action:hover,
-.sidebar-section.filter-section .list-group-by li.add-list-group-by.sidebar-action *:hover,
-.sidebar-section.filter-section .list-group-by li.add-list-group-by.sidebar-action:focus,
-.sidebar-section.filter-section .list-group-by li.add-list-group-by.sidebar-action *:focus {
-    border: 1px solid #ddd !important;
-    background: #f8f9fa !important;
-    box-shadow: none !important;
-}
-/* Default hidden */
-.sidebar-section.filter-section .list-tags .dropdown-menu,
-.sidebar-section.filter-section .list-tags .awesomplete ul,
-.sidebar-section.filter-section .list-tags .ui-autocomplete,
-.sidebar-section.filter-section .list-tags .tagit-autocomplete,
-.sidebar-section.filter-section .list-tags .tt-menu,
-.sidebar-section.filter-section .list-tags .select2-results__options {
-    display: none !important;
-}
-
-/* Show only when active/focused */
-.sidebar-section.filter-section .list-tags input:focus + .dropdown-menu,
-.sidebar-section.filter-section .list-tags input:focus + .awesomplete ul,
-.sidebar-section.filter-section .list-tags input:focus + .ui-autocomplete,
-.sidebar-section.filter-section .list-tags input:focus + .tagit-autocomplete,
-.sidebar-section.filter-section .list-tags input:focus + .tt-menu,
-.sidebar-section.filter-section .list-tags input:focus + .select2-results__options {
-    display: block !important;
-}
 
 
 
