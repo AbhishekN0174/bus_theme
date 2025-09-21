@@ -151,64 +151,11 @@ body .tt-menu {
   margin-top: 6px !important;
 }
 
-/* ====== CLEAN "Edit Filters" TO MATCH OTHER FIELDS ====== */
-.sidebar-section.filter-section .btn.btn-default {
-  background: #fff !important;
-  border: none !important;
-  box-shadow: none !important;
-  color: #333 !important;
-  padding: 6px 10px !important;
-  font-size: 13px !important;
-  border-radius: 4px !important;
-  text-align: left !important;
-  width: 100% !important;
-}
 
-/* Remove border hover/focus effect */
-.sidebar-section.filter-section .btn.btn-default:hover,
-.sidebar-section.filter-section .btn.btn-default:focus {
-  background: #fff !important;
-  border: none !important;
-  box-shadow: none !important;
-  color: #333 !important;
-}
 
-/* ====== CLEAN TAG POPUP (NO RED BOX, JUST TEXT) ====== */
-.sidebar-section.filter-section .list-tags .dropdown-menu,
-.sidebar-section.filter-section .list-tags .tt-menu,
-.sidebar-section.filter-section .list-tags .awesomplete ul,
-.sidebar-section.filter-section .list-tags .ui-autocomplete,
-.sidebar-section.filter-section .list-tags .select2-results__options {
-  background: transparent !important;   /* remove red container */
-  border: none !important;              /* remove border */
-  box-shadow: none !important;
-  padding: 0 !important;
-  margin: 2px 0 0 0 !important;
-}
 
-/* Each item inside dropdown */
-.sidebar-section.filter-section .list-tags .dropdown-menu li,
-.sidebar-section.filter-section .list-tags .tt-suggestion,
-.sidebar-section.filter-section .list-tags .awesomplete li,
-.sidebar-section.filter-section .list-tags .ui-menu-item,
-.sidebar-section.filter-section .list-tags .select2-results__option {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 4px 6px !important;
-  font-size: 13px !important;
-  color: #333 !important;              /* simple text */
-}
 
-/* Remove hover highlight */
-.sidebar-section.filter-section .list-tags .dropdown-menu li:hover,
-.sidebar-section.filter-section .list-tags .tt-suggestion:hover,
-.sidebar-section.filter-section .list-tags .awesomplete li:hover,
-.sidebar-section.filter-section .list-tags .ui-menu-item:hover,
-.sidebar-section.filter-section .list-tags .select2-results__option:hover {
-  background: transparent !important;
-  color: #000 !important;
-}
+
 
 
 
