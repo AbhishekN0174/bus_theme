@@ -288,7 +288,7 @@ body .tt-menu {
   box-shadow: none !important;
 
   font-weight: 600 !important;   /* bold */
-  font-size: 16px !important;    /* increase size (adjust as needed) */
+  font-size: 12px !important;    /* increase size (adjust as needed) */
   color: #111 !important;        /* readable dark color */
 
 /*   margin-top: 8px !important;     */
