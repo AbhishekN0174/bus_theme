@@ -1,33 +1,8 @@
-/* ================= CLEAN SIDEBAR FIELDS ================= */
-
-/* --- Edit Filters: make it look like other fields --- */
-li.add-list-group-by.sidebar-action,
-li.add-list-group-by.sidebar-action * {
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    padding: 2px 6px !important;   /* smaller padding for equal height */
-    margin: 0 !important;
-    width: auto !important;
-    display: inline-block !important;
-    border-radius: 0 !important;
-    font-size: 13px !important;    /* match other filter font size */
-    line-height: 1.4 !important;
-}
-
-/* remove hover/focus for Edit Filters */
-li.add-list-group-by.sidebar-action:hover,
-li.add-list-group-by.sidebar-action *:hover,
-li.add-list-group-by.sidebar-action:focus,
-li.add-list-group-by.sidebar-action *:focus {
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    outline: none !important;
-}
-
-/* --- Tags / Show Tags container: plain field look --- */
-.sidebar-section.filter-section .list-tags {
+/* === Remove container styles for al filter sections === */
+.sidebar-section.filter-section .list-group-by,
+.sidebar-section.filter-section .list-tags,
+.sidebar-section.filter-section .list-group-by > li,
+.sidebar-section.filter-section .list-tags > li {
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
@@ -35,57 +10,201 @@ li.add-list-group-by.sidebar-action *:focus {
     margin: 0 !important;
 }
 
-/* remove hover background for Tags/Show Tags */
-.sidebar-section.filter-section .list-tags li:hover,
-.sidebar-section.filter-section .list-tags li a:hover {
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    outline: none !important;
-}
-
-/* ================= TAGS POPUP ================= */
-
-/* Popup box styling */
-.list-tag-preview {
-    position: absolute !important;
-    z-index: 9999 !important;
-    min-width: 140px !important;   /* smaller popup */
-    max-width: 220px !important;
-    background: #fff !important;   /* light background */
+/* === Edit Filters styled like input but smaller height == */
+/* Edit Filters – same look/size as Created By */
+.sidebar-section.filter-section .list-group-by li.add-list-group-by.sidebar-action,
+.sidebar-section.filter-section .list-group-by li.add-list-group-by.sidebar-action * {
+    background: #f8f9fa !important;
     border: 1px solid #ddd !important;
-    border-radius: 6px !important;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15) !important;
-    padding: 6px 10px !important;
+    border-radius: 4px !important;
+    padding: 4px 8px !important;   /* smaller padding */
+    margin: 5px 0 !important;
+    color: #000 !important;
+    width: 100% !important;
+    height: 32px !important;       /* force smaller height */
+    line-height: 20px !important;  /* center text */
     font-size: 13px !important;
-    line-height: 1.4 !important;
-    display: none;  /* hidden by default */
+    box-shadow: none !important;
 }
 
-/* Show popup only when hovering over Tags/Show Tags */
-.sidebar-section.filter-section .list-tags:hover .list-tag-preview {
+
+
+/* === Style Tags + Show Tags same as fields === */
+.sidebar-section.filter-section .list-tags select,
+.sidebar-section.filter-section .list-tags input,
+.sidebar-section.filter-section .list-tags button,
+.sidebar-section.filter-section .list-tags a {
+    background: #f8f9fa !important;
+    border: 1px solid #ddd !important;
+    border-radius: 4px !important;
+    padding: 6px 10px !important;
+    margin: 5px 0 !important;
+    color: #000 !important;
+    width: 100% !important;
+    box-shadow: none !important;
+    text-align: left !important;
     display: block !important;
 }
 
-/* Hide popup when cursor moves away */
-.sidebar-section.filter-section .list-tags:not(:hover) .list-tag-preview {
-    display: none !important;
+/* === Remove hover/focus effects === */
+.sidebar-section.filter-section .list-group-by li.add-list-group-by.sidebar-action:hover,
+.sidebar-section.filter-section .list-group-by li.add-list-group-by.sidebar-action *:hover,
+.sidebar-section.filter-section .list-group-by li.add-list-group-by.sidebar-action:focus,
+.sidebar-section.filter-section .list-group-by li.add-list-group-by.sidebar-action *:focus {
+    border: 1px solid #ddd !important;
+    background: #f8f9fa !important;
+    box-shadow: none !important;
 }
 
-/* Popup items */
-.list-tag-preview li {
-    padding: 2px 4px !important;
-    margin: 0 !important;
-    background: transparent !important;
-    border: none !important;
+/* === Shrink the popup inside Tags === */
+.sidebar-section.filter-section .list-tags .awesomplete ul,
+.sidebar-section.filter-section .list-tags .ui-autocomplete,
+.sidebar-section.filter-section .list-tags .tagit-autocomplete {
+    max-height: 180px !important;   /* limit popup height */
+    overflow-y: auto !important;    /* add scroll if too many options */
+    font-size: 13px !important;     /* smaller font */
+    line-height: 1.3 !important;    /* tighter spacing */
+    padding: 2px 0 !important;      /* reduce extra padding */
+}
+
+/* Make individual items smaller */
+.sidebar-section.filter-section .list-tags .awesomplete ul li,
+.sidebar-section.filter-section .list-tags .ui-menu-item,
+.sidebar-section.filter-section .list-tags .tagit-autocomplete li {
+    padding: 4px 8px !important;    /* smaller item padding */
+    font-size: 13px !important;
+    line-height: 1.3 !important;
+}
+/* ---------- container anchor: ensure dropdown is positioned relative to input ---------- */
+.sidebar-section.filter-section .list-tags {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* ---------- target common popup classes used by Frappe/tag plugins ---------- */
+.sidebar-section.filter-section .list-tags .awesomplete,
+.sidebar-section.filter-section .list-tags .awesomplete ul,
+.sidebar-section.filter-section .list-tags .ui-autocomplete,
+.sidebar-section.filter-section .list-tags .ui-autocomplete ul,
+.sidebar-section.filter-section .list-tags .tt-menu,
+.sidebar-section.filter-section .list-tags .typeahead,
+.sidebar-section.filter-section .list-tags .dropdown-menu,
+.sidebar-section.filter-section .list-tags .select2-dropdown {
+  position: absolute !important;
+  top: 100% !important;             /* sit below the input, without affecting layout */
+  left: 0 !important;
+  margin: 4px 0 0 0 !important;
+  width: calc(100% - 0px) !important; /* match input width */
+  max-height: 160px !important;     /* smaller popup; will scroll if more items */
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  background: #ffffff !important;
+  border: 1px solid #ddd !important;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08) !important;
+  padding: 4px 0 !important;
+  font-size: 13px !important;       /* compact text */
+  line-height: 1.2 !important;
+  z-index: 9999 !important;         /* appear above other fields */
+  -webkit-overflow-scrolling: touch !important;
+}
+
+/* ---------- make each dropdown item compact ---------- */
+.sidebar-section.filter-section .list-tags .awesomplete li,
+.sidebar-section.filter-section .list-tags .ui-menu-item,
+.sidebar-section.filter-section .list-tags .tt-suggestion,
+.sidebar-section.filter-section .list-tags .typeahead .suggestion,
+.sidebar-section.filter-section .list-tags .select2-results__option,
+.sidebar-section.filter-section .list-tags .dropdown-item {
+  padding: 6px 8px !important;      /* reduced item height */
+  font-size: 13px !important;
+  line-height: 1.2 !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ---------- ensure popup does not expand to full page width or add extra gap ---------- */
+.sidebar-section.filter-section .list-tags .awesomplete,
+.sidebar-section.filter-section .list-tags .ui-autocomplete,
+.sidebar-section.filter-section .list-tags .select2-dropdown {
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* ---------- if plugin appends dropdown to body (Select2 / choices), constrain it globally ---------- */
+body .select2-container--open .select2-dropdown,
+body .awesomplete,
+body .tt-menu {
+  max-height: 160px !important;
+  overflow-y: auto !important;
+  font-size: 13px !important;
+  z-index: 9999 !important;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08) !important;
+}
+
+/* ---------- small visual tweak if you want the popup to overlap the next field slightly (optional) ---------- */
+.sidebar-section.filter-section .list-tags .awesomplete,
+.sidebar-section.filter-section .list-tags .ui-autocomplete {
+  margin-top: 6px !important;
+}
+
+
+/* === Make "Edit Filters" look exactly like other fields (remove border box) === */
+.sidebar-section.filter-section .list-group-by li.add-list-group-by.sidebar-action,
+.sidebar-section.filter-section .list-group-by li.add-list-group-by.sidebar-action * {
+    background: #f8f9fa !important;   /* same as other fields */
+    border: none !important;          /* 🔴 remove border */
+    box-shadow: none !important;
+    border-radius: 4px !important;
+    padding: 6px 10px !important;
+    margin: 5px 0 !important;
+    color: #000 !important;
+    width: 100% !important;
+    text-align: left !important;
+    display: block !important;
+    line-height: 1.3 !important;
     font-size: 13px !important;
 }
 
-/* Hover effect for popup items */
-.list-tag-preview li:hover {
-    background: #f5f5f5 !important;
-    border-radius: 4px !important;
+/* === Popup dropdown with clean background container === */
+.sidebar-section.filter-section .list-tags .dropdown-menu,
+.sidebar-section.filter-section .list-tags .awesomplete ul,
+.sidebar-section.filter-section .list-tags .ui-autocomplete,
+.sidebar-section.filter-section .list-tags .tagit-autocomplete,
+.sidebar-section.filter-section .list-tags .tt-menu,
+.sidebar-section.filter-section .list-tags .select2-results__options {
+    background: #ffffff !important;      /* ✅ white container */
+    border: 1px solid #ddd !important;   /* light grey border */
+    border-radius: 4px !important;       /* rounded corners */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08) !important; /* subtle shadow */
+    padding: 4px 0 !important;
+    margin: 4px 0 0 0 !important;
+    font-size: 13px !important;
+    line-height: 1.3 !important;
+    z-index: 9999 !important;            /* appear above fields */
 }
+
+/* Each item inside popup */
+/* Default hidden */
+.sidebar-section.filter-section .list-tags .dropdown-menu,
+.sidebar-section.filter-section .list-tags .awesomplete ul,
+.sidebar-section.filter-section .list-tags .ui-autocomplete,
+.sidebar-section.filter-section .list-tags .tagit-autocomplete,
+.sidebar-section.filter-section .list-tags .tt-menu,
+.sidebar-section.filter-section .list-tags .select2-results__options {
+    display: none !important;
+}
+
+/* Show only when active/focused */
+.sidebar-section.filter-section .list-tags input:focus + .dropdown-menu,
+.sidebar-section.filter-section .list-tags input:focus + .awesomplete ul,
+.sidebar-section.filter-section .list-tags input:focus + .ui-autocomplete,
+.sidebar-section.filter-section .list-tags input:focus + .tagit-autocomplete,
+.sidebar-section.filter-section .list-tags input:focus + .tt-menu,
+.sidebar-section.filter-section .list-tags input:focus + .select2-results__options {
+    display: block !important;
+}
+
 
 
 
