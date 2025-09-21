@@ -186,7 +186,7 @@ body .tt-menu {
     z-index: 9999 !important;            /* appear above fields */
 }
 
-/* .sidebar-section.filter-section .list-tags .dropdown-menu li,
+.sidebar-section.filter-section .list-tags .dropdown-menu li,
 .sidebar-section.filter-section .list-tags .awesomplete li,
 .sidebar-section.filter-section .list-tags .ui-menu-item,
 .sidebar-section.filter-section .list-tags .tt-suggestion,
@@ -197,17 +197,8 @@ body .tt-menu {
     font-size: 13px !important;
     color: #000 !important;
     cursor: pointer;
-} */
-
-/* Remove hover highlight completely */
-.sidebar-section.filter-section .list-tags .dropdown-menu li:hover,
-.sidebar-section.filter-section .list-tags .awesomplete li:hover,
-.sidebar-section.filter-section .list-tags .ui-menu-item:hover,
-.sidebar-section.filter-section .list-tags .tt-suggestion:hover,
-.sidebar-section.filter-section .list-tags .select2-results__option:hover {
-    background: transparent !important;
-    color: #000 !important;
 }
+
 
 
 
