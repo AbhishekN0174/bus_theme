@@ -187,29 +187,8 @@ body .tt-menu {
     z-index: 9999 !important;            /* appear above fields */
 }
 
-/* Each item inside popup */
-.sidebar-section.filter-section .list-tags .dropdown-menu li,
-.sidebar-section.filter-section .list-tags .awesomplete li,
-.sidebar-section.filter-section .list-tags .ui-menu-item,
-.sidebar-section.filter-section .list-tags .tt-suggestion,
-.sidebar-section.filter-section .list-tags .select2-results__option {
-    background: transparent !important;
-    border: none !important;
-    padding: 6px 10px !important;
-    font-size: 13px !important;
-    color: #000 !important;
-    cursor: pointer;
-}
 
-/* Hover highlight inside popup */
-.sidebar-section.filter-section .list-tags .dropdown-menu li:hover,
-.sidebar-section.filter-section .list-tags .awesomplete li:hover,
-.sidebar-section.filter-section .list-tags .ui-menu-item:hover,
-.sidebar-section.filter-section .list-tags .tt-suggestion:hover,
-.sidebar-section.filter-section .list-tags .select2-results__option:hover {
-    background: #f1f1f1 !important;  /* light grey hover */
    
-}
 
 
 
