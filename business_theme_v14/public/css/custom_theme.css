@@ -3936,13 +3936,13 @@ header .form-control:focus {
     opacity: 0.9 !important;
 }
 
-.layout-side-section .sidebar-menu li,
+/* .layout-side-section .sidebar-menu li, */
 .layout-side-section .standard-sidebar li,
 .layout-side-section .sidebar-menu li a,
 .layout-side-section .standard-sidebar li a,
 .standard-sidebar-item {
-/*     background: linear-gradient(180deg, rgb(237, 28, 36) 0%, rgb(200, 20, 30) 100%) !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important; */
+    background: linear-gradient(180deg, rgb(237, 28, 36) 0%, rgb(200, 20, 30) 100%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
     border-radius: 8px !important;
     margin-bottom: 4px !important;
     padding: 8px 12px !important;
