@@ -249,106 +249,109 @@ body .tt-menu {
 
 
 
-/* ---------------------------
-   Make "Filter Name" input match other fields
-   --------------------------- */
-.sidebar-section.save-filter-section,
-.sidebar-section.save-filter-section > *,
-.sidebar-section.save-filter-section .list-unstyled,
-.sidebar-section.save-filter-section .list-group,
-.sidebar-section.save-filter-section .list-group > li {
+/* remove the red/grey container background from Save Filter block */
+.sidebar-section.save-filter-section {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
+/*    margin-top: -10px !important; */
 }
 
-/* Target any input-like element in save-filter section */
-.sidebar-section.save-filter-section input[type="text"],
-.sidebar-section.save-filter-section input[type="search"],
+/* remove borders and background from fields inside */
 .sidebar-section.save-filter-section input,
-.sidebar-section.save-filter-section .control-input,
-.sidebar-section.save-filter-section .form-control,
-.sidebar-section.save-filter-section .input {
-  background: #f8f9fa !important;       /* same light background as other fields */
-  border: 1px solid #ddd !important;    /* light border */
-  border-radius: 6px !important;        /* rounded like others */
-  padding: 6px 10px !important;         /* match height/spacing */
-  margin: 6px 0 !important;
-  height: 34px !important;              /* same height as other fields */
-  line-height: 1.2 !important;
-  font-size: 13px !important;
-  color: #111 !important;
-  width: 100% !important;
-  display: block !important;
-  box-shadow: none !important;
-  outline: none !important;
-}
-
-/* placeholder color */
-.sidebar-section.save-filter-section input::placeholder { color: #999 !important; }
-
-/* Remove any pseudo-element decorations on save section parents */
-.sidebar-section.save-filter-section::before,
-.sidebar-section.save-filter-section::after,
-.sidebar-section.save-filter-section *::before,
-.sidebar-section.save-filter-section *::after {
-  content: none !important;
-  display: none !important;
-}
-
-/* ---------------------------
-   Make "Hide Saved" (button/link) look like other fields
-   --------------------------- */
 .sidebar-section.save-filter-section button,
 .sidebar-section.save-filter-section .btn,
-.sidebar-section.save-filter-section a.btn,
-.sidebar-section.save-filter-section .list-link,
-.sidebar-section.save-filter-section input[type="submit"] {
-  background: #f8f9fa !important;       /* white/grey field look */
-  border: 1px solid #ddd !important;
-  color: #111 !important;
-  border-radius: 6px !important;
-  padding: 6px 10px !important;
-  margin: 6px 0 !important;
-  height: 34px !important;
-  line-height: 1.2 !important;
-  font-size: 13px !important;
-  width: 100% !important;
-  display: block !important;
-  text-align: left !important;          /* left aligned like inputs */
-  box-shadow: none !important;
-  cursor: pointer !important;
-}
-
-/* remove primary/danger gradients if button has those classes */
-.sidebar-section.save-filter-section .btn.btn-primary,
-.sidebar-section.save-filter-section .btn.btn-danger,
-.sidebar-section.save-filter-section .btn.btn-default,
-.sidebar-section.save-filter-section .btn.btn-secondary {
-  background: #f8f9fa !important;
-  border: 1px solid #ddd !important;
-  color: #111 !important;
+.sidebar-section.save-filter-section .list-link {
+  background: transparent !important;
+  border: none !important;
   box-shadow: none !important;
 }
 
-/* Remove hover/focus backgrounds and outlines */
-.sidebar-section.save-filter-section button:hover,
-.sidebar-section.save-filter-section .btn:hover,
-.sidebar-section.save-filter-section a.btn:hover,
+/* remove hover/focus background */
+.sidebar-section.save-filter-section input:hover,
 .sidebar-section.save-filter-section input:focus,
-.sidebar-section.save-filter-section button:focus {
-  background: #f8f9fa !important;
-  border: 1px solid #ddd !important;
+.sidebar-section.save-filter-section button:hover,
+.sidebar-section.save-filter-section button:focus,
+.sidebar-section.save-filter-section .btn:hover,
+.sidebar-section.save-filter-section .btn:focus,
+.sidebar-section.save-filter-section .list-link:hover,
+.sidebar-section.save-filter-section .list-link:focus {
+  background: transparent !important;
+  border: none !important;
   box-shadow: none !important;
-  outline: none !important;
 }
 
+/* save filter text */
 
 
+/* Style Save Filter text */
+.sidebar-section.save-filter-section .sidebar-label {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 
+  font-weight: 600 !important;   /* bold */
+  font-size: 12px !important;    /* increase size (adjust as needed) */
+  color: #111 !important;        /* readable dark color */
 
+/*   margin-top: 8px !important;     */
+  padding: 2px 0 !important;     /* small vertical spacing */
+  cursor: default !important;    /* make it behave like text */
+}
+
+.sidebar-section.save-filter-section .sidebar-label:hover {
+  background: transparent !important;
+  color: #111 !important;
+}
+
+/* Kill hover/focus/active states */
+.sidebar-section.save-filter-section .sidebar-label:hover,
+.sidebar-section.save-filter-section .sidebar-label:focus,
+.sidebar-section.save-filter-section .sidebar-label:active {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #111 !important;
+}
+/* Pull Save Filter container down below Show Tags */
+/* .sidebar-section.filter-section + .sidebar-section.save-filter-section {
+    margin-top: 12px !important; /* adjust 8px–16px as you like */
+    padding-top: 0 !important;
+} */
+
+/* Final cleaned Save Filter positioning */
+/* Target Save Filter section only */
+.sidebar-section.save-filter-section {
+    margin-top: 20px !important;   /* push it down */
+    margin-bottom: 0 !important;   /* remove extra bottom gap */
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    min-height: auto !important;
+    height: auto !important;
+}
+
+/* Reset spacing from all children (li, div, etc.) */
+.sidebar-section.save-filter-section > * {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Remove any pseudo-element spacing */
+.sidebar-section.save-filter-section::after,
+.sidebar-section.save-filter-section::before {
+    display: none !important;
+    content: none !important;
+}
+.sidebar-section.save-filter-section .sidebar-label {
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    color: #374151 !important;
+    margin-top: -18px !important;
+    text-transform: none !important;
+}
 
 
 
