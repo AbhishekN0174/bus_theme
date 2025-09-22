@@ -204,39 +204,6 @@ body .tt-menu {
     cursor: pointer;
 }
 
-/* Make Filter Name input same as other fields */
-.sidebar .filter-section input#filter_name {
-    width: 100%;
-    height: 34px;                  /* same as dropdowns */
-    border-radius: 6px;
-    border: 1px solid #ddd;
-    padding: 6px 10px;
-    background-color: #fff;
-    box-shadow: none !important;
-    outline: none;
-}
-
-/* Make Hide Saved button match the fields */
-.sidebar .filter-section .hide-saved-btn {
-    display: block;
-    width: 100%;
-    height: 34px;                  /* same height */
-    border-radius: 6px;
-    border: 1px solid #ddd;
-    background: #fff;              /* white background like fields */
-    color: #333;
-    text-align: left;              /* text aligned like the others */
-    padding: 6px 10px;
-    font-size: 14px;
-    cursor: pointer;
-    box-shadow: none !important;
-}
-
-/* Remove hover background from Hide Saved */
-.sidebar .filter-section .hide-saved-btn:hover {
-    background: #fff !important;
-    color: #000;
-}
 
 
 
@@ -383,6 +350,101 @@ body .tt-menu {
     color: #374151 !important;
     margin-top: -18px !important;
     text-transform: none !important;
+}
+/* ---------------------------
+   Make "Filter Name" input match other fields
+   --------------------------- */
+.sidebar-section.save-filter-section,
+.sidebar-section.save-filter-section > *,
+.sidebar-section.save-filter-section .list-unstyled,
+.sidebar-section.save-filter-section .list-group,
+.sidebar-section.save-filter-section .list-group > li {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Target any input-like element in save-filter section */
+.sidebar-section.save-filter-section input[type="text"],
+.sidebar-section.save-filter-section input[type="search"],
+.sidebar-section.save-filter-section input,
+.sidebar-section.save-filter-section .control-input,
+.sidebar-section.save-filter-section .form-control,
+.sidebar-section.save-filter-section .input {
+  background: #f8f9fa !important;       /* same light background as other fields */
+  border: 1px solid #ddd !important;    /* light border */
+  border-radius: 6px !important;        /* rounded like others */
+  padding: 6px 10px !important;         /* match height/spacing */
+  margin: 6px 0 !important;
+  height: 34px !important;              /* same height as other fields */
+  line-height: 1.2 !important;
+  font-size: 13px !important;
+  color: #111 !important;
+  width: 100% !important;
+  display: block !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* placeholder color */
+.sidebar-section.save-filter-section input::placeholder { color: #999 !important; }
+
+/* Remove any pseudo-element decorations on save section parents */
+.sidebar-section.save-filter-section::before,
+.sidebar-section.save-filter-section::after,
+.sidebar-section.save-filter-section *::before,
+.sidebar-section.save-filter-section *::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* ---------------------------
+   Make "Hide Saved" (button/link) look like other fields
+   --------------------------- */
+.sidebar-section.save-filter-section button,
+.sidebar-section.save-filter-section .btn,
+.sidebar-section.save-filter-section a.btn,
+.sidebar-section.save-filter-section .list-link,
+.sidebar-section.save-filter-section input[type="submit"] {
+  background: #f8f9fa !important;       /* white/grey field look */
+  border: 1px solid #ddd !important;
+  color: #111 !important;
+  border-radius: 6px !important;
+  padding: 6px 10px !important;
+  margin: 6px 0 !important;
+  height: 34px !important;
+  line-height: 1.2 !important;
+  font-size: 13px !important;
+  width: 100% !important;
+  display: block !important;
+  text-align: left !important;          /* left aligned like inputs */
+  box-shadow: none !important;
+  cursor: pointer !important;
+}
+
+/* remove primary/danger gradients if button has those classes */
+.sidebar-section.save-filter-section .btn.btn-primary,
+.sidebar-section.save-filter-section .btn.btn-danger,
+.sidebar-section.save-filter-section .btn.btn-default,
+.sidebar-section.save-filter-section .btn.btn-secondary {
+  background: #f8f9fa !important;
+  border: 1px solid #ddd !important;
+  color: #111 !important;
+  box-shadow: none !important;
+}
+
+/* Remove hover/focus backgrounds and outlines */
+.sidebar-section.save-filter-section button:hover,
+.sidebar-section.save-filter-section .btn:hover,
+.sidebar-section.save-filter-section a.btn:hover,
+.sidebar-section.save-filter-section input:focus,
+.sidebar-section.save-filter-section button:focus {
+  background: #f8f9fa !important;
+  border: 1px solid #ddd !important;
+  box-shadow: none !important;
+  outline: none !important;
 }
 
 
