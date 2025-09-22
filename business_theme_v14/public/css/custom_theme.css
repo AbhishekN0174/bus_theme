@@ -204,6 +204,41 @@ body .tt-menu {
     cursor: pointer;
 }
 
+/* Make Filter Name input same as other fields */
+.sidebar .filter-section input#filter_name {
+    width: 100%;
+    height: 34px;                  /* same as dropdowns */
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    padding: 6px 10px;
+    background-color: #fff;
+    box-shadow: none !important;
+    outline: none;
+}
+
+/* Make Hide Saved button match the fields */
+.sidebar .filter-section .hide-saved-btn {
+    display: block;
+    width: 100%;
+    height: 34px;                  /* same height */
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background: #fff;              /* white background like fields */
+    color: #333;
+    text-align: left;              /* text aligned like the others */
+    padding: 6px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: none !important;
+}
+
+/* Remove hover background from Hide Saved */
+.sidebar .filter-section .hide-saved-btn:hover {
+    background: #fff !important;
+    color: #000;
+}
+
+
 
 
 
