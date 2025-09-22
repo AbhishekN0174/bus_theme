@@ -3937,8 +3937,8 @@ header .form-control:focus {
 }
 
 /* .layout-side-section .sidebar-menu li, */
-.layout-side-section .standard-sidebar li,
-/* .layout-side-section .sidebar-menu li a, */
+/* .layout-side-section .standard-sidebar li, */
+.layout-side-section .sidebar-menu li a,
 .layout-side-section .standard-sidebar li a,
 .standard-sidebar-item {
     background: linear-gradient(180deg, rgb(237, 28, 36) 0%, rgb(200, 20, 30) 100%) !important;
