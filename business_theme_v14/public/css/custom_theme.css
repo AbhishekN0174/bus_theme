@@ -3205,7 +3205,7 @@ header * {
 /* ===================== FILTER NAME INPUT ===================== */
 .input-with-feedback.form-control.input-xs {
     background: #f3f4f6 !important;
-    border: 1px solid #d1d5db !important;
+/*     border: 1px solid #d1d5db !important; */
     border-radius: 6px !important;
     padding: 6px 10px !important;
     font-size: 12px !important;
@@ -3214,9 +3214,9 @@ header * {
     margin-bottom: 8px !important;
 }
 .input-with-feedback.form-control.input-xs:focus {
-    border-color: #2563eb !important;
-    box-shadow: 0 0 0 2px rgba(37,99,235,0.15) !important;
-    background: #ffffff !important;
+/*     border-color: #2563eb !important; */
+/*     box-shadow: 0 0 0 2px rgba(37,99,235,0.15) !important;
+    background: #ffffff !important; */
 }
 
 /* ===================== LAYOUT: STACK INPUT + ACTION ===================== */
@@ -3236,8 +3236,8 @@ header * {
 }
 .save-filter-section .sidebar-action .btn,
 .save-filter-section .sidebar-action button {
-    background: #f3f4f6 !important;
-    border: 1px solid #d1d5db !important;
+/*     background: #f3f4f6 !important;
+    border: 1px solid #d1d5db !important; */
     border-radius: 6px !important;
     padding: 6px 10px !important;
     font-size: 12px !important;
@@ -3247,7 +3247,7 @@ header * {
 }
 .save-filter-section .sidebar-action .btn:hover {
 /*     background: #2563eb !important; */
-    color: #fff !important;
+/*     color: #fff !important; */
 }
 
 
