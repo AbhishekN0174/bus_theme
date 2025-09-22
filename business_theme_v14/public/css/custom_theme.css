@@ -3954,7 +3954,7 @@ header .form-control:focus {
     gap: 8px !important;
 }
 
-.layout-side-section .sidebar-menu li:hover,
+/* .layout-side-section .sidebar-menu li:hover,
 .layout-side-section .standard-sidebar li:hover,
 .layout-side-section .sidebar-menu li a:hover,
 .layout-side-section .standard-sidebar li a:hover,
@@ -3963,7 +3963,7 @@ header .form-control:focus {
     border-color: rgba(255, 255, 255, 0.4) !important;
     transform: translateX(3px) !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
-}
+} */
 
 /* Navigation icons */
 .layout-side-section .sidebar-menu li .sidebar-item-icon,
