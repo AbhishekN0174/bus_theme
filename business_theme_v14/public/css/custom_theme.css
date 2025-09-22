@@ -3203,7 +3203,54 @@ header * {
 
 
 
+/* ====== FIXED POSITIONING FOR GROUP-BY + LIST-STATS POPUPS ====== */
+/* ===================== FILTER NAME INPUT ===================== */
+.input-with-feedback.form-control.input-xs {
+    background: #f3f4f6 !important;
+/*     border: 1px solid #d1d5db !important; */
+    border-radius: 6px !important;
+    padding: 6px 10px !important;
+    font-size: 12px !important;
+    color: #111827 !important;
+    width: 100% !important;
+    margin-bottom: 8px !important;
+}
+.input-with-feedback.form-control.input-xs:focus {
+/*     border-color: #2563eb !important; */
+/*     box-shadow: 0 0 0 2px rgba(37,99,235,0.15) !important;
+    background: #ffffff !important; */
+}
 
+/* ===================== LAYOUT: STACK INPUT + ACTION ===================== */
+.save-filter-section .list-filters.list-link {
+    display: flex !important;
+    flex-direction: column !important;   /* stack vertically */
+    align-items: flex-start !important;
+    gap: 8px !important;
+}
+
+
+/* ==================== HIDE SAVED BUTTON ===================== */
+.save-filter-section .sidebar-action {
+    display: block !important;
+    margin-top: 6px !important;
+    width: 100% !important;
+}
+.save-filter-section .sidebar-action .btn,
+.save-filter-section .sidebar-action button {
+/*     background: #f3f4f6 !important;
+    border: 1px solid #d1d5db !important; */
+    border-radius: 6px !important;
+    padding: 6px 10px !important;
+    font-size: 12px !important;
+    color: #111827 !important;
+    width: auto !important;
+    text-align: center !important;
+}
+.save-filter-section .sidebar-action .btn:hover {
+/*     background: #2563eb !important; */
+/*     color: #fff !important; */
+}
 
 
 
@@ -4354,90 +4401,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-/* -------------------- Save Filter: fixes + consistent field styling -------------------- */
-
-/* Fix container */
-.sidebar-section.save-filter-section {
-    margin-top: 20px !important;
-    padding: 0 !important;
-    height: auto !important;
-    min-height: 0 !important;
-    max-height: none !important;
-    overflow: visible !important;
-    box-sizing: border-box !important;
-}
-
-/* Normalize inner list spacing */
-.save-filter-section .list-unstyled,
-.save-filter-section .list-filters,
-.save-filter-section .list-filters.list-link {
-    margin: 0 !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
-}
-
-/* ===================== FILTER NAME input (match "Created By") ===================== */
-.save-filter-section .input-with-feedback.form-control.input-xs,
-.save-filter-section input[type="text"].input-with-feedback.form-control.input-xs {
-    background: #f8f9fa !important;       /* same as other fields */
-    border: 1px solid #ddd !important;
-    border-radius: 4px !important;
-    padding: 6px 10px !important;
-    font-size: 13px !important;
-    color: #000 !important;
-    width: 100% !important;
-    height: 34px !important;
-    line-height: 1.2 !important;
-    box-shadow: none !important;
-    margin: 5px 0 !important;
-    box-sizing: border-box !important;
-    outline: none !important;
-    text-align: left !important;
-}
-
-/* ===================== HIDE SAVED button (make it field-like) ===================== */
-.save-filter-section .sidebar-action,
-.save-filter-section .sidebar-action .btn,
-.save-filter-section .sidebar-action button {
-    display: block !important;
-    width: 100% !important;
-    background: #f8f9fa !important;        /* same as inputs */
-    border: 1px solid #ddd !important;
-    border-radius: 4px !important;
-    padding: 6px 10px !important;
-    font-size: 13px !important;
-    color: #000 !important;
-    height: 34px !important;
-    line-height: 22px !important;
-    text-align: left !important;           /* same as "Created By" */
-    box-shadow: none !important;
-    cursor: pointer !important;
-    box-sizing: border-box !important;
-    margin: 5px 0 !important;
-}
-
-/* Keep hover/focus neutral */
-.save-filter-section .sidebar-action .btn:hover,
-.save-filter-section .sidebar-action .btn:focus,
-.save-filter-section .sidebar-action button:hover,
-.save-filter-section .sidebar-action button:focus {
-    background: #f8f9fa !important;
-    border: 1px solid #ddd !important;
-    box-shadow: none !important;
-    color: #000 !important;
-    outline: none !important;
-}
-
-/* Remove any wrappers adding borders */
-.save-filter-section .panel,
-.save-filter-section .card,
-.save-filter-section .well,
-.save-filter-section .form-group {
-    background: transparent !important;
-    border: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    box-shadow: none !important;
-}
 
