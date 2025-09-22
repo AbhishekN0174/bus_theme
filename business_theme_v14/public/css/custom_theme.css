@@ -4438,21 +4438,20 @@ document.addEventListener('DOMContentLoaded', function() {
     box-shadow: none !important;
 }
 
- .layout-side-section.standard-sidebar-item  {
-    /* background: linear-gradient(180deg, rgb(243 243 243) 0%, rgb(255 255 255) 100%) !important; */
+.layout-side-section .sidebar-menu li a, .standard-sidebar-item {
+    background: linear-gradient(180deg, rgb(243 243 243) 0%, #ffffff 100%) !important;
     /* border: 1px solid rgba(255, 255, 255, 0.2) !important; */
     /* border-radius: 8px !important; */
     /* margin-bottom: 4px !important; */
     /* padding: 8px 12px !important; */
     /* transition: all 0.3s 
 ease !important; */
-    color: #282626 !important;
+    color: #4c3131 !important;
     /* text-decoration: none !important; */
     display: flex !important
 ;
     align-items: center !important;
     gap: 8px !important;
-    background: #f8f9fa !important; 
 }
 
 
