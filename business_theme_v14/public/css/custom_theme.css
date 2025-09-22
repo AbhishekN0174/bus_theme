@@ -4427,6 +4427,44 @@ document.addEventListener('DOMContentLoaded', function() {
     color: #000 !important;
 }
 
+/* Hide the "Save Filter" label/heading completely */
+.sidebar-section.save-filter-section::before,
+.sidebar-section.save-filter-section .section-head,
+.sidebar-section.save-filter-section h6 {
+    display: none !important;
+}
+
+/* Remove the section container styling */
+.sidebar-section.save-filter-section {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Make inputs & buttons look like other filter fields */
+.sidebar-section.save-filter-section input,
+.sidebar-section.save-filter-section button {
+    width: 100% !important;
+    height: 32px !important; /* same as Created By, Tags */
+    border: 1px solid #ddd !important;
+    border-radius: 6px !important;
+    padding: 4px 8px !important;
+    background: #fff !important;
+    box-shadow: none !important;
+    font-size: 14px !important;
+    font-weight: normal !important;
+}
+
+/* Make the button consistent */
+.sidebar-section.save-filter-section button {
+    text-align: left !important;
+    background: #fff !important;
+    color: #000 !important;
+}
+
+
 
 
 
