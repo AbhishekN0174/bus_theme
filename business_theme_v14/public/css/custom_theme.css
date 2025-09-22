@@ -4357,9 +4357,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 /* -------------------- Save Filter: fixes + consistent field styling -------------------- */
 
-/* Fix invalid unit and ensure container behaves */
+/* Fix container */
 .sidebar-section.save-filter-section {
-    margin-top: 20px !important;      /* <-- fixed unit */
+    margin-top: 20px !important;
     padding: 0 !important;
     height: auto !important;
     min-height: 0 !important;
@@ -4377,73 +4377,59 @@ document.addEventListener('DOMContentLoaded', function() {
     box-sizing: border-box !important;
 }
 
-/* ===================== FILTER NAME input (match other fields) ===================== */
-/* Targets typical Frappe input classes and ensures full-width + consistent height */
+/* ===================== FILTER NAME input (match "Created By") ===================== */
 .save-filter-section .input-with-feedback.form-control.input-xs,
-.save-filter-section input.input-with-feedback.form-control.input-xs,
 .save-filter-section input[type="text"].input-with-feedback.form-control.input-xs {
-    background: #f3f4f6 !important;       /* same light background */
-    border: 1px solid #d1d5db !important; /* light grey border */
-    border-radius: 6px !important;
+    background: #f8f9fa !important;       /* same as other fields */
+    border: 1px solid #ddd !important;
+    border-radius: 4px !important;
     padding: 6px 10px !important;
     font-size: 13px !important;
-    color: #111827 !important;
+    color: #000 !important;
     width: 100% !important;
-    height: 34px !important;               /* match height of other fields */
+    height: 34px !important;
     line-height: 1.2 !important;
     box-shadow: none !important;
-    margin-bottom: 8px !important;
+    margin: 5px 0 !important;
     box-sizing: border-box !important;
     outline: none !important;
-}
-
-/* Remove any stray focused outline that looks like an extra border */
-.save-filter-section .input-with-feedback.form-control.input-xs:focus {
-    box-shadow: none !important;
-    outline: none !important;
+    text-align: left !important;
 }
 
 /* ===================== HIDE SAVED button (make it field-like) ===================== */
-/* Full-width button styled like the other inputs */
 .save-filter-section .sidebar-action,
 .save-filter-section .sidebar-action .btn,
 .save-filter-section .sidebar-action button {
     display: block !important;
     width: 100% !important;
-    background: #f3f4f6 !important;        /* same as inputs */
-    border: 1px solid #d1d5db !important;  /* same border */
-    border-radius: 6px !important;
+    background: #f8f9fa !important;        /* same as inputs */
+    border: 1px solid #ddd !important;
+    border-radius: 4px !important;
     padding: 6px 10px !important;
     font-size: 13px !important;
-    color: #111827 !important;
+    color: #000 !important;
     height: 34px !important;
-    line-height: 22px !important;          /* vertically center the text */
-    text-align: left !important;           /* match other field alignment */
+    line-height: 22px !important;
+    text-align: left !important;           /* same as "Created By" */
     box-shadow: none !important;
     cursor: pointer !important;
     box-sizing: border-box !important;
+    margin: 5px 0 !important;
 }
 
-/* Keep hover/focus from changing appearance */
+/* Keep hover/focus neutral */
 .save-filter-section .sidebar-action .btn:hover,
 .save-filter-section .sidebar-action .btn:focus,
 .save-filter-section .sidebar-action button:hover,
 .save-filter-section .sidebar-action button:focus {
-    background: #f3f4f6 !important;
-    border: 1px solid #d1d5db !important;
+    background: #f8f9fa !important;
+    border: 1px solid #ddd !important;
     box-shadow: none !important;
-    color: #111827 !important;
+    color: #000 !important;
     outline: none !important;
 }
 
-/* If the hide-saved element is an anchor or link, target it too */
-.save-filter-section a.sidebar-action,
-.save-filter-section a.sidebar-action .btn {
-    display: block !important;
-    width: 100% !important;
-}
-
-/* Small catch-all: make sure any inner wrappers don't add extra padding/border */
+/* Remove any wrappers adding borders */
 .save-filter-section .panel,
 .save-filter-section .card,
 .save-filter-section .well,
