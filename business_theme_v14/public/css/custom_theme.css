@@ -3217,9 +3217,9 @@ header * {
     margin-bottom: 8px !important;
 }
 .input-with-feedback.form-control.input-xs:focus {
-/*     border-color: #2563eb !important; */
-/*     box-shadow: 0 0 0 2px rgba(37,99,235,0.15) !important;
-    background: #ffffff !important; */
+    border-color: #2563eb !important; */
+    box-shadow: 0 0 0 2px rgba(37,99,235,0.15) !important;
+    background: #ffffff !important;
 }
 
 /* ===================== LAYOUT: STACK INPUT + ACTION ===================== */
