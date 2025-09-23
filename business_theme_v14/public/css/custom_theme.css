@@ -1,3 +1,23 @@
+select.form-control {
+    appearance: none;
+    padding: 0 12px;   /* only horizontal padding */
+    line-height: 1.5;
+    color: inherit;    /* inherit text color from parent */
+    background-color: inherit;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* === Remove container styles for all filter sections === */
 .sidebar-section.filter-section .list-group-by,
 .sidebar-section.filter-section .list-tags,
