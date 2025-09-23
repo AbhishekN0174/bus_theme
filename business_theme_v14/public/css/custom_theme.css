@@ -2126,11 +2126,11 @@ li.nav-item.dropdown .dropdown-menu,
     appearance: auto !important; /* allow value rendering */
 }
 
-/* .form-control:focus {
+ .form-control:focus {
     background-color: white !important;
     border-color: #3b82f6 !important;
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
-}  */
+}  
 
 .form-control {
     background-color: #f9fafb !important;
