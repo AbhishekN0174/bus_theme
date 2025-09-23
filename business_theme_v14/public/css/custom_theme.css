@@ -27,6 +27,7 @@
     font-size: 13px !important;       /* same font size */
     height: auto !important;          /* let it size like selects */
     cursor: default !important;
+    text-decoration: none !important;
 }
 
 
