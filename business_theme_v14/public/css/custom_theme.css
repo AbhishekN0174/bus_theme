@@ -2130,15 +2130,16 @@ li.nav-item.dropdown .dropdown-menu,
     background-color: white !important;
     border-color: #3b82f6 !important;
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+     color: inherit !important;
 }  
 
-.form-control {
+/* .form-control {
     appearance: auto !important; /* restore text rendering */
-}
+} */
 
-.form-control option {
+/* .form-control option {
     color: inherit !important; /* keep same text color as field */
-}
+} */
 
 
 
