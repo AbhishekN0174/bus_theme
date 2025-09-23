@@ -2116,7 +2116,7 @@ li.nav-item.dropdown .dropdown-menu,
 /* ==================== FORM STYLING ==================== */
 /* Form inputs and controls */
 
-/* .form-control {
+.form-control {
     background-color: #f9fafb !important;
     border: 1px solid #d1d5db !important;
     border-radius: 8px !important;
@@ -2125,12 +2125,12 @@ li.nav-item.dropdown .dropdown-menu,
     font-size: 14px !important;
     appearance: auto !important; /* allow value rendering */
 }
-/* 
+
  .form-control:focus {
     background-color: white !important;
     border-color: #3b82f6 !important;
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
-}   */
+}  
 
 .form-control {
     appearance: auto !important; /* restore text rendering */
