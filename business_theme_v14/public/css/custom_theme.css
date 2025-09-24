@@ -4,6 +4,7 @@ select.form-control {
     line-height: 1.5;
     color: inherit;    /* inherit text color from parent */
     background-color: inherit;
+    border: 1px solid #ddd !important;
 }
 
 
