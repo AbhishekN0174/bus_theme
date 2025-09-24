@@ -1,11 +1,11 @@
-select.form-control {
+/* select.form-control {
     appearance: none;
     padding: 0 12px;   /* only horizontal padding */
     line-height: 1.5;
     color: inherit;    /* inherit text color from parent */
     background-color: inherit;
     border: 1px solid #ddd !important;
-}
+} */
 
 
 
@@ -2125,6 +2125,15 @@ li.nav-item.dropdown .dropdown-menu,
     color: #374151 !important;
     font-size: 14px !important;
 }  */
+
+.form-control {
+    appearance: none;
+    padding: 0 12px;   /* only horizontal padding */
+    line-height: 1.5;
+    color: inherit;    /* inherit text color from parent */
+    background-color: inherit;
+    border: 1px solid #ddd !important;
+}
 
   .form-control:focus {
     background-color: white !important;
