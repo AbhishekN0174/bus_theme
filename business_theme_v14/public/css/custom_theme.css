@@ -223,14 +223,14 @@ body .tt-menu {
     color: #000 !important;
     cursor: pointer;
 }
-.a stat-link dropdown-item{
-        background: transparent !important;
-    border: none !important;
-    padding: 6px 10px !important;
-    font-size: 13px !important;
-    color: #000 !important;
-    cursor: pointer;
+/* Disable hover background on No Tags */
+a.stat-link.dropdown-item:hover,
+a.stat-link.dropdown-item:focus,
+a.stat-link.dropdown-item:active {
+    background: transparent !important;
+    box-shadow: none !important;
 }
+
 
 
 
