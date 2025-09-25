@@ -228,13 +228,14 @@ body .tt-menu {
 
 
 
-/* 1) Generic: remove hover for li / anchors in that dropdown */
-.sidebar-section.filter-section .list-tags .dropdown-menu li,
-.sidebar-section.filter-section .list-tags .dropdown-menu li a,
-.sidebar-section.filter-section .list-tags .dropdown-menu .dropdown-item {
+.sidebar-section.filter-section .list-tags .dropdown-menu li a:hover,
+.sidebar-section.filter-section .list-tags .dropdown-menu li a:focus,
+.sidebar-section.filter-section .list-tags .dropdown-menu li a:active,
+.sidebar-section.filter-section .list-tags .dropdown-menu .dropdown-item:hover,
+.sidebar-section.filter-section .list-tags .dropdown-menu .dropdown-item:focus,
+.sidebar-section.filter-section .list-tags .dropdown-menu .dropdown-item:active {
   background: transparent !important;
   background-color: transparent !important;
-  background-image: none !important;
   box-shadow: none !important;
   outline: none !important;
 }
