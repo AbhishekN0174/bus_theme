@@ -228,11 +228,15 @@ body .tt-menu {
 
 
 
-/* 4) If the blue/selection looks like text-selection, also disable highlight */
+/* 1) Generic: remove hover for li / anchors in that dropdown */
+.sidebar-section.filter-section .list-tags .dropdown-menu li,
 .sidebar-section.filter-section .list-tags .dropdown-menu li a,
-.sidebar-section.filter-section .list-tags .dropdown-menu li {
-  -webkit-tap-highlight-color: transparent !important;
-  user-select: none !important;
+.sidebar-section.filter-section .list-tags .dropdown-menu .dropdown-item {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  outline: none !important;
 }
 
 
