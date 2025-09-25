@@ -194,7 +194,7 @@ body .tt-menu {
 }
 
 
-.sidebar-section.filter-section .list-tags .dropdown-menu,
+/* .sidebar-section.filter-section .list-tags .dropdown-menu, */
 .sidebar-section.filter-section .list-tags .awesomplete ul,
 .sidebar-section.filter-section .list-tags .ui-autocomplete,
 .sidebar-section.filter-section .list-tags .tagit-autocomplete,
