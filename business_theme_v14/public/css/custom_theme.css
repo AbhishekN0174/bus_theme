@@ -239,6 +239,7 @@ body .tt-menu {
   color: inherit !important;
     cursor: pointer !important;
     text-decoration: none !important;
+    border: none !important;
 }
 
 
