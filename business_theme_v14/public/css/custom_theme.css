@@ -226,40 +226,7 @@ body .tt-menu {
 /* Disable hover background on No Tags */
 /* === Remove hover/focus/active background for that tags dropdown (container scoped) === */
 
-/* 1) Generic: remove hover for li / anchors in that dropdown */
-.sidebar-section.filter-section .list-tags .dropdown-menu li,
-.sidebar-section.filter-section .list-tags .dropdown-menu li a,
-.sidebar-section.filter-section .list-tags .dropdown-menu .dropdown-item {
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: none !important;
-  box-shadow: none !important;
-  outline: none !important;
-}
 
-/* 2) Remove hover/focus/active states explicitly */
-.sidebar-section.filter-section .list-tags .dropdown-menu li a:hover,
-.sidebar-section.filter-section .list-tags .dropdown-menu li a:focus,
-.sidebar-section.filter-section .list-tags .dropdown-menu li a:active,
-.sidebar-section.filter-section .list-tags .dropdown-menu .dropdown-item:hover,
-.sidebar-section.filter-section .list-tags .dropdown-menu .dropdown-item:focus,
-.sidebar-section.filter-section .list-tags .dropdown-menu .dropdown-item:active {
-  background: transparent !important;
-  background-color: transparent !important;
-  box-shadow: none !important;
-  outline: none !important;
-}
-
-/* 3) Target your exact anchor class too (extra specificity) */
-.sidebar-section.filter-section .list-tags .dropdown-menu a.stat-link.dropdown-item,
-.sidebar-section.filter-section .list-tags .dropdown-menu a.stat-link.dropdown-item:hover,
-.sidebar-section.filter-section .list-tags .dropdown-menu a.stat-link.dropdown-item:focus {
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: none !important;
-  box-shadow: none !important;
-  color: inherit !important;
-}
 
 /* 4) If the blue/selection looks like text-selection, also disable highlight */
 .sidebar-section.filter-section .list-tags .dropdown-menu li a,
