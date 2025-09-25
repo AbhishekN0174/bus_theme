@@ -3947,7 +3947,8 @@ header .form-control:focus {
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1) !important;
 }
 
-.layout-side-section{
+/* .layout-side-section */
+.sidebar-section{
     background: linear-gradient(180deg, rgb(215 20 28) 0%, rgb(200, 20, 30) 100%) !important;
     padding: 2px 1px !important;
     border-radius: 0 !important;
