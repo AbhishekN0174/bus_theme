@@ -211,7 +211,7 @@ body .tt-menu {
     z-index: 9999 !important;            /* appear above fields */
 }
 
-.sidebar-section.filter-section .list-tags .dropdown-menu li,
+/* .sidebar-section.filter-section .list-tags .dropdown-menu li, */
 .sidebar-section.filter-section .list-tags .awesomplete li,
 .sidebar-section.filter-section .list-tags .ui-menu-item,
 .sidebar-section.filter-section .list-tags .tt-suggestion,
@@ -223,7 +223,14 @@ body .tt-menu {
     color: #000 !important;
     cursor: pointer;
 }
-
+.sidebar-section.filter-section .list-tags .dropdown-menu li,{
+       background: transparent !important;
+    border: none !important;
+    padding: 6px 10px !important;
+    font-size: 13px !important;
+    color: red !important;
+    cursor: pointer; 
+}
 
 
 
