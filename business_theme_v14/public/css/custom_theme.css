@@ -3667,6 +3667,10 @@ color: #e14040 !important;
     color: #ff7f7f !important;
     margin-top: var(--margin-xs);
 }
+
+.widget.onboarding-widget-box .widget-body .onboarding-step-preview h3{
+    color: #a67c28 !important;
+}
 /* text color */
 /* ---------------------------------------------------------------------------- */
 
