@@ -251,6 +251,8 @@ body .tt-menu {
   background-image: none !important;
   box-shadow: none !important;
   color: inherit !important;
+    cursor:pointer !important;
+    border:none !important;
 }
 
 
