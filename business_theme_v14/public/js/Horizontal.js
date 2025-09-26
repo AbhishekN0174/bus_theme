@@ -250,33 +250,3 @@ document.querySelectorAll('.widget.spacer, .spacer, .flex-spacer').forEach(n=>n.
 
     (() => {
 
-frappe.ready(() => {
-  // Target the trigger (the filter field) and the dropdown
-  const trigger = document.querySelector(
-    ".sidebar-section.filter-section .list-tags"
-  );
-  const dropdown = document.querySelector(
-    ".sidebar-section.filter-section .list-tags .dropdown-menu"
-  );
-
-  if (trigger && dropdown) {
-    // Toggle on click
-    trigger.addEventListener("click", (e) => {
-      e.stopPropagation(); // prevent bubbling
-      dropdown.classList.toggle("show");
-    });
-
-    // Close when mouse leaves dropdown
-    dropdown.addEventListener("mouseleave", () => {
-      dropdown.classList.remove("show");
-    });
-
-    // Close if clicking anywhere else on the page
-    document.addEventListener("click", (e) => {
-      if (!trigger.contains(e.target) && !dropdown.contains(e.target)) {
-        dropdown.classList.remove("show");
-      }
-    });
-  }
-});
-
