@@ -238,7 +238,7 @@ body .tt-menu {
   background-color: transparent !important;
   background-image: none !important;
   box-shadow: none !important;
-    position: fixed !important;
+    
 }
 
 
@@ -253,6 +253,7 @@ body .tt-menu {
   color: inherit !important;
     cursor:pointer !important;
     border:none !important;
+    position: fixed !important;
 }
 
 
