@@ -251,31 +251,3 @@ document.querySelectorAll('.widget.spacer, .spacer, .flex-spacer').forEach(n=>n.
     (() => {
 
 
-      // notags
-
-    frappe.ready(() => {
-  const trigger = document.querySelector(
-    ".sidebar-section.filter-section .list-tags"
-  );
-  const dropdown = document.querySelector(
-    ".sidebar-section.filter-section .list-tags .dropdown-menu"
-  );
-
-  if (trigger && dropdown) {
-    // Show when clicking
-    trigger.addEventListener("click", (e) => {
-      e.stopPropagation();
-      dropdown.classList.add("show");
-    });
-
-    // Hide when leaving the field (trigger container)
-    trigger.addEventListener("mouseleave", () => {
-      dropdown.classList.remove("show");
-    });
-
-    // Also hide if mouse leaves the dropdown itself
-    dropdown.addEventListener("mouseleave", () => {
-      dropdown.classList.remove("show");
-    });
-  }
-});
