@@ -255,6 +255,16 @@ body .tt-menu {
     border:none !important;
 }
 
+/* Force dropdown to only appear on hover */
+.sidebar-section.filter-section .list-tags .dropdown-menu {
+  display: none !important;
+}
+
+.sidebar-section.filter-section .list-tags:hover .dropdown-menu {
+  display: block !important;
+}
+
+
 
 
 
