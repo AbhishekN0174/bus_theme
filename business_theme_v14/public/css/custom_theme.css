@@ -13,9 +13,6 @@
 
 
 
-
-
-
 /* === Remove container styles for all filter sections === */
 .sidebar-section.filter-section .list-group-by,
 .sidebar-section.filter-section .list-tags,
@@ -3704,6 +3701,20 @@ color: #e14040 !important;
 
 .widget.onboarding-widget-box .widget-body .onboarding-step-preview h3{
     color: #ed1d1d !important;
+}
+
+
+/* id */
+
+.level-item {
+    font-weight: var(--weight-medium);
+    color: #f95e5e;
+    align-items: center;
+    display: flex;
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+    justify-content: center;
 }
 /* text color */
 /* ---------------------------------------------------------------------------- */
