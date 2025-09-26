@@ -253,8 +253,7 @@ document.querySelectorAll('.widget.spacer, .spacer, .flex-spacer').forEach(n=>n.
 
       // notags
 
-      frappe.ready(() => {
-  // Target the trigger (the filter field) and the dropdown
+    frappe.ready(() => {
   const trigger = document.querySelector(
     ".sidebar-section.filter-section .list-tags"
   );
@@ -263,23 +262,20 @@ document.querySelectorAll('.widget.spacer, .spacer, .flex-spacer').forEach(n=>n.
   );
 
   if (trigger && dropdown) {
-    // Toggle on click
+    // Show when clicking
     trigger.addEventListener("click", (e) => {
-      e.stopPropagation(); // prevent bubbling
-      dropdown.classList.toggle("show");
+      e.stopPropagation();
+      dropdown.classList.add("show");
     });
 
-    // Close when mouse leaves dropdown
-    dropdown.addEventListener("mouseleave", () => {
+    // Hide when leaving the field (trigger container)
+    trigger.addEventListener("mouseleave", () => {
       dropdown.classList.remove("show");
     });
 
-    // Close if clicking anywhere else on the page
-    document.addEventListener("click", (e) => {
-      if (!trigger.contains(e.target) && !dropdown.contains(e.target)) {
-        dropdown.classList.remove("show");
-      }
+    // Also hide if mouse leaves the dropdown itself
+    dropdown.addEventListener("mouseleave", () => {
+      dropdown.classList.remove("show");
     });
   }
 });
-
