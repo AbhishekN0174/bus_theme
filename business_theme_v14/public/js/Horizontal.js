@@ -250,3 +250,82 @@ document.querySelectorAll('.widget.spacer, .spacer, .flex-spacer').forEach(n=>n.
 
     (() => {
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      frappe.ready(function() {
+    // Create Chatbox container
+    let chatContainer = $(`
+        <div id="ai-chatbox" style="
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            z-index: 9999;
+        ">
+            <div style="padding:10px; background:#f44336; color:white; border-radius:12px 12px 0 0; font-weight:bold;">
+                🤖 AI Assistant
+            </div>
+            <div id="chat-messages" style="flex:1; padding:10px; overflow-y:auto; max-height:200px;">
+                <div style="color:gray; font-size:12px;">Ask me anything...</div>
+            </div>
+            <div style="display:flex; border-top:1px solid #eee;">
+                <input id="chat-input" type="text" placeholder="Type a message..." 
+                    style="flex:1; border:none; padding:8px; font-size:14px; outline:none;">
+                <button id="chat-send" style="background:#f44336; color:white; border:none; padding:8px 12px; cursor:pointer;">
+                    Send
+                </button>
+            </div>
+        </div>
+    `);
+
+    $("body").append(chatContainer);
+
+    // Handle send button
+    $("#chat-send").on("click", function() {
+        let msg = $("#chat-input").val();
+        if (!msg) return;
+
+        // Add user message
+        $("#chat-messages").append(`<div style="margin:5px 0; text-align:right;"><b>You:</b> ${msg}</div>`);
+        $("#chat-input").val("");
+
+        // Call OpenAI API (via backend)
+        frappe.call({
+            method: "bus_theme_v14.api.ask_openai",
+            args: { prompt: msg },
+            callback: function(r) {
+                if (r.message) {
+                    $("#chat-messages").append(`<div style="margin:5px 0; text-align:left; color:#333;"><b>AI:</b> ${r.message}</div>`);
+                    $("#chat-messages").scrollTop($("#chat-messages")[0].scrollHeight);
+                }
+            }
+        });
+    });
+});
+
+
