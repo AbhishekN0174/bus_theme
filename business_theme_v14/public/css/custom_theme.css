@@ -9,14 +9,6 @@
 
 
 
-#ai-chatbox {
-  animation: slideUp 0.3s ease-in-out;
-}
-@keyframes slideUp {
-  from { transform: translateY(50px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
 
 
 
@@ -235,7 +227,7 @@ body .tt-menu {
 
 
 /* Remove background/hover effect from the LI container itself */
-.sidebar-section.filter-section .list-tags .dropdown-menu li,
+/* .sidebar-section.filter-section .list-tags .dropdown-menu li,
 .sidebar-section.filter-section .list-tags .dropdown-menu li:hover,
 .sidebar-section.filter-section .list-tags .dropdown-menu li:focus,
 .sidebar-section.filter-section .list-tags .dropdown-menu li:active {
@@ -244,7 +236,7 @@ body .tt-menu {
   background-image: none !important;
   box-shadow: none !important;
     
-}
+} */
 
 /* 3) Target your exact anchor class too (extra specificity) */
 .sidebar-section.filter-section .list-tags .dropdown-menu a.stat-link.dropdown-item,
