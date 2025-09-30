@@ -354,14 +354,14 @@ body .tt-menu {
 }
 
 /* Kill hover/focus/active states */
-/* .sidebar-section.save-filter-section .sidebar-label:hover,
+.sidebar-section.save-filter-section .sidebar-label:hover,
 .sidebar-section.save-filter-section .sidebar-label:focus,
 .sidebar-section.save-filter-section .sidebar-label:active {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
   color: #111 !important;
-} */
+}
 /* Pull Save Filter container down below Show Tags */
 /* .sidebar-section.filter-section + .sidebar-section.save-filter-section {
     margin-top: 12px !important; /* adjust 8px–16px as you like */
@@ -2056,11 +2056,11 @@ li.nav-item.dropdown .dropdown-menu,
 }
 
 /* Widget hover effects */
-.layout-main-section .widget:hover,
+/* .layout-main-section .widget:hover,
 .layout-main-section [data-widget-name]:hover {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1), 0 4px 10px rgba(0, 0, 0, 0.05) !important;
     transform: translateY(-2px) !important;
-}
+} */
 
 /* Widget headers */
 /* .layout-main-section .widget .widget-head,
