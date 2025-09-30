@@ -2105,10 +2105,10 @@ li.nav-item.dropdown .dropdown-menu,
     transition: color 0.2s ease !important;
 }
 
-/* .layout-main-section .widget .widget-body a:hover {
+.layout-main-section .widget .widget-body a:hover {
     color: #1d4ed8 !important;
     text-decoration: underline !important;
-} */
+}
 
 /* Revenue metrics styling */
 /* .layout-main-section .widget .widget-body .number,
@@ -2192,11 +2192,11 @@ li.nav-item.dropdown .dropdown-menu,
     transition: all 0.3s ease !important;
 }
 
-/* .btn-primary:hover {
+.btn-primary:hover {
     background: linear-gradient(135deg, #1d4ed8, #1e40af) !important;
     transform: translateY(-1px) !important;
     box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4) !important;
-} */
+}
 
 .btn-secondary {
     background: white !important;
@@ -2208,10 +2208,10 @@ li.nav-item.dropdown .dropdown-menu,
     transition: all 0.3s ease !important;
 }
 
-/* .btn-secondary:hover {
+.btn-secondary:hover {
     background: #f9fafb !important;
     border-color: #9ca3af !important;
-} */
+}
 
 /* Remove button focus outlines */
 .btn:focus,
@@ -2620,9 +2620,9 @@ background: linear-gradient(180deg, rgb(217 225 233) 0%, rgb(204 224 251) 100%) 
     font-weight: 500 !important;
 }
 
-.navbar .navbar-nav .nav-link:hover {
+/* .navbar .navbar-nav .nav-link:hover {
     color: #1e40af !important;
-}
+} */
 
 /* Search bar in navbar */
 header .form-control {
@@ -2671,9 +2671,9 @@ header .form-control {
     color: #1e3a8a !important;
 }
 
-#navbar-breadcrumbs a:hover {
+/* #navbar-breadcrumbs a:hover {
     color: #1e40af !important;
-}
+} */
 
 /* Additional fallback selectors for ERPNext */
 .layout-main-section-wrapper > .container,
@@ -2860,14 +2860,14 @@ header * {
 
 
 /* Hover effect */
-.list-sidebar.overlay-sidebar .standard-sidebar-item:hover,
+/* .list-sidebar.overlay-sidebar .standard-sidebar-item:hover,
 .list-sidebar.overlay-sidebar .sidebar-item:hover,
 .list-sidebar .module-sidebar-item:hover {
     background: #d5bf83 !important;    /* brighter hover color for sidebar menu item */
     color: #fff !important;
     transform: scale(1.02);
     border-radius: 10px !important;
-}
+} */
 
 /* ==================== FILTER SIDEBAR COMPACT GLASS THEME ==================== */
 
@@ -2970,12 +2970,12 @@ header * {
     margin-bottom: 6px !important;
     width: 100% !important;
 }
-.sidebar-section.filter-section .btn:hover,
+/* .sidebar-section.filter-section .btn:hover,
 .sidebar-section.save-filter-section .btn:hover {
 /*     background: #2563eb !important; */
     color: #fff !important;
     border-color: #2563eb !important;
-}
+} */
 
 /* Dropdowns */
 /* ================== DROPDOWN POPUP ================== */
