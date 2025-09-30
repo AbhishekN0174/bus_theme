@@ -227,7 +227,7 @@ body .tt-menu {
 
 
 /* Remove background/hover effect from the LI container itself */
-/* .sidebar-section.filter-section .list-tags .dropdown-menu li,
+.sidebar-section.filter-section .list-tags .dropdown-menu li,
 .sidebar-section.filter-section .list-tags .dropdown-menu li:hover,
 .sidebar-section.filter-section .list-tags .dropdown-menu li:focus,
 .sidebar-section.filter-section .list-tags .dropdown-menu li:active {
@@ -236,7 +236,7 @@ body .tt-menu {
   background-image: none !important;
   box-shadow: none !important;
     
-} */
+}
 
 /* 3) Target your exact anchor class too (extra specificity) */
 .sidebar-section.filter-section .list-tags .dropdown-menu a.stat-link.dropdown-item,
@@ -317,7 +317,7 @@ body .tt-menu {
 }
 
 /* remove hover/focus background */
-.sidebar-section.save-filter-section input:hover,
+/* .sidebar-section.save-filter-section input:hover,
 .sidebar-section.save-filter-section input:focus,
 .sidebar-section.save-filter-section button:hover,
 .sidebar-section.save-filter-section button:focus,
@@ -328,7 +328,7 @@ body .tt-menu {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
-}
+} */
 
 /* save filter text */
 
