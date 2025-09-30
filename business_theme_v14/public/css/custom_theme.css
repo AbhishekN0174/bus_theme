@@ -317,7 +317,7 @@ body .tt-menu {
 }
 
 /* remove hover/focus background */
-/* .sidebar-section.save-filter-section input:hover,
+.sidebar-section.save-filter-section input:hover,
 .sidebar-section.save-filter-section input:focus,
 .sidebar-section.save-filter-section button:hover,
 .sidebar-section.save-filter-section button:focus,
@@ -328,7 +328,7 @@ body .tt-menu {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
-} */
+}
 
 /* save filter text */
 
@@ -348,10 +348,10 @@ body .tt-menu {
   cursor: default !important;    /* make it behave like text */
 }
 
-.sidebar-section.save-filter-section .sidebar-label:hover {
+/* .sidebar-section.save-filter-section .sidebar-label:hover {
   background: transparent !important;
   color: #111 !important;
-}
+} */
 
 /* Kill hover/focus/active states */
 .sidebar-section.save-filter-section .sidebar-label:hover,
