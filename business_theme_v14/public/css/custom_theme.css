@@ -3030,11 +3030,11 @@ header * {
   color: #374151 !important;
   border-radius: 4px !important;
 }
-/* .dropdown-menu.group-by-dropdown .dropdown-item:hover,
+.dropdown-menu.group-by-dropdown .dropdown-item:hover,
 .dropdown-menu.group-by-dropdown .dropdown-item:focus {
   background: #2563eb !important;
   color: #ffffff !important;
-} */
+}
 
 /* empty state like "No filters found" */
 .dropdown-menu.group-by-dropdown .empty-state,
@@ -3085,11 +3085,11 @@ header * {
   transition: background 0.2s ease-in-out;
 }
 
-/* .dropdown-menu.group-by-dropdown.show .dropdown-item:hover,
+.dropdown-menu.group-by-dropdown.show .dropdown-item:hover,
 .dropdown-menu.list-stats-dropdown.show .dropdown-item:hover {
 /*   background: #2563eb !important; */
   color: #fff !important;
-} */
+}
 
 
 /* ///////////tagspace///// */
@@ -3595,10 +3595,10 @@ header * {
 
 /* text color */
 /* Target only the Save Filter section items filteeeerrrrr */
-/* .sidebar-section.save-filter-section .list-filters.list-link:hover {
+.sidebar-section.save-filter-section .list-filters.list-link:hover {
     background: transparent !important;
     box-shadow: none !important;
-} */
+}
  
 /* Make "No Tags" plain text */
 .dropdown-menu.list-stats-dropdown.show .dropdown-item {
@@ -4042,16 +4042,16 @@ header .form-control:focus {
     gap: 8px !important;
 }
 
-/* .layout-side-section .sidebar-menu li:hover,
+.layout-side-section .sidebar-menu li:hover,
 .layout-side-section .standard-sidebar li:hover,
 .layout-side-section .sidebar-menu li a:hover,
 .layout-side-section .standard-sidebar li a:hover,
-.standard-sidebar-item:hover { */
+.standard-sidebar-item:hover { 
      /* background: rgba(255, 255, 255, 0.2) !important; */
     /* border-color: rgba(255, 255, 255, 0.4) !important;  */
-    /* transform: translateX(3px) !important;
+    transform: translateX(3px) !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
-    color:black !important!; */
+    color:black !important!;
 }
 
 /* Navigation icons */
@@ -4374,11 +4374,11 @@ document.addEventListener('DOMContentLoaded', function() {
     transition: all 0.3s ease !important;
 }
 
-.layout-main-section .widget:hover,
+/* .layout-main-section .widget:hover,
 .layout-main-section [data-widget-name]:hover {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1), 0 4px 10px rgba(0, 0, 0, 0.05) !important;
     transform: translateY(-2px) !important;
-}
+} */
 
 .layout-main-section .widget .widget-head,
 .layout-main-section .widget .widget-title,
@@ -4401,11 +4401,11 @@ document.addEventListener('DOMContentLoaded', function() {
     transition: all 0.3s ease !important;
 }
 
-.btn-primary:hover {
+/* .btn-primary:hover {
     background: linear-gradient(135deg, #1d4ed8, #1e40af) !important;
     transform: translateY(-1px) !important;
     box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4) !important;
-}
+} */
 
 /* ==================== RESPONSIVE DESIGN ==================== */
 @media (max-width: 991px) {
