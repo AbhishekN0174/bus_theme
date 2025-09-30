@@ -2056,11 +2056,11 @@ li.nav-item.dropdown .dropdown-menu,
 }
 
 /* Widget hover effects */
-/* .layout-main-section .widget:hover,
+.layout-main-section .widget:hover,
 .layout-main-section [data-widget-name]:hover {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1), 0 4px 10px rgba(0, 0, 0, 0.05) !important;
     transform: translateY(-2px) !important;
-} */
+}
 
 /* Widget headers */
 /* .layout-main-section .widget .widget-head,
@@ -2105,10 +2105,10 @@ li.nav-item.dropdown .dropdown-menu,
     transition: color 0.2s ease !important;
 }
 
-.layout-main-section .widget .widget-body a:hover {
+/* .layout-main-section .widget .widget-body a:hover {
     color: #1d4ed8 !important;
     text-decoration: underline !important;
-}
+} */
 
 /* Revenue metrics styling */
 /* .layout-main-section .widget .widget-body .number,
@@ -2192,11 +2192,11 @@ li.nav-item.dropdown .dropdown-menu,
     transition: all 0.3s ease !important;
 }
 
-.btn-primary:hover {
+/* .btn-primary:hover {
     background: linear-gradient(135deg, #1d4ed8, #1e40af) !important;
     transform: translateY(-1px) !important;
     box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4) !important;
-}
+} */
 
 .btn-secondary {
     background: white !important;
@@ -2208,10 +2208,10 @@ li.nav-item.dropdown .dropdown-menu,
     transition: all 0.3s ease !important;
 }
 
-.btn-secondary:hover {
+/* .btn-secondary:hover {
     background: #f9fafb !important;
     border-color: #9ca3af !important;
-}
+} */
 
 /* Remove button focus outlines */
 .btn:focus,
