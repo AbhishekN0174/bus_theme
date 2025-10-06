@@ -7,7 +7,7 @@ a.pill-label.ellipsis.explore-link{
 span.share-label{
     color:white !important;
 }
-span.like-count ml-2{
+span.liked-by.like-action.d-flex.align-items-center.not-liked{
     color:white !important;
 }
 
