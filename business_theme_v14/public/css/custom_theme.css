@@ -11,12 +11,10 @@ span.liked-by.like-action.d-flex.align-items-center.not-liked{
     color:white !important;
 }
 
-.list-filters list-link:hover,
-.list-filters list-link:focus,
-.list-filters list-link:active {
- background-color: transparent !important;
-  box-shadow: none !important;
+body .input-with-feedback.form-control.input-xs:hover {
+  background-color: transparent !important;
 }
+
 
 
 
