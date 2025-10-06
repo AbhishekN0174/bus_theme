@@ -10,6 +10,16 @@
 
     color: white !important;
 }
+
+    body[data-route^=Form] .page-title .title-text {
+     
+        color: black !important;
+        font-weight: bold !important;
+    }
+
+
+
+
 /* a.pill-label ellipsis explore-link{
   color:white !important;
 } */
