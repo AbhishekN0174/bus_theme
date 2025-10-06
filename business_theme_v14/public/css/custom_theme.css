@@ -6,8 +6,9 @@
 
 
 /* color */
-.ellipsis{
-  color:white !important;
+.ellipsis, .awesomplete>[role=listbox]>li, .awesomplete>[role=listbox]>[role=option], .widget.shortcut-widget-box .indicator-pill {
+
+    color: white !important;
 }
 /* a.pill-label ellipsis explore-link{
   color:white !important;
