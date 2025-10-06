@@ -7,6 +7,13 @@ li.input-area:active {
   border: none !important;
 }
 
+li.input-area *,
+li.input-area:hover * {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+
 
 
 /* ==================== ITCHAMPS DASHBOARD THEME ==================== */
