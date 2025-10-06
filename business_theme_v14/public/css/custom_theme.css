@@ -1,17 +1,10 @@
-/* Remove hover background color for input-area */
-li.input-area:hover,
-li.input-area:focus,
-li.input-area:active {
+.sidebar-section.filter-section li:hover,
+.sidebar-section.save-filter-section li:hover {
   background: transparent !important;
-  box-shadow: none !important;
-  border: none !important;
 }
 
-li.input-area *,
-li.input-area:hover * {
-  background: transparent !important;
-  box-shadow: none !important;
-}
+
+
 
 /* a.ellipsis{
   color:white !important;
