@@ -19,6 +19,9 @@
 .page-title .title-area .title-text {
 color:black !important;
 }
+.span-like-count-ml-2 {
+  color: white;
+}
 
 
 
@@ -3087,12 +3090,10 @@ header * {
     font-size: 10px !important;   /* smaller number */
     padding: 2px 4px !important;  /* reduce spacing */
     margin-left: -6px !important; /* shift left */
-  
-}
-/* ////X//// */
-a.form-sidebar .comments.d-flex.align-items-center{
   color:white !important;
 }
+/* ////X//// */
+
 
 /* make header relative so we can position icons inside */
 .modal-header.search-header {
