@@ -5,13 +5,17 @@
 
 
 
-
-/* a.ellipsis{
-  color:white !important;
-} */
-a.pill-label ellipsis explore-link{
+/* color */
+a.ellipsis{
   color:white !important;
 }
+/* a.pill-label ellipsis explore-link{
+  color:white !important;
+} */
+
+
+
+
 
 
 /* ==================== ITCHAMPS DASHBOARD THEME ==================== */
@@ -4549,6 +4553,7 @@ button .section-title span,
 
 @media (max-width: 991px) {
     .layout-side-section .overlay-sidebar {
+      color:white !important;
         margin-top: 0 !important;
         position: fixed;
         background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #4facfe 100%) !important;
