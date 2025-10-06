@@ -14,7 +14,7 @@ span.liked-by.like-action.d-flex.align-items-center.not-liked{
 .list-filters list-link:hover,
 .list-filters list-link:focus,
 .list-filters list-link:active {
- color: transparent !important;
+ background-color: transparent !important;
   box-shadow: none !important;
 }
 
