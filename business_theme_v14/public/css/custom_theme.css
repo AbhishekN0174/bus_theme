@@ -11,9 +11,9 @@ span.liked-by.like-action.d-flex.align-items-center.not-liked{
     color:white !important;
 }
 
-.input-with-feedback.form-control.input-xs:hover,
-.input-with-feedback.form-control.input-xs:focus,
-.input-with-feedback.form-control.input-xs:active {
+.list-filters list-link:hover,
+.list-filters list-link:focus,
+.list-filters list-link:active {
  color: transparent !important;
   box-shadow: none !important;
 }
@@ -3129,10 +3129,10 @@ header * {
 
 /* text color */
 /* Target only the Save Filter section items filteeeerrrrr */
-.sidebar-section.save-filter-section .list-filters.list-link:hover {
+/* .sidebar-section.save-filter-section .list-filters.list-link:hover {
     background: transparent !important;
     box-shadow: none !important;
-}
+} */
  
 /* Make "No Tags" plain text */
 .dropdown-menu.list-stats-dropdown.show .dropdown-item {
