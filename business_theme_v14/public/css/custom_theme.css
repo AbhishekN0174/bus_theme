@@ -11,9 +11,15 @@ span.liked-by.like-action.d-flex.align-items-center.not-liked{
     color:white !important;
 }
 
-body .input-with-feedback.form-control.input-xs:hover {
+/* Remove hover background and shadow from the filter input area */
+.sidebar-section.filter-section li.input-area:hover,
+.sidebar-section.filter-section li.input-area:focus,
+.sidebar-section.filter-section li.input-area:active {
+  background: transparent !important;
   background-color: transparent !important;
+  box-shadow: none !important;
 }
+
 
 
 
