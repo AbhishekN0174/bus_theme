@@ -11,26 +11,6 @@ span.liked-by.like-action.d-flex.align-items-center.not-liked{
     color:white !important;
 }
 
-/* Full override for hover background on filter name item */
-li.input-area,
-li.input-area:hover,
-li.input-area:focus,
-li.input-area:active {
-  background: none !important;
-  background-color: transparent !important;
-  box-shadow: none !important;
-  outline: none !important;
-}
-
-/* Sometimes Frappe wraps a link or div inside li — override that too */
-li.input-area *:hover {
-  background: none !important;
-  background-color: transparent !important;
-  box-shadow: none !important;
-}
-.list-tags li.input-area:hover {
-  background: transparent !important;
-}
 
 
 
@@ -2889,7 +2869,7 @@ header * {
 }
 .save-filter-section .sidebar-action .btn:hover {
 /*     background: #2563eb !important; */
-    color: #fff !important;
+    /* color: #fff !important; */
 }
 
 
