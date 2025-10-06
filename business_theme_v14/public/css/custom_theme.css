@@ -1,3 +1,14 @@
+/* Remove hover background color for input-area */
+li.input-area:hover,
+li.input-area:focus,
+li.input-area:active {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+
+
 /* ==================== ITCHAMPS DASHBOARD THEME ==================== */
 /* ==================== NAVBAR STYLING ==================== */
 /* Top navigation bar with ITChamps logo */
