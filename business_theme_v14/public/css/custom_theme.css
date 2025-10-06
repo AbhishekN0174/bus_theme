@@ -1,6 +1,10 @@
-sidebar-section save-filter-section li:hover {
-  background: transparent !important;
+input.input-with-feedback.form-control.input-xs:hover,
+input.input-with-feedback.form-control.input-xs:focus {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
 }
+
 
 
 /* color */
