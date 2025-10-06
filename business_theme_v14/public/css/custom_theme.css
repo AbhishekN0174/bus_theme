@@ -3087,10 +3087,12 @@ header * {
     font-size: 10px !important;   /* smaller number */
     padding: 2px 4px !important;  /* reduce spacing */
     margin-left: -6px !important; /* shift left */
-  color:white !important;
+  
 }
 /* ////X//// */
-
+a.form-sidebar .comments.d-flex.align-items-center{
+  color:white !important;
+}
 
 /* make header relative so we can position icons inside */
 .modal-header.search-header {
