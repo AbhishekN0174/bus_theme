@@ -5,10 +5,15 @@
 
 
 /* color */
-.ellipsis, .awesomplete>[role=listbox]>li, .awesomplete>[role=listbox]>[role=option], .widget.shortcut-widget-box .indicator-pill {
+/* .ellipsis, .awesomplete>[role=listbox]>li, .awesomplete>[role=listbox]>[role=option], .widget.shortcut-widget-box .indicator-pill {
 
     color: white !important;
+} */
+
+.form-sidebar.overlay-sidebar.hidden-xs.hidden-sm.opened {
+  color: white !important;
 }
+
 
     body[data-route^=Form] .page-title .title-text {
      
