@@ -14,7 +14,7 @@ span.liked-by.like-action.d-flex.align-items-center.not-liked{
 .input-with-feedback.form-control.input-xs:hover,
 .input-with-feedback.form-control.input-xs:focus,
 .input-with-feedback.form-control.input-xs:active {
-  background-color: transparent !important;
+ color: transparent !important;
   box-shadow: none !important;
 }
 
