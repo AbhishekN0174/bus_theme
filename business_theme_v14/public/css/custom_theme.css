@@ -13,7 +13,12 @@ li.input-area:hover * {
   box-shadow: none !important;
 }
 
-
+a.ellipsis{
+  color:white !important;
+}
+a.pill-label ellipsis explore-link{
+  color:white !important;
+}
 
 
 /* ==================== ITCHAMPS DASHBOARD THEME ==================== */
