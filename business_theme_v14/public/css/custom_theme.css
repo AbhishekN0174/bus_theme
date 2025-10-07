@@ -16,15 +16,13 @@ header.level.list-row-head.text-muted{
 }
 
 use.like-icon {
-    stroke: black !important;
+    stroke: white !important;
 }
 
 span.form-sidebar-items{
     color:white !important;
 }
-use.like-icon.es-icon icon-sm{
-    color:white !important;
-}
+
 
 
 
