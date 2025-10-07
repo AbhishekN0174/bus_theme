@@ -10,6 +10,25 @@ app_email = "sagar@midocean.tech"
 app_license = "MIT"
 
 
+
+
+
+
+
+app_name = "doppio_bot"
+app_title = "DoppioBot"
+app_publisher = "Hussain Nagaria"
+app_description = "ChatGPT in the Desk, powered by React, LangChain & OpenAI API"
+app_email = "hussain@frappe.io"
+app_license = "AGPL-3.0"
+
+
+
+
+
+
+
+
 # Includes in <head>
 # ------------------
 
