@@ -22,7 +22,7 @@ use.like-icon {
 span.form-sidebar-items{
     color:white !important;
 }
-span.level-item.list-liked-by-me.hidden-xs{
+like-icon{
     color:black !important;
 }
 
