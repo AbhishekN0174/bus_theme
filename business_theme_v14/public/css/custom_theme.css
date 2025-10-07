@@ -11,7 +11,9 @@ span.liked-by.like-action.d-flex.align-items-center.not-liked{
     color:white !important;
 }
 
-
+header.level.list-row-head.text-muted{
+    color:black !important;
+}
 
 
 
