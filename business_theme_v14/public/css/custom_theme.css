@@ -19,10 +19,12 @@ use.like-icon {
     stroke: black !important;
 }
 
-span.form-sidebar-items.es-icon icon-sm{
+span.form-sidebar-items{
     color:white !important;
 }
-
+use.like-icon.es-icon icon-sm{
+    color:white !important;
+}
 
 
 
