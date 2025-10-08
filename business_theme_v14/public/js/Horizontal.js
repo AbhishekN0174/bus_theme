@@ -408,7 +408,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // --- OpenAI Chat Request ---
   async function askOpenAI(userText) {
-    const API_KEY = "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"; // <-- Replace with your key
+    const API_KEY = "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"; // <-- Replace with your key
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
