@@ -3692,6 +3692,10 @@ body .tt-menu {
   background: transparent !important;
   color: #111 !important;
 }
+.layout-side-section:hover {
+  background-color: transparent !important;
+}
+
 
 /* Kill hover/focus/active states */
 .sidebar-section.save-filter-section .sidebar-label:hover,
