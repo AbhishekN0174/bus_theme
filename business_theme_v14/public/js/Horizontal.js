@@ -428,3 +428,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+
+
+      // Add this to a custom .js file in your app
+frappe.ready(() => {
+    const searchBar = document.querySelector('.awesomplete input');
+    if (!searchBar) return;
+
+    const mic = document.createElement('button');
+    mic.innerHTML = '🎤';
+    mic.style.marginLeft = '8px';
+    searchBar.parentElement.appendChild(mic);
+
+    mic.addEventListener('click', () => {
+        const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+        recognition.lang = 'en-US';
+        recognition.start();
+
+        recognition.onresult = function(event) {
+            const speech = event.results[0][0].transcript;
+            searchBar.value = speech;
+            searchBar.dispatchEvent(new Event('input')); // trigger search
+        };
+    });
+});
+
+
