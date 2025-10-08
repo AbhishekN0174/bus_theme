@@ -329,3 +329,102 @@ document.querySelectorAll('.widget.spacer, .spacer, .flex-spacer').forEach(n=>n.
 });
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+      // ========================
+//  AI Chatbot (Glass UI)
+// ========================
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Create chat button
+  const chatButton = document.createElement("div");
+  chatButton.id = "ai-chat-button";
+  chatButton.innerHTML = "💬";
+  document.body.appendChild(chatButton);
+
+  // Create chat window
+  const chatWindow = document.createElement("div");
+  chatWindow.id = "ai-chat-window";
+  chatWindow.innerHTML = `
+    <div class="ai-chat-header">
+      <span>AI Assistant</span>
+      <button id="close-chat">×</button>
+    </div>
+    <div class="ai-chat-messages" id="chat-messages"></div>
+    <div class="ai-chat-input">
+      <input type="text" id="chat-input" placeholder="Ask me anything..." />
+      <button id="send-chat">➤</button>
+    </div>
+  `;
+  document.body.appendChild(chatWindow);
+
+  const messagesDiv = document.getElementById("chat-messages");
+  const inputField = document.getElementById("chat-input");
+  const sendButton = document.getElementById("send-chat");
+  const closeButton = document.getElementById("close-chat");
+
+  // Open/close handlers
+  chatButton.onclick = () => chatWindow.classList.toggle("open");
+  closeButton.onclick = () => chatWindow.classList.remove("open");
+
+  // Handle send message
+  sendButton.onclick = sendMessage;
+  inputField.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") sendMessage();
+  });
+
+  async function sendMessage() {
+    const text = inputField.value.trim();
+    if (!text) return;
+
+    addMessage("user", text);
+    inputField.value = "";
+
+    try {
+      const reply = await askOpenAI(text);
+      addMessage("bot", reply);
+    } catch (err) {
+      addMessage("bot", "⚠️ Error connecting to AI. Check your API key.");
+    }
+  }
+
+  function addMessage(sender, text) {
+    const msg = document.createElement("div");
+    msg.className = `msg ${sender}`;
+    msg.innerText = text;
+    messagesDiv.appendChild(msg);
+    messagesDiv.scrollTop = messagesDiv.scrollHeight;
+  }
+
+  // --- OpenAI Chat Request ---
+  async function askOpenAI(userText) {
+    const API_KEY = "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"; // <-- Replace with your key
+    const response = await fetch("https://api.openai.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${API_KEY}`,
+      },
+      body: JSON.stringify({
+        model: "gpt-3.5-turbo",
+        messages: [{ role: "user", content: userText }],
+      }),
+    });
+
+    const data = await response.json();
+    return data.choices?.[0]?.message?.content || "No response from AI.";
+  }
+});
+
+
+
