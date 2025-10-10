@@ -99,20 +99,33 @@
             messages.appendChild(userMsg);
             inputBox.value = "";
 
-            // AI Response Simulation
-            const aiMsg = document.createElement("div");
-            aiMsg.textContent = "🤖 Thinking...";
-            Object.assign(aiMsg.style, { margin: "6px 0", color: "#007bff" });
-            messages.appendChild(aiMsg);
+// ---- 🔥 Send Message to Backend (AI Chatbot API) ----
+const aiMsg = document.createElement("div");
+aiMsg.textContent = "🤖 Thinking...";
+Object.assign(aiMsg.style, { margin: "6px 0", color: "#007bff" });
+messages.appendChild(aiMsg);
 
-            // You can replace this with frappe.call() to your backend later
-            setTimeout(() => {
-                aiMsg.textContent = "🤖 Thanks! (Chatbot connected successfully)";
-            }, 1000);
+messages.scrollTop = messages.scrollHeight;
 
-            messages.scrollTop = messages.scrollHeight;
-        };
+// 🔗 Call your Frappe API (update method path if needed)
+frappe.call({
+    method: "ai_chatbot.api.get_reply",
+    args: { message: text },
+    callback: function (r) {
+        if (r.message && r.message.reply) {
+            aiMsg.textContent = "🤖 " + r.message.reply;
+        } else if (r.message && r.message.error) {
+            aiMsg.textContent = "⚠️ Error: " + r.message.error;
+        } else {
+            aiMsg.textContent = "🤖 (No response)";
+        }
+        messages.scrollTop = messages.scrollHeight;
+    },
+    error: function (err) {
+        aiMsg.textContent = "⚠️ Failed to reach server.";
     }
+});
+
 
     // Ensure chatbot initializes after full desk load
     window.addEventListener("load", initChatbot);
