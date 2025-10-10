@@ -90,29 +90,43 @@
         const inputBox = chatWindow.querySelector("#ai-chatbot-input");
         const messages = chatWindow.querySelector("#ai-chatbot-messages");
 
-        sendBtn.onclick = () => {
-            const text = inputBox.value.trim();
-            if (!text) return;
-            const userMsg = document.createElement("div");
-            userMsg.textContent = "🧑 " + text;
-            Object.assign(userMsg.style, { textAlign: "right", margin: "6px 0", color: "#222" });
-            messages.appendChild(userMsg);
-            inputBox.value = "";
+sendBtn.onclick = () => {
+    const text = inputBox.value.trim();
+    if (!text) return;
 
-            // AI Response Simulation
-            const aiMsg = document.createElement("div");
-            aiMsg.textContent = "🤖 Thinking...";
-            Object.assign(aiMsg.style, { margin: "6px 0", color: "#007bff" });
-            messages.appendChild(aiMsg);
+    const userMsg = document.createElement("div");
+    userMsg.textContent = "🧑 " + text;
+    Object.assign(userMsg.style, { textAlign: "right", margin: "6px 0", color: "#222" });
+    messages.appendChild(userMsg);
+    inputBox.value = "";
 
-            // You can replace this with frappe.call() to your backend later
-            setTimeout(() => {
-                aiMsg.textContent = "🤖 Thanks! (Chatbot connected successfully)";
-            }, 1000);
+    // ---- 🔥 Send Message to Backend (AI Chatbot API) ----
+    const aiMsg = document.createElement("div");
+    aiMsg.textContent = "🤖 Thinking...";
+    Object.assign(aiMsg.style, { margin: "6px 0", color: "#007bff" });
+    messages.appendChild(aiMsg);
 
+    messages.scrollTop = messages.scrollHeight;
+
+    frappe.call({
+        method: "ai_chatbot.api.get_reply",
+        args: { message: text },
+        callback: function (r) {
+            if (r.message && r.message.reply) {
+                aiMsg.textContent = "🤖 " + r.message.reply;
+            } else if (r.message && r.message.error) {
+                aiMsg.textContent = "⚠️ Error: " + r.message.error;
+            } else {
+                aiMsg.textContent = "🤖 (No response)";
+            }
             messages.scrollTop = messages.scrollHeight;
-        };
-    }
+        },
+        error: function (err) {
+            aiMsg.textContent = "⚠️ Failed to reach server.";
+        }
+    });
+};
+
 
     // Ensure chatbot initializes after full desk load
     window.addEventListener("load", initChatbot);
