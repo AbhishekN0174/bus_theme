@@ -58,7 +58,30 @@
         const inputBox = chatWindow.querySelector("#ai-chatbot-input");
         const messages = chatWindow.querySelector("#ai-chatbot-messages");
 
-        sendBtn.onclick = () => {
+        // 🔹 NEW FUNCTION: fetch data from Frappe backend
+        async function fetchFrappeData(docType) {
+            try {
+                const response = await fetch(`/api/method/ai_chatbot.api.chatbot_api.get_doc_data?doctype_name=${encodeURIComponent(docType)}`);
+                const result = await response.json();
+
+                if (result.message) {
+                    return `⚠️ ${result.message}`;
+                } else if (result.data && result.data.length > 0) {
+                    let formatted = `<b>${docType} Data:</b><br>`;
+                    result.data.forEach(item => {
+                        formatted += `• ${item.name || 'Unnamed'}<br>`;
+                    });
+                    return formatted;
+                } else {
+                    return `No records found for ${docType}.`;
+                }
+            } catch (error) {
+                console.error(error);
+                return "Error fetching data from backend.";
+            }
+        }
+
+        sendBtn.onclick = async () => {
             const text = inputBox.value.trim();
             if (!text) return;
 
@@ -76,24 +99,30 @@
             messages.appendChild(aiMsg);
             messages.scrollTop = messages.scrollHeight;
 
-            // Call Frappe API (updated to your theme app)
-            frappe.call({
-                method: "business_theme_v14.api.get_reply",
-                args: { message: text },
-                callback: function(r) {
-                    if (r.message && r.message.reply) {
-                        aiMsg.textContent = "🤖 " + r.message.reply;
-                    } else if (r.message && r.message.error) {
-                        aiMsg.textContent = "⚠️ Error: " + r.message.error;
-                    } else {
-                        aiMsg.textContent = "🤖 (No response)";
-                    }
-                    messages.scrollTop = messages.scrollHeight;
-                },
-                error: function(err) {
-                    aiMsg.textContent = "⚠️ Failed to reach server.";
+            let botReply = "";
+
+            // 🔹 Keyword detection for live DocType data
+            if (text.toLowerCase().includes("holiday")) {
+                botReply = await fetchFrappeData("Holiday List");
+            } else if (text.toLowerCase().includes("sick leave")) {
+                botReply = await fetchFrappeData("Leave Application");
+            } else if (text.toLowerCase().includes("employee")) {
+                botReply = await fetchFrappeData("Employee");
+            } else {
+                // 🔹 Fallback: AI reply from your backend
+                try {
+                    const r = await frappe.call({
+                        method: "business_theme_v14.api.get_reply",
+                        args: { message: text }
+                    });
+                    botReply = (r.message && r.message.reply) ? r.message.reply : "🤖 (No response)";
+                } catch (err) {
+                    botReply = "⚠️ Failed to reach server.";
                 }
-            });
+            }
+
+            aiMsg.innerHTML = botReply;
+            messages.scrollTop = messages.scrollHeight;
         };
 
         // Optional: send message on Enter key
