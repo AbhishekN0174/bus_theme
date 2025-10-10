@@ -76,9 +76,9 @@
             messages.appendChild(aiMsg);
             messages.scrollTop = messages.scrollHeight;
 
-            // Call Frappe API
+            // Call Frappe API (updated to your theme app)
             frappe.call({
-                method: "ai_chatbot.api.get_reply",
+                method: "business_theme_v14.api.get_reply",
                 args: { message: text },
                 callback: function(r) {
                     if (r.message && r.message.reply) {
