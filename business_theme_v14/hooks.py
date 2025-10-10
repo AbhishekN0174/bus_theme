@@ -13,6 +13,9 @@ app_color = "grey"
 app_email = "sagar@midocean.tech"
 app_license = "MIT"
 
+override_whitelisted_methods = {
+    "ai_chatbot.api.chatbot_api.get_doc_data": "ai_chatbot.api.chatbot_api.get_doc_data"
+}
 
 
 
