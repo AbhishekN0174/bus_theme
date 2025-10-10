@@ -64,9 +64,10 @@ frappe.ready(() => {
 
     try {
       const res = await frappe.call({
-        method: "bus_theme.api.chatbot_reply",
-        args: { message },
+          method: "business_theme_v14.api.chatbot_reply",
+          args: { message },
       });
+      
       const reply = res.message || "Sorry, I didn't understand that.";
       messagesDiv.innerHTML += `<div><b>Bot:</b> ${reply}</div>`;
       messagesDiv.scrollTop = messagesDiv.scrollHeight;
