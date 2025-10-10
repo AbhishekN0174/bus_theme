@@ -21,14 +21,16 @@ override_whitelisted_methods = {
 
 
 # hooks.py - required by Frappe
-app_name = "ai_chatbot"
-app_title = "AI Chatbot"
-app_publisher = "Your Name"
-app_description = "AI Chatbot integration for Frappe"
-app_icon = "octicon octicon-comment"
-app_color = "blue"
+app_name = "business_theme_v14"
+app_title = "Business Theme v14"
+app_publisher = "Abhishek"
+app_description = "Custom business theme with AI chatbot"
 app_email = "you@example.com"
 app_license = "MIT"
+
+# ✅ Add this line
+import business_theme_v14.api.chatbot_api
+
 
 
 
