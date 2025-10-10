@@ -17,10 +17,13 @@ app_license = "MIT"
 
 
 
+# hooks.py - required by Frappe
 app_name = "ai_chatbot"
 app_title = "AI Chatbot"
-app_publisher = "You"
-app_version = "1.0.0"
+app_publisher = "Your Name"
+app_description = "AI Chatbot integration for Frappe"
+app_icon = "octicon octicon-comment"
+app_color = "blue"
 app_email = "you@example.com"
 app_license = "MIT"
 
