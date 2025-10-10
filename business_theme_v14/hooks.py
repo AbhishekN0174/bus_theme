@@ -2,6 +2,7 @@ from . import __version__ as app_version
 import time
 
 # -----------------------------
+
 # App Info
 # -----------------------------
 app_name = "business_theme_v14"
