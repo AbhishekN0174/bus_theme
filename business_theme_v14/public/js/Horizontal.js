@@ -1,156 +1,120 @@
-frappe.ready(function () {
-    console.log("💬 Chatbot JS Loaded with Popup UI");
+(() => {
+    // Safe load check — ensures frappe is ready and DOM is available
+    function initChatbot() {
+        console.log("💬 Initializing Chatbot...");
 
-    // Wait until UI fully loads
-    setTimeout(() => {
-        // --- 1. Chatbot Button ---
-        const chatButton = document.createElement("button");
-        chatButton.innerText = "💬 Chat";
-        Object.assign(chatButton.style, {
+        if (!window.frappe || !document.body) {
+            console.log("⏳ Waiting for Frappe Desk to load...");
+            return setTimeout(initChatbot, 1000);
+        }
+
+        // Prevent duplicate button creation
+        if (document.getElementById("ai-chatbot-button")) return;
+
+        console.log("✅ Frappe loaded, injecting chatbot UI...");
+
+        // ---- 1️⃣ Create Chat Button ----
+        const chatBtn = document.createElement("button");
+        chatBtn.id = "ai-chatbot-button";
+        chatBtn.innerText = "💬";
+        Object.assign(chatBtn.style, {
             position: "fixed",
             bottom: "25px",
             right: "25px",
-            padding: "12px 18px",
-            borderRadius: "40px",
+            width: "60px",
+            height: "60px",
+            borderRadius: "50%",
             backgroundColor: "#007bff",
             color: "#fff",
+            fontSize: "26px",
+            fontWeight: "bold",
             border: "none",
-            fontWeight: "600",
-            fontSize: "15px",
+            boxShadow: "0 6px 18px rgba(0,0,0,0.3)",
             cursor: "pointer",
-            zIndex: "9999999",
-            boxShadow: "0 4px 12px rgba(0,0,0,0.25)",
+            zIndex: "9999999999",
             transition: "transform 0.2s ease"
         });
 
-        chatButton.addEventListener("mouseenter", () => {
-            chatButton.style.transform = "scale(1.05)";
-        });
-        chatButton.addEventListener("mouseleave", () => {
-            chatButton.style.transform = "scale(1)";
-        });
+        chatBtn.onmouseenter = () => chatBtn.style.transform = "scale(1.1)";
+        chatBtn.onmouseleave = () => chatBtn.style.transform = "scale(1)";
 
-        document.body.appendChild(chatButton);
+        document.body.appendChild(chatBtn);
+        console.log("✅ Chat button added to page.");
 
-        // --- 2. Chat Window Container ---
+        // ---- 2️⃣ Create Chat Popup Window ----
         const chatWindow = document.createElement("div");
+        chatWindow.id = "ai-chatbot-window";
         Object.assign(chatWindow.style, {
             position: "fixed",
-            bottom: "90px",
+            bottom: "100px",
             right: "25px",
-            width: "340px",
-            height: "420px",
+            width: "350px",
+            height: "450px",
             backgroundColor: "#fff",
             borderRadius: "16px",
-            boxShadow: "0 4px 20px rgba(0,0,0,0.3)",
+            boxShadow: "0 8px 30px rgba(0,0,0,0.3)",
             display: "none",
             flexDirection: "column",
             overflow: "hidden",
-            zIndex: "99999999",
-            animation: "fadeIn 0.3s ease"
+            zIndex: "99999999999"
         });
 
-        // --- 3. Chat Header ---
-        const header = document.createElement("div");
-        header.innerText = "AI Assistant 💬";
-        Object.assign(header.style, {
-            backgroundColor: "#007bff",
-            color: "#fff",
-            padding: "12px 16px",
-            fontWeight: "600",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center"
-        });
-
-        const closeBtn = document.createElement("span");
-        closeBtn.innerHTML = "&times;";
-        Object.assign(closeBtn.style, {
-            cursor: "pointer",
-            fontSize: "20px"
-        });
-        closeBtn.onclick = () => (chatWindow.style.display = "none");
-        header.appendChild(closeBtn);
-
-        chatWindow.appendChild(header);
-
-        // --- 4. Messages Area ---
-        const messages = document.createElement("div");
-        Object.assign(messages.style, {
-            flex: "1",
-            padding: "12px",
-            overflowY: "auto",
-            backgroundColor: "#f9f9f9"
-        });
-        messages.innerHTML = `<div style="margin-bottom:8px;color:#555;">👋 Hello! How can I help you today?</div>`;
-        chatWindow.appendChild(messages);
-
-        // --- 5. Input Area ---
-        const inputContainer = document.createElement("div");
-        Object.assign(inputContainer.style, {
-            display: "flex",
-            borderTop: "1px solid #ddd",
-            padding: "8px"
-        });
-
-        const inputBox = document.createElement("input");
-        Object.assign(inputBox.style, {
-            flex: "1",
-            border: "1px solid #ccc",
-            borderRadius: "6px",
-            padding: "8px"
-        });
-        inputBox.placeholder = "Type your message...";
-
-        const sendBtn = document.createElement("button");
-        sendBtn.innerText = "Send";
-        Object.assign(sendBtn.style, {
-            marginLeft: "8px",
-            backgroundColor: "#007bff",
-            color: "#fff",
-            border: "none",
-            borderRadius: "6px",
-            padding: "8px 12px",
-            cursor: "pointer"
-        });
-
-        inputContainer.appendChild(inputBox);
-        inputContainer.appendChild(sendBtn);
-        chatWindow.appendChild(inputContainer);
-
-        // --- 6. Add to DOM ---
+        chatWindow.innerHTML = `
+            <div style="background:#007bff;color:#fff;padding:12px 16px;font-weight:600;display:flex;justify-content:space-between;align-items:center;">
+                <span>AI Assistant 🤖</span>
+                <span id="ai-chatbot-close" style="cursor:pointer;font-size:20px;">&times;</span>
+            </div>
+            <div id="ai-chatbot-messages" style="flex:1;padding:12px;overflow-y:auto;background:#f8f9fa;">
+                <div style="margin-bottom:8px;color:#555;">👋 Hello! How can I help you today?</div>
+            </div>
+            <div style="display:flex;border-top:1px solid #ddd;padding:8px;background:#fff;">
+                <input id="ai-chatbot-input" type="text" placeholder="Type your message..." 
+                       style="flex:1;border:1px solid #ccc;border-radius:6px;padding:8px;">
+                <button id="ai-chatbot-send" 
+                        style="margin-left:8px;background:#007bff;color:#fff;border:none;border-radius:6px;padding:8px 12px;cursor:pointer;">Send</button>
+            </div>
+        `;
         document.body.appendChild(chatWindow);
+        console.log("✅ Chat window added to DOM.");
 
-        // --- 7. Toggle Popup ---
-        chatButton.addEventListener("click", () => {
-            chatWindow.style.display =
-                chatWindow.style.display === "none" ? "flex" : "none";
-        });
+        // ---- 3️⃣ Toggle Logic ----
+        const closeBtn = chatWindow.querySelector("#ai-chatbot-close");
+        chatBtn.onclick = () => {
+            const isVisible = chatWindow.style.display === "flex";
+            chatWindow.style.display = isVisible ? "none" : "flex";
+        };
+        closeBtn.onclick = () => (chatWindow.style.display = "none");
 
-        // --- 8. Send Button Function ---
-        sendBtn.addEventListener("click", () => {
-            const userText = inputBox.value.trim();
-            if (!userText) return;
+        // ---- 4️⃣ Message Sending ----
+        const sendBtn = chatWindow.querySelector("#ai-chatbot-send");
+        const inputBox = chatWindow.querySelector("#ai-chatbot-input");
+        const messages = chatWindow.querySelector("#ai-chatbot-messages");
 
-            // Show user message
-            const msg = document.createElement("div");
-            msg.textContent = "🧑 " + userText;
-            Object.assign(msg.style, {
-                margin: "6px 0",
-                textAlign: "right",
-                color: "#222"
-            });
-            messages.appendChild(msg);
-
+        sendBtn.onclick = () => {
+            const text = inputBox.value.trim();
+            if (!text) return;
+            const userMsg = document.createElement("div");
+            userMsg.textContent = "🧑 " + text;
+            Object.assign(userMsg.style, { textAlign: "right", margin: "6px 0", color: "#222" });
+            messages.appendChild(userMsg);
             inputBox.value = "";
 
-            // Auto reply (for now)
-            const reply = document.createElement("div");
-            reply.textContent = "🤖 Thanks for your message!";
-            Object.assign(reply.style, {
-                margin: "6px 0",
-                color: "#007bff"
-            });
-            setTimeout(() => messages.appendChild(reply), 600);
+            // AI Response Simulation
+            const aiMsg = document.createElement("div");
+            aiMsg.textContent = "🤖 Thinking...";
+            Object.assign(aiMsg.style, { margin: "6px 0", color: "#007bff" });
+            messages.appendChild(aiMsg);
 
-            messages.scrollTop = messages.scrollHei
+            // You can replace this with frappe.call() to your backend later
+            setTimeout(() => {
+                aiMsg.textContent = "🤖 Thanks! (Chatbot connected successfully)";
+            }, 1000);
+
+            messages.scrollTop = messages.scrollHeight;
+        };
+    }
+
+    // Ensure chatbot initializes after full desk load
+    window.addEventListener("load", initChatbot);
+    setTimeout(initChatbot, 2000);
+})();
