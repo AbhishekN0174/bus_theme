@@ -17,12 +17,12 @@ app_license = "MIT"
 
 
 
-app_name = "ai_chatbot"
-app_title = "AI Chatbot"
-app_publisher = "You"
-app_version = "1.0.0"
-app_email = "you@example.com"
-app_license = "MIT"
+# app_name = "ai_chatbot"
+# app_title = "AI Chatbot"
+# app_publisher = "You"
+# app_version = "1.0.0"
+# app_email = "you@example.com"
+# app_license = "MIT"
 
 
 
