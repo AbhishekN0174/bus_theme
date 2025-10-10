@@ -166,11 +166,13 @@ from frappe import _
 
 @frappe.whitelist(allow_guest=True)
 def get_doc_data(doctype_name):
+    """Fetch data from any DocType and return first 10 records"""
     try:
-        docs = frappe.get_all(doctype_name, fields=["*"], limit=10)
-        if not docs:
-            return {"message": f"No data found in {doctype_name}"}
-        return {"data": docs}
-    except Exception as e:
-        return {"error": str(e)}
+        if not frappe.db.exists("DocType", doctype_name):
+            return {"message": f"No matching DocType named '{doctype_name}' in your site."}
+        
+        data = frappe.get_all(doctype_name, fields=["name"], limit=10)
+        return {"data": data}
 
+    except Exception as e:
+        return {"message": f"Error: {str(e)}"}
