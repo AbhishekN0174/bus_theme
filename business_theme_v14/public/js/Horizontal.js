@@ -1,5 +1,5 @@
 frappe.ready(() => {
-    console.log("Chatbot JS loaded!"); // For testing
+    console.log("Horizontal.js loaded!"); // For testing in console
 
     // ---------- Chat Button ----------
     const chatButton = document.createElement('button');
@@ -56,7 +56,7 @@ frappe.ready(() => {
         chatWindow.style.display = chatWindow.style.display === 'none' ? 'flex' : 'none';
     };
 
-    // ---------- Send Message Function ----------
+    // ---------- Send Message Function (Test Only) ----------
     async function sendMessage() {
         const message = inputBox.value.trim();
         if (!message) return;
@@ -64,18 +64,24 @@ frappe.ready(() => {
         messagesDiv.innerHTML += `<div><b>You:</b> ${message}</div>`;
         inputBox.value = '';
 
+        // Temporary test response
+        messagesDiv.innerHTML += `<div><b>Bot:</b> Hello! Chatbot is working.</div>`;
+        messagesDiv.scrollTop = messagesDiv.scrollHeight;
+
+        // Later you can replace above with actual API call:
+        /*
         try {
             const res = await frappe.call({
-                method: "business_theme_v14.api.chatbot_reply", // use your actual app module name
+                method: "business_theme_v14.api.chatbot_reply",
                 args: { message },
             });
-
             const reply = res.message || "Sorry, I didn't understand that.";
             messagesDiv.innerHTML += `<div><b>Bot:</b> ${reply}</div>`;
             messagesDiv.scrollTop = messagesDiv.scrollHeight;
         } catch (e) {
             messagesDiv.innerHTML += `<div><b>Bot:</b> Error connecting to chatbot.</div>`;
         }
+        */
     }
 
     // ---------- Event Listeners ----------
