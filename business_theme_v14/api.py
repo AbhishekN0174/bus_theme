@@ -113,45 +113,46 @@ import frappe
 @frappe.whitelist(allow_guest=True)
 def get_reply(message):
     """
-    Searches across multiple DocTypes for fields containing the user's query.
-    Returns matching records from allowed DocTypes.
+    Search across selected DocTypes and return matching data.
     """
-
     message = message.strip().lower()
-
     if not message:
         return {"reply": "Please provide a search term."}
 
-    # List of DocTypes to search
-    searchable_doctypes = ["Employee", "Role", "Leave Approver", "Customer", "Supplier"]
-
+    searchable_doctypes = ["Employee", "Role", "Customer", "Supplier"]
     reply_lines = []
 
     for dt in searchable_doctypes:
         try:
-            # Retrieve metadata for the DocType
             meta = frappe.get_meta(dt)
-            # Identify fields that are of type 'Data', 'Small Text', 'Link', or 'Select'
-            string_fields = [f.fieldname for f in meta.fields if f.fieldtype in ("Data", "Small Text", "Link", "Select")]
+            string_fields = [
+                f.fieldname for f in meta.fields
+                if f.fieldtype in ("Data", "Small Text", "Link", "Select")
+            ]
 
             if not string_fields:
                 continue
 
-            # Build filters for each field
-            filters = [[field, "like", f"%{message}%"] for field in string_fields]
+            # Use OR filters instead of AND
+            or_filters = []
+            for field in string_fields:
+                or_filters.append([dt, field, "like", f"%{message}%"])
 
-            # Fetch records matching the filters
-            records = frappe.get_all(dt, fields=string_fields, filters=filters, limit=5)
+            records = frappe.get_all(
+                dt, fields=["name"] + string_fields, or_filters=or_filters, limit=5
+            )
 
             if records:
-                reply_lines.append(f"📄 {dt}:")
+                reply_lines.append(f"📄 *{dt}* (Top {len(records)} results):")
                 for r in records:
-                    lines = [f"{k}: {v}" for k, v in r.items()]
-                    reply_lines.append(" • " + "; ".join(lines))
-                reply_lines.append("")  # Add a blank line between DocTypes
+                    display = ", ".join(
+                        f"{k}: {v}" for k, v in r.items() if v and k != "name"
+                    )
+                    reply_lines.append(f" • {display or '(no text fields found)'}")
+                reply_lines.append("")
 
         except Exception as e:
-            # Skip DocTypes that cause errors
+            frappe.log_error(f"Chatbot search error in {dt}: {e}")
             continue
 
     if reply_lines:
