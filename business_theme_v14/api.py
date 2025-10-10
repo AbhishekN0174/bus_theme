@@ -108,54 +108,69 @@
 
 
 
+# import frappe
+
+# @frappe.whitelist(allow_guest=True)
+# def get_reply(message):
+#     """
+#     Search across selected DocTypes and return matching data.
+#     """
+#     message = message.strip().lower()
+#     if not message:
+#         return {"reply": "Please provide a search term."}
+
+#     searchable_doctypes = ["Employee", "Role", "Customer", "Supplier"]
+#     reply_lines = []
+
+#     for dt in searchable_doctypes:
+#         try:
+#             meta = frappe.get_meta(dt)
+#             string_fields = [
+#                 f.fieldname for f in meta.fields
+#                 if f.fieldtype in ("Data", "Small Text", "Link", "Select")
+#             ]
+
+#             if not string_fields:
+#                 continue
+
+#             # Use OR filters instead of AND
+#             or_filters = []
+#             for field in string_fields:
+#                 or_filters.append([dt, field, "like", f"%{message}%"])
+
+#             records = frappe.get_all(
+#                 dt, fields=["name"] + string_fields, or_filters=or_filters, limit=5
+#             )
+
+#             if records:
+#                 reply_lines.append(f"📄 *{dt}* (Top {len(records)} results):")
+#                 for r in records:
+#                     display = ", ".join(
+#                         f"{k}: {v}" for k, v in r.items() if v and k != "name"
+#                     )
+#                     reply_lines.append(f" • {display or '(no text fields found)'}")
+#                 reply_lines.append("")
+
+#         except Exception as e:
+#             frappe.log_error(f"Chatbot search error in {dt}: {e}")
+#             continue
+
+#     if reply_lines:
+#         return {"reply": "\n".join(reply_lines)}
+
+#     return {"reply": "No matching data found in your site."}
+
+
 import frappe
+from frappe import _
 
 @frappe.whitelist(allow_guest=True)
-def get_reply(message):
-    """
-    Search across selected DocTypes and return matching data.
-    """
-    message = message.strip().lower()
-    if not message:
-        return {"reply": "Please provide a search term."}
+def get_doc_data(doctype_name):
+    try:
+        docs = frappe.get_all(doctype_name, fields=["*"], limit=10)
+        if not docs:
+            return {"message": f"No data found in {doctype_name}"}
+        return {"data": docs}
+    except Exception as e:
+        return {"error": str(e)}
 
-    searchable_doctypes = ["Employee", "Role", "Customer", "Supplier"]
-    reply_lines = []
-
-    for dt in searchable_doctypes:
-        try:
-            meta = frappe.get_meta(dt)
-            string_fields = [
-                f.fieldname for f in meta.fields
-                if f.fieldtype in ("Data", "Small Text", "Link", "Select")
-            ]
-
-            if not string_fields:
-                continue
-
-            # Use OR filters instead of AND
-            or_filters = []
-            for field in string_fields:
-                or_filters.append([dt, field, "like", f"%{message}%"])
-
-            records = frappe.get_all(
-                dt, fields=["name"] + string_fields, or_filters=or_filters, limit=5
-            )
-
-            if records:
-                reply_lines.append(f"📄 *{dt}* (Top {len(records)} results):")
-                for r in records:
-                    display = ", ".join(
-                        f"{k}: {v}" for k, v in r.items() if v and k != "name"
-                    )
-                    reply_lines.append(f" • {display or '(no text fields found)'}")
-                reply_lines.append("")
-
-        except Exception as e:
-            frappe.log_error(f"Chatbot search error in {dt}: {e}")
-            continue
-
-    if reply_lines:
-        return {"reply": "\n".join(reply_lines)}
-
-    return {"reply": "No matching data found in your site."}
