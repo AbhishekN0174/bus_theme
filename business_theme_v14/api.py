@@ -113,35 +113,48 @@ import frappe
 @frappe.whitelist(allow_guest=True)
 def get_reply(message):
     """
-    Returns live site data from Frappe, like Employee info.
+    Searches across multiple DocTypes for fields containing the user's query.
+    Returns matching records from allowed DocTypes.
     """
 
     message = message.strip().lower()
 
-    # --- Employee search ---
-    employees = frappe.get_all(
-        "Employee",
-        fields=["employee_name", "company", "designation", "status", "date_of_joining"],
-        filters={"employee_name": ["like", f"%{message}%"]},
-        limit=5
-    )
+    if not message:
+        return {"reply": "Please provide a search term."}
 
-    if employees:
-        reply_lines = []
-        for e in employees:
-            line = f"👤 {e['employee_name']}\n" \
-                   f"Company: {e['company']}\n" \
-                   f"Designation: {e['designation']}\n" \
-                   f"Status: {e['status']}\n" \
-                   f"Date of Joining: {e['date_of_joining']}"
-            reply_lines.append(line)
-        return {"reply": "\n\n".join(reply_lines)}
+    # List of DocTypes to search
+    searchable_doctypes = ["Employee", "Role", "Leave Approver", "Customer", "Supplier"]
 
-    # --- Leave fallback ---
-    if "leave" in message:
-        return {"reply": "You can view your leave balance under HR > Leaves > Leave Balance."}
+    reply_lines = []
 
-    # --- Default fallback ---
+    for dt in searchable_doctypes:
+        try:
+            # Retrieve metadata for the DocType
+            meta = frappe.get_meta(dt)
+            # Identify fields that are of type 'Data', 'Small Text', 'Link', or 'Select'
+            string_fields = [f.fieldname for f in meta.fields if f.fieldtype in ("Data", "Small Text", "Link", "Select")]
+
+            if not string_fields:
+                continue
+
+            # Build filters for each field
+            filters = [[field, "like", f"%{message}%"] for field in string_fields]
+
+            # Fetch records matching the filters
+            records = frappe.get_all(dt, fields=string_fields, filters=filters, limit=5)
+
+            if records:
+                reply_lines.append(f"📄 {dt}:")
+                for r in records:
+                    lines = [f"{k}: {v}" for k, v in r.items()]
+                    reply_lines.append(" • " + "; ".join(lines))
+                reply_lines.append("")  # Add a blank line between DocTypes
+
+        except Exception as e:
+            # Skip DocTypes that cause errors
+            continue
+
+    if reply_lines:
+        return {"reply": "\n".join(reply_lines)}
+
     return {"reply": "No matching data found in your site."}
-
-
