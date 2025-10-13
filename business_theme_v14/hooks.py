@@ -17,23 +17,23 @@ app_color = "grey"
 app_email = "sagar@midocean.tech"
 app_license = "MIT"
 
-override_whitelisted_methods = {
-    "ai_chatbot.api.chatbot_api.get_doc_data": "ai_chatbot.api.chatbot_api.get_doc_data"
-}
+# override_whitelisted_methods = {
+#     "ai_chatbot.api.chatbot_api.get_doc_data": "ai_chatbot.api.chatbot_api.get_doc_data"
+# }
 
 
 
 
 # hooks.py - required by Frappe
-app_name = "business_theme_v14"
-app_title = "Business Theme v14"
-app_publisher = "Abhishek"
-app_description = "Custom business theme with AI chatbot"
-app_email = "you@example.com"
-app_license = "MIT"
+# app_name = "business_theme_v14"
+# app_title = "Business Theme v14"
+# app_publisher = "Abhishek"
+# app_description = "Custom business theme with AI chatbot"
+# app_email = "you@example.com"
+# app_license = "MIT"
 
-# ✅ Add this line
-import business_theme_v14.api.chatbot_api
+
+# import business_theme_v14.api.chatbot_api
 
 
 
