@@ -1,3 +1,4 @@
+
 (() => {
     // Safe load check — ensures frappe is ready and DOM is available
     function initChatbot() {
