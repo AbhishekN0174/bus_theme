@@ -1,12 +1,11 @@
 /* Remove hover bg on the list item / link */
-/* .list-filters.list-link,
-.list-filters.list-link:hover,
+.list-filters.list-link,
 li.list-filters.list-link {
   background: transparent !important;
   background-image: none !important;
   box-shadow: none !important;
   border: none !important;
-} */
+}
 
 /* Remove hover / focus bg on the input/control inside the sidebar save-filter section */
 .sidebar-section.save-filter-section .form-control,
