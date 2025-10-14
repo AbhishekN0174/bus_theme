@@ -1,7 +1,37 @@
-.list-filters.list-link:hover {
-    background: none !important;
-    background-color: transparent !important;
+/* Remove hover bg on the list item / link */
+.list-filters.list-link,
+.list-filters.list-link:hover,
+li.list-filters.list-link {
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  border: none !important;
 }
+
+/* Remove hover / focus bg on the input/control inside the sidebar save-filter section */
+.sidebar-section.save-filter-section .form-control,
+.sidebar-section.save-filter-section .form-control:hover,
+.sidebar-section.save-filter-section .form-control:focus,
+.sidebar-section.save-filter-section input[type="text"],
+.sidebar-section.save-filter-section input[type="text"]:hover,
+.sidebar-section.save-filter-section input[type="text"]:focus,
+.sidebar-section.save-filter-section .input-with-feedback.form-control {
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+  outline: none !important;
+  -webkit-appearance: none !important;
+}
+
+/* If the hover style is applied to the wrapper element */
+.sidebar-section.save-filter-section .input-area:hover,
+.sidebar-section.save-filter-section .list-link:hover {
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
 
 
 
