@@ -29,8 +29,8 @@
             position: "fixed",
             bottom: "70px",
             right: "20px",
-            width: "300px",
-            maxHeight: "400px",
+            width: "350px",
+            maxHeight: "450px",
             background: "#fff",
             border: "1px solid #ccc",
             borderRadius: "10px",
@@ -42,35 +42,41 @@
         });
         document.body.appendChild(chatWindow);
 
-        // Messages container
+        // --- Messages Container ---
         const messages = document.createElement("div");
         messages.style.flex = "1";
         messages.style.overflowY = "auto";
         messages.style.padding = "10px";
         chatWindow.appendChild(messages);
 
-        // Input box
+        // --- Input Box ---
         const inputContainer = document.createElement("div");
         inputContainer.style.display = "flex";
+        inputContainer.style.borderTop = "1px solid #ccc";
         chatWindow.appendChild(inputContainer);
 
         const input = document.createElement("input");
         input.type = "text";
         input.placeholder = "Type your message...";
-        Object.assign(input.style, {flex: "1", padding: "5px"});
+        Object.assign(input.style, { flex: "1", padding: "8px", border: "none" });
         inputContainer.appendChild(input);
 
         const sendBtn = document.createElement("button");
         sendBtn.innerText = "Send";
-        Object.assign(sendBtn.style, {padding: "5px 10px"});
+        Object.assign(sendBtn.style, {
+            padding: "8px 12px",
+            border: "none",
+            background: "#ffb400",
+            cursor: "pointer"
+        });
         inputContainer.appendChild(sendBtn);
 
-        // Toggle chat
+        // --- Toggle Chat Window ---
         chatBtn.onclick = () => {
             chatWindow.style.display = chatWindow.style.display === "none" ? "flex" : "none";
         };
 
-        // Send message
+        // --- Send Message Function ---
         async function sendMessage() {
             const text = input.value.trim();
             if (!text) return;
@@ -80,31 +86,38 @@
             userMsg.innerText = text;
             userMsg.style.textAlign = "right";
             userMsg.style.margin = "5px 0";
+            userMsg.style.background = "#e0e0e0";
+            userMsg.style.padding = "5px 8px";
+            userMsg.style.borderRadius = "5px";
             messages.appendChild(userMsg);
 
             input.value = "";
 
-            // Call Frappe API
+            // Call AI + Frappe backend
             try {
                 const res = await frappe.call({
-                    method: "business_theme_v14.business_theme_v14.api.search_any",
-                    args: { query: text }
+                    method: "business_theme_v14.business_theme_v14.api.get_reply",
+                    args: { message: text }
                 });
 
-                const data = res.message.results;
                 const botMsg = document.createElement("div");
 
-                if (data.length === 0) {
-                    botMsg.innerText = "🤖 No results found.";
+                if (!res.message || !res.message.reply) {
+                    botMsg.innerText = "🤖 No response.";
                 } else {
-                    botMsg.innerText = data.map(d => `${d.doctype}: ${d.name}`).join("\n");
+                    // Preserve line breaks and basic formatting
+                    botMsg.innerHTML = res.message.reply.replace(/\n/g, "<br>");
                 }
 
                 botMsg.style.textAlign = "left";
                 botMsg.style.margin = "5px 0";
+                botMsg.style.background = "#f0f0f0";
+                botMsg.style.padding = "5px 8px";
+                botMsg.style.borderRadius = "5px";
                 messages.appendChild(botMsg);
 
                 messages.scrollTop = messages.scrollHeight;
+
             } catch (err) {
                 const errMsg = document.createElement("div");
                 errMsg.innerText = "🤖 Error contacting server.";
