@@ -22,6 +22,14 @@ app_license = "MIT"
 # }
 
 
+app_name = "ai_chatbot"
+app_title = "AI Chatbot"
+app_publisher = "Your Name"
+app_description = "AI Chatbot for Frappe"
+app_license = "MIT"
+
+
+
 
 
 # hooks.py - required by Frappe
