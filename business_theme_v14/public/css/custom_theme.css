@@ -1,3 +1,11 @@
+.list-filters.list-link:hover {
+    background: none !important;
+    background-color: transparent !important;
+}
+
+
+
+
 /* ========================
    AI Chatbot (Glass UI)
 ======================== */
