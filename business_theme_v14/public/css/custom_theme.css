@@ -9,7 +9,7 @@ li.list-filters.list-link {
 }
 
 /* Remove hover / focus bg on the input/control inside the sidebar save-filter section */
-.sidebar-section.save-filter-section .form-control,
+/* .sidebar-section.save-filter-section .form-control,
 .sidebar-section.save-filter-section .form-control:hover,
 .sidebar-section.save-filter-section .form-control:focus,
 .sidebar-section.save-filter-section input[type="text"],
@@ -22,7 +22,7 @@ li.list-filters.list-link {
   border-color: transparent !important;
   outline: none !important;
   -webkit-appearance: none !important;
-}
+} */
 
 /* If the hover style is applied to the wrapper element */
 .sidebar-section.save-filter-section .input-area:hover,
