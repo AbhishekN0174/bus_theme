@@ -31,7 +31,7 @@
             zIndex: "99999999999"
         });
 
-        chatWindow.innerHTML = `
+        chatWindow.innerHTML = 
             <div style="background:#007bff;color:#fff;padding:12px 16px;font-weight:600;display:flex;justify-content:space-between;align-items:center;">
                 <span>AI Assistant 🤖</span>
                 <span id="ai-chatbot-close" style="cursor:pointer;font-size:20px;">&times;</span>
@@ -45,7 +45,7 @@
                 <button id="ai-chatbot-send" 
                         style="margin-left:8px;background:#007bff;color:#fff;border:none;border-radius:6px;padding:8px 12px;cursor:pointer;">Send</button>
             </div>
-        `;
+        ;
         document.body.appendChild(chatWindow);
 
         // --- Toggle Logic ---
@@ -77,33 +77,16 @@
             messages.scrollTop = messages.scrollHeight;
 
             // Call Frappe API
-            // frappe.call({
-            //     method: "business_theme_v14.business_theme_v14.api.get_reply",
-            //     args: { message: text },
-            //     callback: function(r) {
-            //         if (r.message && r.message.reply) {
-            //             aiMsg.textContent = "🤖 " + r.message.reply;
-            //         } else if (r.message && r.message.error) {
-            //             aiMsg.textContent = "⚠️ Error: " + r.message.error;
-            //         } else {
-            //             aiMsg.textContent = "🤖 (No response)";
-            //         }
-            //         messages.scrollTop = messages.scrollHeight;
-            //     },
-            //     error: function(err) {
-            //         aiMsg.textContent = "⚠️ Failed to reach server.";
-            //     }
-            // });
-            // Call Frappe API dynamically for all doctypes
             frappe.call({
-                method: "business_theme_v14.business_theme_v14.api.search_any",
-                args: { query: text }, // optional: add doctype: "Employee" to limit
+                method: "business_theme_v14.business_theme_v14.api.get_reply",
+                args: { message: text },
                 callback: function(r) {
-                    if (r.message && r.message.results && r.message.results.length) {
-                        aiMsg.textContent = "🤖 Found " + r.message.results.length + " record(s):\n" +
-                            r.message.results.map(item => item.name + (item.doctype ? " (" + item.doctype + ")" : "")).join("\n");
+                    if (r.message && r.message.reply) {
+                        aiMsg.textContent = "🤖 " + r.message.reply;
+                    } else if (r.message && r.message.error) {
+                        aiMsg.textContent = "⚠️ Error: " + r.message.error;
                     } else {
-                        aiMsg.textContent = "🤖 No results found.";
+                        aiMsg.textContent = "🤖 (No response)";
                     }
                     messages.scrollTop = messages.scrollHeight;
                 },
@@ -123,3 +106,15 @@
     window.addEventListener("load", initChatbot);
     setTimeout(initChatbot, 2000);
 })();
+where to add the above js you have given
+frappe.call({
+    method: "ai_chatbot.api.get_reply",
+    args: { message: userMessage },
+    callback: function(r) {
+        if (r.message) {
+            addBotMessage(r.message.reply);
+        } else {
+            addBotMessage("No response from server.");
+        }
+    },
+});
