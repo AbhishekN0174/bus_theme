@@ -1,6 +1,5 @@
 import frappe
 
-
 @frappe.whitelist()
 def get_reply(message):
     try:
@@ -20,13 +19,13 @@ def get_reply(message):
             else:
                 reply = "No employees found."
 
-        # 2️⃣ Leave Application list
+        # 2️⃣ Leave Applications
         elif "leave" in message:
             leaves = frappe.get_all(
                 "Leave Application",
                 fields=["employee_name", "leave_type", "from_date", "to_date", "status"],
-                limit=10,
-                order_by="from_date desc"
+                order_by="from_date desc",
+                limit=10
             )
             if leaves:
                 reply = "🌴 Leave Applications:\n"
@@ -35,47 +34,55 @@ def get_reply(message):
             else:
                 reply = "No leave applications found."
 
-        # 3️⃣ Expense Claim list
+        # 3️⃣ Expense Claims
         elif "expense" in message:
             claims = frappe.get_all(
                 "Expense Claim",
                 fields=["employee", "total_sanctioned_amount", "approval_status"],
-                limit=10,
-                order_by="creation desc"
+                order_by="creation desc",
+                limit=10
             )
             if claims:
                 reply = "💰 Expense Claims:\n"
                 for cl in claims:
-                    reply += f"- {cl.employee}: ₹{cl.total_sanctioned_amount or 0} [{cl.approval_status}]\n"
+                    reply += f"- {cl.employee}: ₹{cl.total_sanctioned_amount or 0} [{cl.approval_status or 'Pending'}]\n"
             else:
                 reply = "No expense claims found."
 
-        # 4️⃣ Attendance records
+        # 4️⃣ Attendance Records
         elif "attendance" in message:
-            attendance = frappe.get_all(
+            records = frappe.get_all(
                 "Attendance",
                 fields=["employee", "attendance_date", "status"],
-                limit=10,
-                order_by="attendance_date desc"
+                order_by="attendance_date desc",
+                limit=10
             )
-            if attendance:
+            if records:
                 reply = "🕒 Attendance Records:\n"
-                for a in attendance:
-                    reply += f"- {a.employee}: {a.attendance_date} ({a.status})\n"
+                for r in records:
+                    reply += f"- {r.employee}: {r.attendance_date} ({r.status})\n"
             else:
-                reply = "No attendance records found."
+                reply = "No attendance data found."
 
-        # 5️⃣ Role list for current user
+        # 5️⃣ Role List
         elif "role" in message:
             roles = frappe.get_roles(frappe.session.user)
-            reply = "🧩 Your Roles: " + ", ".join(roles)
+            reply = "🧩 Your Roles:\n" + "\n".join(roles)
 
-        # 6️⃣ Default: echo
+        # Default fallback
         else:
-            reply = f"Server received your message: {message}. Try typing 'employee', 'leave', 'expense', or 'attendance'."
+            reply = (
+                "🤖 I can fetch live ERPNext data.\n"
+                "Try typing any of these:\n"
+                "• employee list\n"
+                "• leave list\n"
+                "• expense claims\n"
+                "• attendance\n"
+                "• role list"
+            )
 
         return {"reply": reply}
 
     except Exception as e:
-        frappe.log_error(message=str(e), title="Chatbot Error")
-        return {"reply": f"⚠️ Error: {str(e)}"}
+        frappe.log_error(message=str(e), title="Chatbot API Error")
+        return {"reply": f"⚠️ Server Error: {str(e)}"}
