@@ -77,16 +77,33 @@
             messages.scrollTop = messages.scrollHeight;
 
             // Call Frappe API
+            // frappe.call({
+            //     method: "business_theme_v14.business_theme_v14.api.get_reply",
+            //     args: { message: text },
+            //     callback: function(r) {
+            //         if (r.message && r.message.reply) {
+            //             aiMsg.textContent = "🤖 " + r.message.reply;
+            //         } else if (r.message && r.message.error) {
+            //             aiMsg.textContent = "⚠️ Error: " + r.message.error;
+            //         } else {
+            //             aiMsg.textContent = "🤖 (No response)";
+            //         }
+            //         messages.scrollTop = messages.scrollHeight;
+            //     },
+            //     error: function(err) {
+            //         aiMsg.textContent = "⚠️ Failed to reach server.";
+            //     }
+            // });
+            // Call Frappe API dynamically for all doctypes
             frappe.call({
-                method: "business_theme_v14.business_theme_v14.api.get_reply",
-                args: { message: text },
+                method: "business_theme_v14.business_theme_v14.api.search_any",
+                args: { query: text }, // optional: add doctype: "Employee" to limit
                 callback: function(r) {
-                    if (r.message && r.message.reply) {
-                        aiMsg.textContent = "🤖 " + r.message.reply;
-                    } else if (r.message && r.message.error) {
-                        aiMsg.textContent = "⚠️ Error: " + r.message.error;
+                    if (r.message && r.message.results && r.message.results.length) {
+                        aiMsg.textContent = "🤖 Found " + r.message.results.length + " record(s):\n" +
+                            r.message.results.map(item => item.name + (item.doctype ? " (" + item.doctype + ")" : "")).join("\n");
                     } else {
-                        aiMsg.textContent = "🤖 (No response)";
+                        aiMsg.textContent = "🤖 No results found.";
                     }
                     messages.scrollTop = messages.scrollHeight;
                 },
@@ -94,24 +111,7 @@
                     aiMsg.textContent = "⚠️ Failed to reach server.";
                 }
             });
-            // Call Frappe API dynamically for all doctypes
-        //     frappe.call({
-        //         method: "business_theme_v14.business_theme_v14.api.search_any",
-        //         args: { query: text }, // optional: add doctype: "Employee" to limit
-        //         callback: function(r) {
-        //             if (r.message && r.message.results && r.message.results.length) {
-        //                 aiMsg.textContent = "🤖 Found " + r.message.results.length + " record(s):\n" +
-        //                     r.message.results.map(item => item.name + (item.doctype ? " (" + item.doctype + ")" : "")).join("\n");
-        //             } else {
-        //                 aiMsg.textContent = "🤖 No results found.";
-        //             }
-        //             messages.scrollTop = messages.scrollHeight;
-        //         },
-        //         error: function(err) {
-        //             aiMsg.textContent = "⚠️ Failed to reach server.";
-        //         }
-        //     });
-        // };
+        };
 
         // Optional: send message on Enter key
         inputBox.addEventListener("keypress", (e) => {
