@@ -29,6 +29,7 @@ li.list-filters.list-link {
   background: transparent !important;
   background-image: none !important;
   box-shadow: none !important;
+  border-color: solid white !important;
 }
 
 
