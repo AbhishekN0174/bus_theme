@@ -46,6 +46,9 @@ li.list-filters.list-link {
 .checkbox .label-area {
     color: white !important;
 }
+.sidebar-section a, .control-value a, .data-row a {
+    color: white !important;
+}
 
 
 
