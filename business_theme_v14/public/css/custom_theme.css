@@ -4,7 +4,7 @@ li.list-filters.list-link {
   background: transparent !important;
   background-image: none !important;
   box-shadow: none !important;
-  border: 1px solid white !important;
+  border-color: #3b82f6 !important;
 }
 
 /* Remove hover / focus bg on the input/control inside the sidebar save-filter section */
@@ -18,7 +18,7 @@ li.list-filters.list-link {
   background: transparent !important;
   background-image: none !important;
   box-shadow: none !important;
-  border-color: transparent !important;
+  border-color: #3b82f6 !important;
   outline: none !important;
   -webkit-appearance: none !important;
 }
