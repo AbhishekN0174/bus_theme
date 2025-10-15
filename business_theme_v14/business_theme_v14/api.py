@@ -2,26 +2,79 @@ import frappe
 
 @frappe.whitelist()
 def get_reply(message):
-    user = frappe.session.user
+    try:
+        message = message.lower().strip()
 
-    # Example 1: Role list
-    if "role" in message.lower():
-        roles = frappe.get_roles(user)
-        return {"reply": f"Your roles are: {', '.join(roles)}"}
+        # 1️⃣ Employee list
+        if "employee" in message:
+            employees = frappe.get_all(
+                "Employee",
+                fields=["employee_name", "designation", "department"],
+                limit=10
+            )
+            if employees:
+                reply = "👥 Employee List:\n"
+                for emp in employees:
+                    reply += f"- {emp.employee_name} ({emp.designation or 'No Designation'}) [{emp.department or 'No Department'}]\n"
+            else:
+                reply = "No employees found."
 
-    # Example 2: Employee info
-    if "employee" in message.lower():
-        employee = frappe.db.get_value("Employee", {"user_id": user}, ["employee_name", "designation"], as_dict=True)
-        if employee:
-            return {"reply": f"👤 {employee.employee_name}, Designation: {employee.designation}"}
+        # 2️⃣ Leave Application list
+        elif "leave" in message:
+            leaves = frappe.get_all(
+                "Leave Application",
+                fields=["employee_name", "leave_type", "from_date", "to_date", "status"],
+                limit=10,
+                order_by="from_date desc"
+            )
+            if leaves:
+                reply = "🌴 Leave Applications:\n"
+                for lv in leaves:
+                    reply += f"- {lv.employee_name}: {lv.leave_type} ({lv.from_date} → {lv.to_date}) [{lv.status}]\n"
+            else:
+                reply = "No leave applications found."
+
+        # 3️⃣ Expense Claim list
+        elif "expense" in message:
+            claims = frappe.get_all(
+                "Expense Claim",
+                fields=["employee", "total_sanctioned_amount", "approval_status"],
+                limit=10,
+                order_by="creation desc"
+            )
+            if claims:
+                reply = "💰 Expense Claims:\n"
+                for cl in claims:
+                    reply += f"- {cl.employee}: ₹{cl.total_sanctioned_amount or 0} [{cl.approval_status}]\n"
+            else:
+                reply = "No expense claims found."
+
+        # 4️⃣ Attendance records
+        elif "attendance" in message:
+            attendance = frappe.get_all(
+                "Attendance",
+                fields=["employee", "attendance_date", "status"],
+                limit=10,
+                order_by="attendance_date desc"
+            )
+            if attendance:
+                reply = "🕒 Attendance Records:\n"
+                for a in attendance:
+                    reply += f"- {a.employee}: {a.attendance_date} ({a.status})\n"
+            else:
+                reply = "No attendance records found."
+
+        # 5️⃣ Role list for current user
+        elif "role" in message:
+            roles = frappe.get_roles(frappe.session.user)
+            reply = "🧩 Your Roles: " + ", ".join(roles)
+
+        # 6️⃣ Default: echo
         else:
-            return {"reply": "No employee record found for your user."}
+            reply = f"Server received your message: {message}. Try typing 'employee', 'leave', 'expense', or 'attendance'."
 
-    # Example 3: Attendance status
-    if "attendance" in message.lower():
-        today = frappe.utils.today()
-        status = frappe.db.get_value("Attendance", {"employee": ["in", frappe.db.get_all("Employee", filters={"user_id": user}, pluck="name")], "attendance_date": today}, "status")
-        return {"reply": f"Today's attendance status: {status or 'Not marked yet.'}"}
+        return {"reply": reply}
 
-    # Default response
-    return {"reply": f"Server received your message: {message}"}
+    except Exception as e:
+        frappe.log_error(message=str(e), title="Chatbot Error")
+        return {"reply": f"⚠️ Error: {str(e)}"}
