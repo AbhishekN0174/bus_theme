@@ -43,8 +43,8 @@ li.list-filters.list-link {
     box-shadow: none !important;
     outline: none !important;
 }
-div.form-group frappe-control input-max-width{
-  color: white !important;
+.checkbox .label-area {
+    color: #da3a3a;
 }
 
 
