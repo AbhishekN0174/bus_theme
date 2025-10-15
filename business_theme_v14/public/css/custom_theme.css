@@ -32,6 +32,19 @@ li.list-filters.list-link {
   border-color: solid white !important;
 } */
 
+/* === Make background transparent and border white === */
+.sidebar-section.save-filter-section input[type="text"],
+.sidebar-section.save-filter-section input[type="text"]:hover,
+.sidebar-section.save-filter-section input[type="text"]:focus {
+    background: transparent !important;
+    background-image: none !important;
+    border: 1px solid #fff !important; /* white border */
+    color: #fff !important;            /* white text inside input */
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+
 
 
 
