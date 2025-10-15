@@ -24,13 +24,13 @@ li.list-filters.list-link {
 }
 
 /* If the hover style is applied to the wrapper element */
-.sidebar-section.save-filter-section .input-area:hover,
+/* .sidebar-section.save-filter-section .input-area:hover,
 .sidebar-section.save-filter-section .list-link:hover {
   background: transparent !important;
   background-image: none !important;
   box-shadow: none !important;
   border-color: solid white !important;
-}
+} */
 
 
 
