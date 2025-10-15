@@ -1,85 +1,122 @@
 import frappe
-import requests
-import os
-
-# Optional: set OPENAI_API_KEY in environment variables if you want GPT responses
-OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
 
 @frappe.whitelist()
 def get_reply(message):
-    """
-    Handles AI + Frappe data queries
-    """
-    # First, check if the message is about your site data
-    site_data_response = fetch_frappe_data(message)
-    if site_data_response:
-        return {"reply": site_data_response}
+    try:
+        message = message.lower().strip()
 
-    # Otherwise, fallback to AI response
-    ai_response = get_ai_response(message)
-    return {"reply": ai_response}
-
-
-def fetch_frappe_data(query):
-    """
-    Check if query matches your site data (Employee, Leave, Attendance)
-    Return formatted results if found
-    """
-    doctypes_to_search = {
-        "Employee": ["employee_name", "employee_number", "department", "designation"],
-        "Leave Application": ["employee", "leave_type", "from_date", "to_date", "status"],
-        "Attendance": ["employee", "attendance_date", "status"]
-    }
-
-    results = []
-
-    for doctype, fields in doctypes_to_search.items():
-        try:
-            docs = frappe.get_all(
-                doctype,
-                filters={"name": ["like", f"%{query}%"]},
-                fields=fields,
-                limit_page_length=5
+        # 1️⃣ Employee list
+        if "employee" in message:
+            employees = frappe.get_all(
+                "Employee",
+                fields=["employee_name", "designation", "department"],
+                limit=10
             )
-            for doc in docs:
-                results.append({"doctype": doctype, "data": doc})
-        except Exception:
-            continue
+            if employees:
+                reply = "👥 Employee List:\n"
+                for emp in employees:
+                    reply += f"- {emp.employee_name} ({emp.designation or 'No Designation'}) [{emp.department or 'No Department'}]\n"
+            else:
+                reply = "No employees found."
 
-    if results:
-        text = ""
-        for item in results:
-            text += f"{item['doctype']}:\n"
-            for k, v in item["data"].items():
-                text += f"  {k}: {v}\n"
-            text += "\n"
-        return text
+        # 2️⃣ Leave Application list
+        elif "leave" in message:
+            leaves = frappe.get_all(
+                "Leave Application",
+                fields=["employee_name", "leave_type", "from_date", "to_date", "status"],
+                limit=10,
+                order_by="from_date desc"
+            )
+            if leaves:
+                reply = "🌴 Leave Applications:\n"
+                for lv in leaves:
+                    reply += f"- {lv.employee_name}: {lv.leave_type} ({lv.from_date} → {lv.to_date}) [{lv.status}]\n"
+            else:
+                reply = "No leave applications found."
 
-    return None
+        # 3️⃣ Expense Claim list
+        elif "expense" in message:
+            claims = frappe.get_all(
+                "Expense Claim",
+                fields=["employee", "total_sanctioned_amount", "approval_status"],
+                limit=10,
+                order_by="creation desc"
+            )
+            if claims:
+                reply = "💰 Expense Claims:\n"
+                for cl in claims:
+                    reply += f"- {cl.employee}: ₹{cl.total_sanctioned_amount or 0} [{cl.approval_status}]\n"
+            else:
+                reply = "No expense claims found."
+
+        # 4️⃣ Attendance records
+        elif "attendance" in message:
+            attendance = frappe.get_all(
+                "Attendance",
+                fields=["employee", "attendance_date", "status"],
+                limit=10,
+                order_by="attendance_date desc"
+            )
+            if attendance:
+                reply = "🕒 Attendance Records:\n"
+                for a in attendance:
+                    reply += f"- {a.employee}: {a.attendance_date} ({a.status})\n"
+            else:
+                reply = "No attendance records found."
+
+        # 5️⃣ Role list for current user
+        elif "role" in message:
+            roles = frappe.get_roles(frappe.session.user)
+            reply = "🧩 Your Roles: " + ", ".join(roles)
+
+        # 6️⃣ Default: echo
+        else:
+            reply = f"Server received your message: {message}. Try typing 'employee', 'leave', 'expense', or 'attendance'."
+
+        return {"reply": reply}
+
+    except Exception as e:
+        frappe.log_error(message=str(e), title="Chatbot Error")
+        return {"reply": f"⚠️ Error: {str(e)}"}
 
 
-def get_ai_response(message):
-    """
-    Uses OpenAI GPT model to answer general questions
-    """
-    if not OPENAI_API_KEY:
-        return "AI not configured. Please set OPENAI_API_KEY in environment."
 
-    url = "https://api.openai.com/v1/chat/completions"
-    headers = {
-        "Authorization": f"Bearer {OPENAI_API_KEY}",
-        "Content-Type": "application/json"
-    }
-    payload = {
-        "model": "gpt-4",
-        "messages": [{"role": "user", "content": message}],
-        "temperature": 0.7,
-        "max_tokens": 300
-    }
 
-    response = requests.post(url, headers=headers, json=payload)
-    if response.status_code == 200:
-        data = response.json()
-        return data["choices"][0]["message"]["content"]
-    else:
-        return f"AI Error: {response.text}"
+
+# ai_chatbot/api.py
+# import frappe
+
+# @frappe.whitelist()
+# def search_site(query, doctype=None, limit=10):
+#     """
+#     Search any doctype in the Frappe site.
+#     :param query: Search text
+#     :param doctype: Specific doctype to search (optional)
+#     :param limit: Max results
+#     """
+#     results = []
+
+#     # If a specific doctype is provided
+#     if doctype:
+#         results = frappe.get_list(
+#             doctype,
+#             filters=[["name", "like", f"%{query}%"]],
+#             fields=["name"],
+#             limit_page_length=limit
+#         )
+#     else:
+#         # Search all doctypes the user has permission for
+#         for dt in frappe.get_all("DocType", filters={"issingle": 0, "restrict_to_domain": ""}):
+#             try:
+#                 matches = frappe.get_list(
+#                     dt.name,
+#                     filters=[["name", "like", f"%{query}%"]],
+#                     fields=["name"],
+#                     limit_page_length=limit
+#                 )
+#                 if matches:
+#                     results.append({dt.name: matches})
+#             except Exception as e:
+#                 continue  # Skip doctypes user cannot access
+
+#     return results
