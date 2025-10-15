@@ -1,14 +1,9 @@
-
-
-
-
 from . import __version__ as app_version
 import time
 
-# -----------------------------
-
-# App Info
-# -----------------------------
+# ------------------------------------------------------
+# App Information
+# ------------------------------------------------------
 app_name = "business_theme_v14"
 app_title = "Business Theme V14"
 app_publisher = "Midocean Technologies Pvt Ltd"
@@ -18,80 +13,38 @@ app_color = "grey"
 app_email = "sagar@midocean.tech"
 app_license = "MIT"
 
-# override_whitelisted_methods = {
-#     "ai_chatbot.api.chatbot_api.get_doc_data": "ai_chatbot.api.chatbot_api.get_doc_data"
-# }
-
-
-app_name = "ai_chatbot"
-app_title = "AI Chatbot"
-app_publisher = "Your Name"
-app_description = "AI Chatbot for Frappe"
-app_license = "MIT"
-
-
-
-
-
-# hooks.py - required by Frappe
-# app_name = "business_theme_v14"
-# app_title = "Business Theme v14"
-# app_publisher = "Abhishek"
-# app_description = "Custom business theme with AI chatbot"
-# app_email = "you@example.com"
-# app_license = "MIT"
-
-
-# import business_theme_v14.api.chatbot_api
-
-
-
-
-
-
-
-
-
-# -----------------------------
-# Version (auto timestamp)
-# -----------------------------
+# ------------------------------------------------------
+# Version (auto-generated timestamp for cache busting)
+# ------------------------------------------------------
 app_version = str(int(time.time()))
 
-# -----------------------------
-# Includes in <head>
-# -----------------------------
-
-# Include JS files
+# ------------------------------------------------------
+# Include JS and CSS files in Desk
+# ------------------------------------------------------
 app_include_js = [
     "/assets/business_theme_v14/js/Horizontal.js"
 ]
 
-# Include CSS files with versioning
 app_include_css = [
     f"/assets/business_theme_v14/css/custom_theme.css?v={app_version}"
 ]
 
-# -----------------------------
-# Website settings
-# -----------------------------
+# ------------------------------------------------------
+# Website Settings
+# ------------------------------------------------------
 website_context = {
-    "favicon": "/assets/business_theme_v14/images/favicon.png",
-    # Optional: splash image
-    # "splash_image": "/assets/business_theme_v14/images/itchamps_logo.png"
+    "favicon": "/assets/business_theme_v14/images/favicon.png"
 }
 
-# -----------------------------
-# (Optional) other hooks
-# -----------------------------
-# You can uncomment and customize these later if needed
-# web_include_js = "/assets/business_theme_v14/js/business_theme_v14.js"
-# web_include_css = "/assets/business_theme_v14/css/business_theme_v14.css"
-# page_js = {"page" : "public/js/file.js"}
-# doctype_js = {"doctype" : "public/js/doctype.js"}
-# doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
-# doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
-# doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
+# ------------------------------------------------------
+# Fixtures, Permissions, Schedulers (optional)
+# ------------------------------------------------------
+# Uncomment and customize these as needed
 
-# -----------------------------
+# fixtures = []
+# scheduler_events = {}
+# override_whitelisted_methods = {}
+
+# ------------------------------------------------------
 # End of hooks.py
-# -----------------------------
+# ------------------------------------------------------
