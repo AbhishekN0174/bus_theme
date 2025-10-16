@@ -1,9 +1,3 @@
-from . import __version__ as app_version
-import time
-
-# ------------------------------------------------------
-# App Information
-# ------------------------------------------------------
 app_name = "business_theme_v14"
 app_title = "Business Theme V14"
 app_publisher = "Midocean Technologies Pvt Ltd"
@@ -13,47 +7,10 @@ app_color = "grey"
 app_email = "sagar@midocean.tech"
 app_license = "MIT"
 
+# JS include
+app_include_js = ["/assets/business_theme_v14/js/Horizontal.js"]
 
-import time
- 
-app_version = str(int(time.time()))  # current timestamp, changes every deploy
- 
-app_include_css = [
-    f"/assets/business_theme_v14/css/custom_theme.css?v={app_version}"
-]
-
-# ------------------------------------------------------
-# Version (auto-generated timestamp for cache busting)
-# ------------------------------------------------------
-app_version = str(int(time.time()))
-
-# ------------------------------------------------------
-# Include JS and CSS files in Desk
-# ------------------------------------------------------
-app_include_js = [
-    "/assets/business_theme_v14/js/Horizontal.js"
-]
-
-app_include_css = [
-    f"/assets/business_theme_v14/css/custom_theme.css?v={app_version}"
-]
-
-# ------------------------------------------------------
-# Website Settings
-# ------------------------------------------------------
-website_context = {
-    "favicon": "/assets/business_theme_v14/images/favicon.png"
+# Include API
+override_whitelisted_methods = {
+    "business_theme_v14.api.chatbot_ai.get_ai_response": "business_theme_v14.api.chatbot_ai.get_ai_response"
 }
-
-# ------------------------------------------------------
-# Fixtures, Permissions, Schedulers (optional)
-# ------------------------------------------------------
-# Uncomment and customize these as needed
-
-# fixtures = []
-# scheduler_events = {}
-# override_whitelisted_methods = {}
-
-# ------------------------------------------------------
-# End of hooks.py
-# ------------------------------------------------------
