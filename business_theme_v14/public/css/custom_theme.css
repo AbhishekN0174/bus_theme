@@ -3433,8 +3433,8 @@ color: #2a5298 !important;
     margin-top: var(--margin-xs);
 }
 
-span.ellipsis{
-  color:white !important;
+div.widget shortcut-widget-box{
+  color:red !important;
 }
 
 /* text color */
