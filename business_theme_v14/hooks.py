@@ -13,6 +13,15 @@ app_color = "grey"
 app_email = "sagar@midocean.tech"
 app_license = "MIT"
 
+
+import time
+ 
+app_version = str(int(time.time()))  # current timestamp, changes every deploy
+ 
+app_include_css = [
+    f"/assets/business_theme_v14/css/custom_theme.css?v={app_version}"
+]
+
 # ------------------------------------------------------
 # Version (auto-generated timestamp for cache busting)
 # ------------------------------------------------------
