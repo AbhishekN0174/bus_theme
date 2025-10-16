@@ -27,6 +27,20 @@ app_include_css = [
     f"/assets/business_theme_v14/css/custom_theme.css?v={app_version}"
 ]
 
+doc_events = {
+    "*": {
+        "on_update": "method",
+        "on_cancel": "method",
+        "on_trash": "method"
+    }
+}
+
+# ✅ Add this line to register the API
+override_whitelisted_methods = {
+    "business_theme_v14.api.get_reply": "business_theme_v14.api.chatbot_api.get_reply"
+}
+
+
 # -----------------------------
 # Website context
 # -----------------------------
