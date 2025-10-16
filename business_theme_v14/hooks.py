@@ -14,3 +14,9 @@ app_include_js = ["/assets/business_theme_v14/js/Horizontal.js"]
 override_whitelisted_methods = {
     "business_theme_v14.api.chatbot_ai.get_ai_response": "business_theme_v14.api.chatbot_ai.get_ai_response"
 }
+import time
+ 
+app_version = str(int(time.time()))  # current timestamp, changes every deploy
+ 
+app_include_css = [
+    f"/assets/business_theme_v14/css/custom_theme.css?v={app_version}"
