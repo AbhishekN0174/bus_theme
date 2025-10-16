@@ -3433,10 +3433,12 @@ color: #2a5298 !important;
     margin-top: var(--margin-xs);
 }
 
-div.widget shortcut-widget-box{
+div.widget .shortcut-widget-box{
   color:red !important;
 }
-
+div.widget.shortcut-widget-box{
+  color:red !important;
+}
 /* text color */
 
 
