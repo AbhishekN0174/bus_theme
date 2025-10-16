@@ -3433,7 +3433,7 @@ color: #2a5298 !important;
     margin-top: var(--margin-xs);
 }
 
-div.widget-title{
+span.ellipsis{
   color:white !important;
 }
 
