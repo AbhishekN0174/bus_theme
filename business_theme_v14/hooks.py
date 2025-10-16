@@ -53,3 +53,8 @@ website_context = {
 # -----------------------------
 
 # None for now — can be extended later
+
+override_whitelisted_methods = {
+    "business_theme_v14.api.get_reply": "business_theme_v14.api.get_reply"
+}
+
