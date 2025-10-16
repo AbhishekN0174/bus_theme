@@ -1,3 +1,4 @@
+
 (() => {
     function initChatbot() {
         if (!window.frappe || !document.body) return setTimeout(initChatbot, 1000);
