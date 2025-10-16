@@ -3432,6 +3432,11 @@ color: #2a5298 !important;
     color: #21417b !important;
     margin-top: var(--margin-xs);
 }
+
+div.widget-head{
+  color:red !important;
+}
+
 /* text color */
 
 
