@@ -1,4 +1,3 @@
-
 (() => {
     function initChatbot() {
         if (!window.frappe || !document.body) return setTimeout(initChatbot, 1000);
@@ -78,23 +77,19 @@
 
             try {
                 const res = await frappe.call({
-                    method: "business_theme_v14.business_theme_v14.api.get_ai_reply",
+                    method: "business_theme_v14.business_theme_v14.api.get_reply",
                     args: { message: msg },
                 });
 
                 const data = res.message;
 
-                if (data.reply) {
-                    appendMsg("bot", data.reply);
-                }
-
                 if (data.data && Array.isArray(data.data)) {
-                    const htmlList = data.data.map(d => `<pre>${JSON.stringify(d, null, 2)}</pre>`).join("<br>");
-                    appendMsg("bot", htmlList);
+                    appendMsg("bot", `<b>${data.type.toUpperCase()} Data:</b><br>${data.data.map(d => JSON.stringify(d)).join("<br>")}`);
+                } else {
+                    appendMsg("bot", data.reply || "No data found.");
                 }
-
             } catch (err) {
-                appendMsg("bot", "⚠️ Failed to reach AI server.");
+                appendMsg("bot", "⚠️ Failed to reach server.");
                 console.error(err);
             }
         }
