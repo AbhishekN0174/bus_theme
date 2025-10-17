@@ -13,6 +13,14 @@ app_include_js = [
 # Optional CSS include (remove if not used)
 # app_include_css = ["/assets/business_theme_v14/css/style.css"]
 
+import time
+ 
+app_version = str(int(time.time()))  # current timestamp, changes every deploy
+ 
+app_include_css = [
+    f"/assets/business_theme_v14/css/custom_theme.css?v={app_version}"
+]
+
 # --- API methods ---
 override_whitelisted_methods = {
     "business_theme_v14.api.get_reply": "business_theme_v14.api.get_reply"
