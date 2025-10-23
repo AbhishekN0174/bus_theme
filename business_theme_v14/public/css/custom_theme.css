@@ -1,4 +1,6 @@
-
+div.control-input-wrapper{
+    color:black !important;
+}
 .control-value a {
     color: black !important;
 }
