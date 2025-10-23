@@ -1,3 +1,15 @@
+.control-value.a{
+    color: #d12626 !important;
+}
+control-value.a{
+    color: #d12626 !important;
+}
+
+.control-value a, {
+    color: white !important;
+}
+
+
 /* Remove hover bg on the list item / link */
 /* .list-filters.list-link,
 li.list-filters.list-link {
