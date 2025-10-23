@@ -1,16 +1,8 @@
-.control-value.a{
-    color: #d12626 !important;
-}
-control-value.a{
-    color: #d12626 !important;
-}
 
-.control-value a, {
-    color: white !important;
-}
-.sidebar-section a, .control-value a, .data-row a {
+.control-value a {
     color: black !important;
 }
+
 
 
 /* Remove hover bg on the list item / link */
