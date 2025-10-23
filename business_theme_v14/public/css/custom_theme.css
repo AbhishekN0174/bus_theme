@@ -1,6 +1,10 @@
 .control-value.like-disabled-input.bold[data-name="Employee"] {
-    color: #dd4444 !important;
+    color: black !important;
 }
+.control-value.like-disabled-input.bold[data-name="Employee"] {
+    color: black !important;
+}
+
 
 
 
