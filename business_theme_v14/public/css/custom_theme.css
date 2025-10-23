@@ -1,9 +1,7 @@
-div.control-input-wrapper{
-    color:black !important;
+.control-value.like-disabled-input.bold[data-name="Employee"] {
+    color: #dd4444 !important;
 }
-.control-value a {
-    color: black !important;
-}
+
 
 
 
