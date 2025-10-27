@@ -36,16 +36,16 @@ li.sidebar-label:focus {
 
 
 /* Base list background */
-#awesomplete_list_1 {
+/* #awesomplete_list_1 {
   background-color: #cce5ff !important; /* light blue background */
   color: #000 !important;
   border-radius: 6px;
-}
+} */
 
-/* Remove always-on highlight from first item */
+Remove always-on highlight from first item */
 /* #awesomplete_list_1 li[aria-selected="true"] {
   background-color: transparent !important;
-} */
+}
 
 /* Normal text */
 /* #awesomplete_list_1 li {
