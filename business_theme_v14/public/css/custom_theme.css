@@ -55,7 +55,7 @@ li.sidebar-label:focus {
 
 /* Hover highlight */
 #awesomplete_list_1 li:hover {
-  background-color: #b3d7ff !important;
+  background-color: rgba(255, 255, 255, 0.15) !important;
   color: #000 !important;
 }
 #awesomplete_list_1,
