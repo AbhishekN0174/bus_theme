@@ -10,19 +10,7 @@ li.sidebar-label:focus {
   background-color: transparent !important;
   background-image: none !important;
   box-shadow: none !important;
-  color: inherit !important;
 }
-
-/* disable any pseudo-element hover effect */
-/* li.sidebar-label::before,
-li.sidebar-label::after,
-li.sidebar-label:hover::before,
-li.sidebar-label:hover::after {
-  background: transparent !important;
-  box-shadow: none !important;
-  content: none !important;
-} */
-
 
 
 
