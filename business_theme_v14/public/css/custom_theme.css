@@ -4118,9 +4118,13 @@ header .form-control:focus {
     padding: 0 5px !important;
     opacity: 0.9 !important;
 }
-.layout-side-section .sidebar-label:hover,{
+/* .layout-side-section .sidebar-label:hover,{
   background:none !important;
+} */
+.layout-side-section .sidebar-label:hover {
+  background-color: transparent !important;
 }
+
 
 
 /* .layout-side-section .sidebar-menu li,
