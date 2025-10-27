@@ -13,6 +13,10 @@ li.sidebar-label:focus {
   box-shadow: none !important;
 }
 
+svg.es-icon.icon-sm{
+  color:white !important;
+}
+
 
 
 
