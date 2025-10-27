@@ -1,23 +1,28 @@
-/* override hover background on the sidebar label */
-.sidebar-menu li.sidebar-label:hover,
-.sidebar-menu li.sidebar-label:focus,
-.sidebar-menu li.sidebar-label a:hover,
-.sidebar-menu li.sidebar-label a:focus {
-  background: transparent !important;
+/* remove hover color on Filter By label */
+.list-sidebar.overlay-sidebar .sidebar-menu li.sidebar-label:hover,
+.list-sidebar.overlay-sidebar .sidebar-menu li.sidebar-label:focus,
+.list-sidebar .sidebar-menu li.sidebar-label:hover,
+.list-sidebar .sidebar-menu li.sidebar-label:focus,
+.sidebar-section.filter-section li.sidebar-label:hover,
+.sidebar-section.filter-section li.sidebar-label:focus,
+li.sidebar-label:hover,
+li.sidebar-label:focus {
+  background-color: transparent !important;
   background-image: none !important;
   box-shadow: none !important;
+  color: inherit !important;
 }
 
-/* also override any pseudo-element hover decorations */
-.sidebar-menu li.sidebar-label:hover::before,
-.sidebar-menu li.sidebar-label:hover::after,
-.sidebar-menu li.sidebar-label::before,
-.sidebar-menu li.sidebar-label::after {
+/* disable any pseudo-element hover effect */
+li.sidebar-label::before,
+li.sidebar-label::after,
+li.sidebar-label:hover::before,
+li.sidebar-label:hover::after {
   background: transparent !important;
-  background-image: none !important;
   box-shadow: none !important;
   content: none !important;
 }
+
 
 
 
