@@ -48,19 +48,19 @@ li.sidebar-label:focus {
 } 
 
 /* Normal text */
-/* #awesomplete_list_1 li {
+#awesomplete_list_1 li {
   color: #000 !important;
   background-color: transparent !important;
-} */
+}
 
 /* Hover highlight */
 #awesomplete_list_1 li:hover {
   background-color: rgba(255, 255, 255, 0.15) !important;
   color: #000 !important;
 }
-/* #awesomplete_list_1,
+#awesomplete_list_1,
 #awesomplete_list_1 li,
-#awesomplete_list_1 li a, */
+#awesomplete_list_1 li a,
 #awesomplete_list_1 span {
   color: white !important; /* force black text */
 }
