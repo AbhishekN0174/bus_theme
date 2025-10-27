@@ -25,6 +25,22 @@ li.sidebar-label:focus {
   color: #ffffff !important;
 }
 
+#awesomplete_list_1 {
+  background-color: #cce5ff !important; /* light blue */
+  color: #000000 !important; /* black text */
+  border-radius: 6px;
+}
+
+#awesomplete_list_1 li {
+  color: #000000 !important; /* make sure list items stay black */
+  background-color: transparent !important;
+}
+
+#awesomplete_list_1 li:hover {
+  background-color: #b3d7ff !important; /* slightly darker blue on hover */
+}
+
+
 
 
 
