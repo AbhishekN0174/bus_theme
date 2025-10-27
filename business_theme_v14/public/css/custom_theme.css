@@ -129,7 +129,7 @@ div.control-value like-disabled-input bold{
     outline: none !important;
 }
 .checkbox .label-area {
-    color: white !important;
+    color: black !important;
 }
 .sidebar-section a, .control-value a, .data-row a {
     color: black !important;
