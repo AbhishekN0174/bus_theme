@@ -1,5 +1,5 @@
 /* remove hover color on Filter By label */
-.list-sidebar.overlay-sidebar .sidebar-menu li.sidebar-label:hover,
+/* .list-sidebar.overlay-sidebar .sidebar-menu li.sidebar-label:hover,
 .list-sidebar.overlay-sidebar .sidebar-menu li.sidebar-label:focus,
 .list-sidebar .sidebar-menu li.sidebar-label:hover,
 .list-sidebar .sidebar-menu li.sidebar-label:focus,
@@ -11,7 +11,7 @@ li.sidebar-label:focus {
   background-image: none !important;
   box-shadow: none !important;
   color: inherit !important;
-}
+} */
 
 /* disable any pseudo-element hover effect */
 li.sidebar-label::before,
