@@ -1,11 +1,11 @@
 /* Filter By */
 /* remove hover color on Filter By label */
-.list-sidebar.overlay-sidebar .sidebar-menu li.sidebar-label:hover,
+/* .list-sidebar.overlay-sidebar .sidebar-menu li.sidebar-label:hover,
 .list-sidebar.overlay-sidebar .sidebar-menu li.sidebar-label:focus,
 .list-sidebar .sidebar-menu li.sidebar-label:hover,
 .list-sidebar .sidebar-menu li.sidebar-label:focus,
 .sidebar-section.filter-section li.sidebar-label:hover,
-.sidebar-section.filter-section li.sidebar-label:focus,
+.sidebar-section.filter-section li.sidebar-label:focus, */
 li.sidebar-label:hover,
 li.sidebar-label:focus {
   background-color: transparent !important;
