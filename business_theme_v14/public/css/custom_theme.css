@@ -39,6 +39,9 @@ li.sidebar-label:focus {
 #awesomplete_list_1 li:hover {
   background-color: #b3d7ff !important; /* slightly darker blue on hover */
 }
+span.#awesomplete_list_1 {
+  color: #000000 !important; /* black text */
+}
 
 
 
