@@ -47,7 +47,7 @@ li.sidebar-label:focus {
 #awesomplete_list_1 li a,
 #awesomplete_list_1 span {
   color: white !important; /* force black text */
-  background:#052a67 !important;
+  background:linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #4facfe 100%) !important;
 }
 
 
