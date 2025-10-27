@@ -58,6 +58,12 @@ li.sidebar-label:focus {
   background-color: #b3d7ff !important;
   color: #000 !important;
 }
+#awesomplete_list_1,
+#awesomplete_list_1 li,
+#awesomplete_list_1 li a,
+#awesomplete_list_1 span {
+  color: white !important; /* force black text */
+}
 
 
 
