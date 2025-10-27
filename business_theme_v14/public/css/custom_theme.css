@@ -17,13 +17,19 @@ li.sidebar-label:focus {
   fill: white !important;
   stroke: white !important;
 } */
-.es-icon.icon-sm,
+/* .es-icon.icon-sm,
 .es-icon.icon-sm svg,
 .es-icon.icon-sm * {
   fill: #ffffff !important;
   stroke: #ffffff !important;
   color: #ffffff !important;
+} */
+
+.navbar .es-icon.icon-sm {
+  fill: white !important;
+  stroke: white !important;
 }
+
 
 
 
