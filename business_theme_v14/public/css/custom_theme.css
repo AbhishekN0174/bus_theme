@@ -13,9 +13,16 @@ li.sidebar-label:focus {
   box-shadow: none !important;
 }
 
-.es-icon.icon-sm {
+/* .es-icon.icon-sm {
   fill: white !important;
   stroke: white !important;
+} */
+.es-icon.icon-sm,
+.es-icon.icon-sm svg,
+.es-icon.icon-sm * {
+  fill: #ffffff !important;
+  stroke: #ffffff !important;
+  color: #ffffff !important;
 }
 
 
