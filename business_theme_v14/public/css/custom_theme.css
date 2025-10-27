@@ -1,3 +1,34 @@
+/* override hover background on the sidebar label */
+.sidebar-menu li.sidebar-label:hover,
+.sidebar-menu li.sidebar-label:focus,
+.sidebar-menu li.sidebar-label a:hover,
+.sidebar-menu li.sidebar-label a:focus {
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+/* also override any pseudo-element hover decorations */
+.sidebar-menu li.sidebar-label:hover::before,
+.sidebar-menu li.sidebar-label:hover::after,
+.sidebar-menu li.sidebar-label::before,
+.sidebar-menu li.sidebar-label::after {
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  content: none !important;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /* Remove hover bg on the list item / link */
 /* .list-filters.list-link,
