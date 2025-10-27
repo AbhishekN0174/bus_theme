@@ -2469,12 +2469,12 @@ background: linear-gradient(180deg, rgb(217 225 233) 0%, rgb(204 224 251) 100%) 
 .navbar .navbar-nav .nav-link,
 .navbar .navbar-text,
 .navbar a {
-    color: #1e3a8a !important; /* Dark blue text for contrast */
+    color: #ffffff !important; /* Dark blue text for contrast */
     font-weight: 500 !important;
 }
 
 .navbar .navbar-nav .nav-link:hover {
-    color: #1e40af !important;
+    color: #ffffff !important;
 }
 
 /* Search bar in navbar */
@@ -2538,7 +2538,9 @@ header .form-control {
 /* Force override any conflicting styles */
 body .navbar,
 html .navbar {
-       background: linear-gradient(180deg, rgb(217 225 233) 0%, rgb(204 224 251) 100%) !important;
+       /* background: linear-gradient(180deg, rgb(217 225 233) 0%, rgb(204 224 251) 100%) !important; */
+  background: #052a67 !important;
+  
 }
 
 /* Mobile responsive navbar */
