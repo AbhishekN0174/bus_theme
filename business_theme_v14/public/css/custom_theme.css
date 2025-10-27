@@ -5,17 +5,20 @@
 .list-sidebar .sidebar-menu li.sidebar-label:hover,
 .list-sidebar .sidebar-menu li.sidebar-label:focus,
 .sidebar-section.filter-section li.sidebar-label:hover,
-.sidebar-section.filter-section li.sidebar-label:focus, */
+.sidebar-section.filter-section li.sidebar-label:focus,
 li.sidebar-label:hover,
 li.sidebar-label:focus {
   background-color: transparent !important;
   background-image: none !important;
   box-shadow: none !important;
+} */
+
+li.sidebar-label:hover,
+li.sidebar-label:focus {
+  background: none !important;
+  box-shadow: none !important;
 }
 
-svg.es-icon.icon-sm{
-  color:white !important;
-}
 
 
 
