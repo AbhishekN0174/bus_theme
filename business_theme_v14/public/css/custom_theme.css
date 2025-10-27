@@ -43,7 +43,7 @@ li.sidebar-label:focus {
 #awesomplete_list_1 li,
 #awesomplete_list_1 li a,
 #awesomplete_list_1 span {
-  color: #000 !important; /* force black text */
+  color: white !important; /* force black text */
   background:#052a67 !important;
 }
 
