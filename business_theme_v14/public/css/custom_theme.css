@@ -28,16 +28,16 @@ li.sidebar-label:focus {
 
 
 
-/* #awesomplete_list_1 {
-  background-color: #cce5ff !important; /* light blue */
+ #awesomplete_list_1 {
+  background:linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #4facfe 100%) !important;
   color: #000000 !important; /* black text */
   border-radius: 6px;
 }
 
 #awesomplete_list_1 li {
-  color: #000000 !important; /* make sure list items stay black */
+  color: #000000 !important; /* make sure list items stay black 
   background-color: transparent !important;
-} */
+} 
 
 #awesomplete_list_1 li:hover {
   background-color: #b3d7ff !important; /* slightly darker blue on hover */
@@ -47,7 +47,6 @@ li.sidebar-label:focus {
 #awesomplete_list_1 li a,
 #awesomplete_list_1 span {
   color: white !important; /* force black text */
-  background:linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #4facfe 100%) !important;
 }
 
 
