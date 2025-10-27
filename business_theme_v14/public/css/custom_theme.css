@@ -36,11 +36,11 @@ li.sidebar-label:focus {
 
 
 /* Base list background */
-/* #awesomplete_list_1 {
+#awesomplete_list_1 {
   background-color: #cce5ff !important; /* light blue background */
   color: #000 !important;
   border-radius: 6px;
-} */
+}
 
 /* Remove always-on highlight from first item  */
  #awesomplete_list_1 li[aria-selected="true"] {
@@ -58,9 +58,9 @@ li.sidebar-label:focus {
   background-color: rgba(255, 255, 255, 0.15) !important;
   color: #000 !important;
 }
-#awesomplete_list_1,
+/* #awesomplete_list_1,
 #awesomplete_list_1 li,
-#awesomplete_list_1 li a,
+#awesomplete_list_1 li a, */
 #awesomplete_list_1 span {
   color: white !important; /* force black text */
 }
