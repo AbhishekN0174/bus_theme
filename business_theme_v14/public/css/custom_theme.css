@@ -44,7 +44,6 @@ li.sidebar-label:focus {
 #awesomplete_list_1 li a,
 #awesomplete_list_1 span {
   color: #000 !important; /* force black text */
-  background-color: transparent !important;
 }
 
 
