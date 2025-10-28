@@ -63,7 +63,7 @@ li.sidebar-label:focus {
 
 
 
-.widget.links-widget-box .widget-head .widget-label .widget-title {
+.layout-main-section .widget span {
     color: #d91818 !important;
 }
 
