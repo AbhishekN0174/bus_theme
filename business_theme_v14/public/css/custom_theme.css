@@ -3539,9 +3539,9 @@ color: #2a5298 !important;
     margin-top: var(--margin-xs);
 }
 
-div.widget .shortcut-widget-box{
+/* div.widget .shortcut-widget-box{
   color:red !important;
-}
+} */
 div.widget.shortcut-widget-box{
   color:red !important;
 }
@@ -4587,7 +4587,7 @@ document.addEventListener('DOMContentLoaded', function() {
 .layout-main-section .widget .widget-title,
 .widget-head h4 {
     color: #1f2937 !important;
-    font-size: 18px !important;
+    font-size: 15px !important;
     font-weight: 600 !important;
     border-bottom: none !important;
     text-decoration: none !important;
