@@ -4586,7 +4586,8 @@ document.addEventListener('DOMContentLoaded', function() {
 .layout-main-section .widget .widget-head,
 .layout-main-section .widget .widget-title,
 .widget-head h4 {
-    color: #1f2937 !important;
+    /* color: #1f2937 !important; */
+  color: #21417b !important;
     font-size: 15px !important;
     font-weight: 600 !important;
     border-bottom: none !important;
