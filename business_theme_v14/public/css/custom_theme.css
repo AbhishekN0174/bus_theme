@@ -78,7 +78,7 @@ li.sidebar-label:focus {
 }
 
 .widget.links-widget-box .widget-head .widget-label .widget-title :hover{
-  background:none !important;
+  color: #e92f2f !important;
 }
 
 
