@@ -4598,7 +4598,7 @@ document.addEventListener('DOMContentLoaded', function() {
 .layout-main-section .widget .widget-head,
 .layout-main-section .widget .widget-title,
 .widget-head h4: hover{
-  background: none !important;
+  background: #21417b !important;
 }
 
 /* ==================== BUTTON STYLING ==================== */
