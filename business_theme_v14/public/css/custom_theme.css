@@ -14,9 +14,6 @@ li.sidebar-label:focus {
 }
 
 
-.widget.shortcut-widget-box :hover{
-  background: none !important;
-}
 
 
 
@@ -80,6 +77,9 @@ li.sidebar-label:focus {
     color: #e92f2f !important;
 }
 
+.widget.links-widget-box .widget-head .widget-label .widget-title :hover{
+  background:none !important;
+}
 
 
 .layout-main-section .widget .widget-title {
