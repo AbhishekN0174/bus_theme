@@ -4595,7 +4595,9 @@ document.addEventListener('DOMContentLoaded', function() {
     text-decoration: none !important;
 }
 
-.layout-main-section .widget .widget-title: hover{
+.layout-main-section .widget .widget-head,
+.layout-main-section .widget .widget-title,
+.widget-head h4: hover{
   background: none !important;
 }
 
