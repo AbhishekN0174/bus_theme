@@ -4589,10 +4589,14 @@ document.addEventListener('DOMContentLoaded', function() {
 .widget-head h4 {
     /* color: #1f2937 !important; */
   color: #21417b !important;
-    font-size: 25px !important;
+    font-size: 15px !important;
     font-weight: 600 !important;
     border-bottom: none !important;
     text-decoration: none !important;
+}
+
+.layout-main-section .widget .widget-title: hover{
+  background: none !important;
 }
 
 /* ==================== BUTTON STYLING ==================== */
