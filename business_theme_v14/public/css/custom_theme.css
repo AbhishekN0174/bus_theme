@@ -14,6 +14,11 @@ li.sidebar-label:focus {
 }
 
 
+.widget.shortcut-widget-box :hover{
+  background-color:none !important;
+}
+
+
 
 .navbar .es-icon.icon-sm {
   fill: white !important;
