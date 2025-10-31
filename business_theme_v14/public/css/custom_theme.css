@@ -63,17 +63,17 @@ li.sidebar-label:focus {
   color: white !important; /* force black text */
 }
 
-/* .layout-main-section .widget span {
-    color: #d91818 !important;
+.layout-main-section .widget span {
+    color: green !important;
       font-size: 14px !important;
     line-height: 1.6 !important;
-} */
+}
 
 .widget.links-widget-box .widget-head .widget-label .widget-title {
        font-size: 14px !important;
     line-height: 1.6 !important;
      /* color: #e92f2f !important; */
-  color:green !important;
+  /* color:green !important; */
 }
 
 
