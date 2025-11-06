@@ -1,8 +1,11 @@
 
-.sidebar-section.save-filter-section .sidebar-label:hover{
-  background-color: transparent !important;
-  color: transparent !important;
+.list-sidebar .sidebar-menu li.sidebar-label:hover,
+.list-sidebar .sidebar-menu li.sidebar-label:focus {
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
 }
+
 
 
 
