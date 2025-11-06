@@ -1,9 +1,8 @@
-.list-sidebar .sidebar-menu li.sidebar-label:hover,
-.list-sidebar .sidebar-menu li.sidebar-label:focus {
-  background-color: transparent !important;
-  background-image: none !important;
-}
 
+.sidebar-section.save-filter-section .sidebar-label:hover{
+  background-color: transparent !important;
+  color: transparent !important;
+}
 
 
 
