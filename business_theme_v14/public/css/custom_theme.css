@@ -1,10 +1,15 @@
 
-.list-sidebar .sidebar-menu li.sidebar-label:hover,
-.list-sidebar .sidebar-menu li.sidebar-label:focus {
+/* Forcefully override hover background on sidebar-labels */
+ul.list-sidebar .sidebar-menu li.sidebar-label:hover,
+ul.list-sidebar .sidebar-menu li.sidebar-label:hover a,
+.sidebar-section .sidebar-label:hover,
+.sidebar-section .sidebar-label:hover a {
   background: transparent !important;
+  background-color: transparent !important;
   background-image: none !important;
   box-shadow: none !important;
 }
+
 
 
 
