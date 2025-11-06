@@ -9,6 +9,10 @@ ul.list-sidebar .sidebar-menu li.sidebar-label:hover a,
   background-image: none !important;
   box-shadow: none !important;
 }
+.sidebar-section.save-filter-section .sidebar-label:hover{
+  background: white !important;
+  color: white !important;
+}
 
 
 
