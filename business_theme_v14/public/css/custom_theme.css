@@ -1,8 +1,9 @@
-.sidebar-label:hover,
-.sidebar-label:focus {
+.list-sidebar .sidebar-menu li.sidebar-label:hover,
+.list-sidebar .sidebar-menu li.sidebar-label:focus {
   background-color: transparent !important;
   background-image: none !important;
 }
+
 
 
 
