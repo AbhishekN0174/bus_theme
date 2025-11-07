@@ -1,17 +1,5 @@
-/* Completely disable hover effect on sidebar labels */
-.sidebar-label,
-.sidebar-label:hover,
-.sidebar-label:focus,
-.sidebar-section.save-filter-section .sidebar-label,
-.sidebar-section.save-filter-section .sidebar-label:hover,
-.sidebar-section.save-filter-section .sidebar-label:focus {
-  background: none !important;
-  background-color: transparent !important;
-  background-image: none !important;
-  box-shadow: none !important;
-  cursor: default !important;      /* prevent hover pointer */
-  transition: none !important;     /* no animation */
-  color: inherit !important;       /* keep same text color */
+li.sidebar-label:hover {
+  background-color:transparent !important;
 }
 
 
