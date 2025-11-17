@@ -30,7 +30,7 @@ li.sidebar-label:focus {
   background-image: none !important;
   box-shadow: none !important;
 }
-a.add-group-by{
+li.add-list-group-by sidebar-action{
   border:none !important;
 }
 
