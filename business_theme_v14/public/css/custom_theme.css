@@ -31,7 +31,7 @@ li.sidebar-label:focus {
   box-shadow: none !important;
 }
 a.add-group-by{
-  text-decoration:none;
+  text-decoration:none !important;
 }
 
 
