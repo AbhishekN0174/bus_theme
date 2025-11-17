@@ -15,6 +15,7 @@
 
 
 
+
 /* Filter By */
 /* remove hover color on Filter By label */
 .list-sidebar.overlay-sidebar .sidebar-menu li.sidebar-label:hover,
@@ -28,6 +29,9 @@ li.sidebar-label:focus {
   background-color: transparent !important;
   background-image: none !important;
   box-shadow: none !important;
+}
+li.add-list-group-by sidebar-action{
+  text-decoration:none;
 }
 
 
