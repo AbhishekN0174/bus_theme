@@ -28,12 +28,12 @@ li.add-list-group-by sidebar-action{
 
 
 /* Remove border from Edit Filters box */
-.sidebar-section.filter-section li.add-list-group-by.sidebar-action {
-    border: none !important;
-}
-/* .sidebar-section.filter-section li.add-list-group-by.sidebar-action a.add-group-by {
+/* .sidebar-section.filter-section li.add-list-group-by.sidebar-action {
     border: none !important;
 } */
+.sidebar-section.filter-section li.add-list-group-by.sidebar-action a.add-group-by {
+    border: none !important;
+}
 
 
 
