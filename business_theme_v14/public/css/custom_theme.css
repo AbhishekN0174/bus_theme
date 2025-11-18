@@ -8,6 +8,10 @@ li.sidebar-label:hover span {
     color: inherit !important;
 }
 
+.sidebar-section.save-filter-section li:hover {
+    background: none !important;
+    color: inherit !important;
+}
 
 
 
