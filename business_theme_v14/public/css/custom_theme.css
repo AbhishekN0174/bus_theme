@@ -33,6 +33,10 @@ li.add-list-group-by sidebar-action{
 }
 
 
+.sidebar-section.filter-section a.add-group-by::before,
+.sidebar-section.filter-section a.add-group-by::after {
+    display: none !important;
+}
 
 
 
