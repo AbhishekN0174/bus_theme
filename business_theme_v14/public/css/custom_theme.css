@@ -54,6 +54,7 @@ li.add-list-group-by sidebar-action{
     outline: none !important;
     cursor: pointer !important;
 }
+/* 3890 */
 
 
 
@@ -3652,6 +3653,7 @@ div.widget.shortcut-widget-box{
     box-shadow: none !important;
     text-align: left !important;
     display: block !important;
+    text-decoration:none !important;
 }
 
 /* === Remove hover/focus effects === */
