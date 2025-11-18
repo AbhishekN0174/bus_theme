@@ -35,6 +35,14 @@ li.add-list-group-by sidebar-action{
     border: none !important;
 }
 
+/* Remove border from Edit Filters box (normal + hover) */
+.sidebar-section.filter-section li.add-list-group-by.sidebar-action,
+.sidebar-section.filter-section li.add-list-group-by.sidebar-action:hover {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+
 
 
 
