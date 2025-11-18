@@ -27,28 +27,14 @@ li.add-list-group-by sidebar-action{
 
 
 
-/* target the Edit Filters link seen in inspector */
-.list-sidebar-overlay .sidebar-section.filter-section
-  .list-group-by li.add-list-group-by.sidebar-action a.add-group-by,
-.list-sidebar-overlay .sidebar-section.filter-section
-  .list-group-by li.add-list-group-by.sidebar-action a.add-group-by:hover,
-.list-sidebar-overlay .sidebar-section.filter-section
-  .list-group-by li.add-list-group-by.sidebar-action a.add-group-by:focus {
-  background: transparent !important;
-  background-image: none !important;
-  box-shadow: none !important;
-  color: inherit !important;
-  border: none !important;
+/* Remove border from Edit Filters box */
+.sidebar-section.filter-section li.add-list-group-by.sidebar-action {
+    border: none !important;
+}
+.sidebar-section.filter-section li.add-list-group-by.sidebar-action a.add-group-by {
+    border: none !important;
 }
 
-/* remove any pseudo-element dark overlays */
-.list-sidebar-overlay .sidebar-section.filter-section
-  .list-group-by li.add-list-group-by.sidebar-action a.add-group-by::before,
-.list-sidebar-overlay .sidebar-section.filter-section
-  .list-group-by li.add-list-group-by.sidebar-action a.add-group-by::after {
-  display: none !important;
-  content: none !important;
-}
 
 
 
