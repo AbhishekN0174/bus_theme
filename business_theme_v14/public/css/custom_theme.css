@@ -1,8 +1,16 @@
-/* body .list-sidebar .sidebar-menu li.sidebar-label:hover {
-  all: unset !important;
-  display: list-item !important;
-  color: inherit !important;
-}  */
+/* Remove hover background for Save Filter label */
+li.sidebar-label:hover {
+    background: transparent !important;
+    color: inherit !important;
+    box-shadow: none !important;
+}
+li.sidebar-label:hover span {
+    color: inherit !important;
+}
+
+
+
+
 
 
 
