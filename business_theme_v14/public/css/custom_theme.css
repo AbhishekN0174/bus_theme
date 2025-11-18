@@ -43,6 +43,10 @@ li.add-list-group-by sidebar-action{
 }
 
 
+.sidebar-section.filter-section li.add-list-group-by.sidebar-action a.add-group-by:hover {
+    border: none !important;
+    box-shadow: none !important;
+}
 
 
 
