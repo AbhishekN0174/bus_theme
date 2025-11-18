@@ -2284,7 +2284,7 @@ li.nav-item.dropdown .dropdown-menu,
     }
    
     /* Smaller navigation icons */
-    /* .layout-side-section svg, */
+    .layout-side-section svg,
     .sidebar-item-icon,
     .octicon {
         width: 16px !important;
@@ -3887,7 +3887,7 @@ body .tt-menu {
 }
 .sidebar-section.save-filter-section .btn:hover,
 .sidebar-section.save-filter-section button:hover,
-.sidebar-section.filter-section .btn:hover,
+/* .sidebar-section.filter-section .btn:hover, */
 .sidebar-section.filter-section button:hover {
     background: #2a5298 !important;
     color: #fff !important;
@@ -4312,7 +4312,7 @@ header .form-control:focus {
 /* Navigation icons */
 .layout-side-section .sidebar-menu li .sidebar-item-icon,
 .layout-side-section .standard-sidebar li .icon,
-/* .layout-side-section svg, */
+.layout-side-section svg,
 .sidebar-item-icon,
 .octicon {
     color: white !important;
