@@ -35,18 +35,25 @@ li.add-list-group-by sidebar-action{
     border: none !important;
 }
 
-/* Remove border from Edit Filters box (normal + hover) */
+
+
+
+/* .sidebar-section.filter-section li.add-list-group-by.sidebar-action a.add-group-by:hover {
+    border: none !important;
+    box-shadow: none !important;
+} */
+
+/* Remove all hover effects from Edit Filters */
 .sidebar-section.filter-section li.add-list-group-by.sidebar-action,
-.sidebar-section.filter-section li.add-list-group-by.sidebar-action:hover {
-    border: none !important;
-    box-shadow: none !important;
-}
-
-
+.sidebar-section.filter-section li.add-list-group-by.sidebar-action:hover,
+.sidebar-section.filter-section li.add-list-group-by.sidebar-action a.add-group-by,
 .sidebar-section.filter-section li.add-list-group-by.sidebar-action a.add-group-by:hover {
+    background: transparent !important;
     border: none !important;
     box-shadow: none !important;
+    outline: none !important;
 }
+
 
 
 
