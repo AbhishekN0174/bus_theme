@@ -24,6 +24,22 @@ li.add-list-group-by sidebar-action{
   text-decoration:none !important;
 }
 
+/* Remove hover background from Edit Filters */
+.sidebar-section.filter-section a.add-group-by,
+.sidebar-section.filter-section a.add-group-by:hover {
+    background: transparent !important;
+    box-shadow: none !important;
+    color: inherit !important;
+}
+
+
+
+
+
+
+
+
+
 
 
 
