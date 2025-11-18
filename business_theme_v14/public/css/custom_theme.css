@@ -4312,7 +4312,7 @@ header .form-control:focus {
 /* Navigation icons */
 .layout-side-section .sidebar-menu li .sidebar-item-icon,
 .layout-side-section .standard-sidebar li .icon,
-.layout-side-section svg,
+/* .layout-side-section svg, */
 .sidebar-item-icon,
 .octicon {
     color: white !important;
