@@ -37,6 +37,9 @@ li.add-list-group-by sidebar-action{
 .sidebar-section.filter-section a.add-group-by::after {
     display: none !important;
 }
+.sidebar-section-filter ... a.add-list-group-by.by-sidebar-action:hover {
+    background: #000 !important;
+}
 
 
 
