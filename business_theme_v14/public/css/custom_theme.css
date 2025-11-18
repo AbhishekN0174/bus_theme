@@ -1,54 +1,11 @@
-/* Strong override: remove any hover/active black background on Save Filter label */
-li.sidebar-label,
-ul.list-filters li.sidebar-label,
+/* Remove black hover from Save Filter label */
 .sidebar-section.save-filter-section li.sidebar-label,
-.sidebar-section.filter-section li.sidebar-label,
-.list-sidebar-overlay .sidebar-label,
-.list-sidebar-overlay .sidebar-menu .sidebar-label {
-  background: transparent !important;
-  background-image: none !important;
-  background-color: transparent !important;
-  box-shadow: none !important;
-  -webkit-box-shadow: none !important;
-  color: inherit !important;
-  filter: none !important;
-  opacity: 1 !important;
+.sidebar-section.save-filter-section li.sidebar-label:hover {
+    background: transparent !important;
+    color: inherit !important;
+    box-shadow: none !important;
 }
 
-/* Hover / focus / active states */
-li.sidebar-label:hover,
-li.sidebar-label:focus,
-li.sidebar-label:active,
-ul.list-filters li.sidebar-label:hover,
-.sidebar-section.save-filter-section li.sidebar-label:hover,
-.sidebar-section.filter-section li.sidebar-label:hover {
-  background: transparent !important;
-  background-image: none !important;
-  background-color: transparent !important;
-  box-shadow: none !important;
-  -webkit-box-shadow: none !important;
-  color: inherit !important;
-  filter: none !important;
-}
-
-/* Remove any pseudo-element backgrounds that may be producing the dark area */
-li.sidebar-label::before,
-li.sidebar-label::after,
-ul.list-filters li.sidebar-label::before,
-ul.list-filters li.sidebar-label::after {
-  content: none !important;
-  background: none !important;
-  background-image: none !important;
-  box-shadow: none !important;
-}
-
-/* In case the parent adds background on hover */
-.sidebar-section.save-filter-section:hover li.sidebar-label,
-.sidebar-section.filter-section:hover li.sidebar-label,
-.list-sidebar-overlay:hover li.sidebar-label {
-  background: transparent !important;
-  box-shadow: none !important;
-}
 
 
 
