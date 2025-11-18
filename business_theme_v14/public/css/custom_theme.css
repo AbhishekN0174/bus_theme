@@ -24,22 +24,32 @@ li.add-list-group-by sidebar-action{
   text-decoration:none !important;
 }
 
-/* Remove hover background from Edit Filters */
-.sidebar-section.filter-section a.add-group-by,
-.sidebar-section.filter-section a.add-group-by:hover {
-    background: transparent !important;
-    box-shadow: none !important;
-    color: inherit !important;
-}
 
 
-.sidebar-section.filter-section a.add-group-by::before,
-.sidebar-section.filter-section a.add-group-by::after {
-    display: none !important;
+
+/* target the Edit Filters link seen in inspector */
+.list-sidebar-overlay .sidebar-section.filter-section
+  .list-group-by li.add-list-group-by.sidebar-action a.add-group-by,
+.list-sidebar-overlay .sidebar-section.filter-section
+  .list-group-by li.add-list-group-by.sidebar-action a.add-group-by:hover,
+.list-sidebar-overlay .sidebar-section.filter-section
+  .list-group-by li.add-list-group-by.sidebar-action a.add-group-by:focus {
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: inherit !important;
+  border: none !important;
 }
-.sidebar-section-filter ... a.add-list-group-by.by-sidebar-action:hover {
-    background: #000 !important;
+
+/* remove any pseudo-element dark overlays */
+.list-sidebar-overlay .sidebar-section.filter-section
+  .list-group-by li.add-list-group-by.sidebar-action a.add-group-by::before,
+.list-sidebar-overlay .sidebar-section.filter-section
+  .list-group-by li.add-list-group-by.sidebar-action a.add-group-by::after {
+  display: none !important;
+  content: none !important;
 }
+
 
 
 
