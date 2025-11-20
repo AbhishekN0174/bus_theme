@@ -3588,7 +3588,7 @@ color: #2a5298 !important;
 .widget.dashboard-widget-box .widget-subtitle {
     font-size: 0.75rem;
 /*     color: #e14040 !important; */
-    color: #21417b !important;
+    color: #fd0e0e !important;
     margin-top: var(--margin-xs);
 }
 
