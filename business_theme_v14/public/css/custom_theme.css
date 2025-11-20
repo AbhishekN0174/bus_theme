@@ -1,3 +1,10 @@
+svg.icon.icon-xs{
+    height:1px !important;
+    width:1x !important;
+}
+
+
+
 /* Remove black hover from Save Filter label */
 .sidebar-section.save-filter-section li.sidebar-label,
 .sidebar-section.save-filter-section li.sidebar-label:hover {
