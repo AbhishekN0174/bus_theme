@@ -2,7 +2,7 @@
 .sidebar-section.save-filter-section li.sidebar-label,
 .sidebar-section.save-filter-section li.sidebar-label:hover {
     background: transparent !important;
-    color: inherit !important;
+    color: white !important;
     box-shadow: none !important;
 }
 
