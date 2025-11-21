@@ -7,9 +7,6 @@ button.btn-reset.drop-icon.show-in-edit-mode{
     height:15px !important;
     width:15px !important;
 }
-standard-sidebar-label[data-title="Public"] {
-    display:none;
-}
 
 
 
@@ -21,8 +18,8 @@ standard-sidebar-label[data-title="Public"] {
 } */
 
 svg.icon.icon-xs.span{
-    height:1px !important;
-    width:1px !important;
+    height:15px !important;
+    width:15px !important;
 }
 svg.icon.icon-md{
     height:17px !important;
