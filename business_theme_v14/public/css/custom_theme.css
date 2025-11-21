@@ -1,11 +1,14 @@
-.standard-sidebar-label[aria-label="Toggle Section: Public"],
+/* .standard-sidebar-label[aria-label="Toggle Section: Public"],
 .standard-sidebar-label[data-title="Public"] {
     display: none !important;
-}
+} */
 
 button.btn-reset.drop-icon.show-in-edit-mode{
     height:15px !important;
     width:15px !important;
+}
+standard-sidebar-label[data-title="public"] {
+    display:none;
 }
 
 
