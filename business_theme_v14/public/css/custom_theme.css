@@ -14,11 +14,11 @@ standard-sidebar-label[data-title="Public"] {
 
 
 
- svg.icon.icon-xs span, 
+ /* svg.icon.icon-xs span, 
  a.btn.btn-default.btn-sm list-sidebar-button{ 
     height:15px !important;
     width:15px !important;
-}
+} */
 
 svg.icon.icon-xs.span{
     height:1px !important;
