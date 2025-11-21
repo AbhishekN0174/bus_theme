@@ -7,15 +7,15 @@ button.btn-reset.drop-icon.show-in-edit-mode{
     height:15px !important;
     width:15px !important;
 }
-standard-sidebar-label[data-title="public"] {
+standard-sidebar-label[data-title="Public"] {
     display:none;
 }
 
 
 
 
-/* svg.icon.icon-xs span, */
-/* a.btn.btn-default.btn-sm list-sidebar-button{ */
+ svg.icon.icon-xs span, 
+ a.btn.btn-default.btn-sm list-sidebar-button{ 
     height:15px !important;
     width:15px !important;
 }
