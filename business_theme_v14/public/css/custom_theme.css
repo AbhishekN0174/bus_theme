@@ -1,7 +1,12 @@
 /* svg.icon.icon-xs span, */
-a.btn.btn-default.btn-sm list-sidebar-button{
+/* a.btn.btn-default.btn-sm list-sidebar-button{ */
     height:1px !important;
-    width:1x !important;
+    width:1px !important;
+}
+
+svg.icon.icon-xs.span{
+    height:1px !important;
+    width:1px !important;
 }
 
 
