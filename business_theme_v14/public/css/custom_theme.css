@@ -1,3 +1,11 @@
+.standard-sidebar-label[aria-label="Toggle Section: Public"],
+.standard-sidebar-label[data-title="Public"] {
+    display: none !important;
+}
+
+
+
+
 /* svg.icon.icon-xs span, */
 /* a.btn.btn-default.btn-sm list-sidebar-button{ */
     height:1px !important;
