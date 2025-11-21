@@ -3,7 +3,7 @@
     display: none !important;
 }
 
-button.btn-reset.drop-icon.show-in-edit-mode{
+/* button.btn-reset.drop-icon.show-in-edit-mode{
     height:15px !important;
     width:15px !important;
 }
@@ -20,7 +20,7 @@ button.btn-reset.drop-icon.show-in-edit-mode{
 svg.icon.icon-xs.span{
     height:15px !important;
     width:15px !important;
-}
+} */
 svg.icon.icon-md{
     height:17px !important;
     width:17px !important;
