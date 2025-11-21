@@ -3,6 +3,11 @@
     display: none !important;
 }
 
+button.btn-reset.drop-icon.show-in-edit-mode{
+    height:15px !important;
+    width:15px !important;
+}
+
 
 
 
