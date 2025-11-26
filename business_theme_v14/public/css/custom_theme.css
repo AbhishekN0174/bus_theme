@@ -1,3 +1,20 @@
+navbar-breadcrumbs  li:last-child  a {
+    font-weight: bold !important;
+   color: white !important;
+}
+
+navbar-breadcrumbs  li:last-child  a :hover{
+    color:white !important;
+}
+
+
+
+
+
+
+
+
+
 .standard-sidebar-label[aria-label="Toggle Section: Public"],
 .standard-sidebar-label[data-title="Public"] {
     display: none !important;
@@ -496,11 +513,11 @@ span.text-muted{
 }
 
 /* Make current page (last breadcrumb) bold */
-#navbar-breadcrumbs > li:last-child > a,
+/* #navbar-breadcrumbs > li:last-child > a,
 #navbar-breadcrumbs > li:last-child {
     font-weight: bold !important;
     color: #374151 !important;
-}
+} */
 
 #navbar-breadcrumbs > li > a::before {
     content: "\f105";
@@ -4171,7 +4188,13 @@ element.style {
 #navbar-breadcrumbs > li:last-child > a,
 #navbar-breadcrumbs > li:last-child {
     font-weight: bold !important;
-    color: #374151 !important;
+    color: #cbd4e3 !important;
+}
+
+#navbar-breadcrumbs > li:last-child > a,
+#navbar-breadcrumbs > li: last-child :hover{
+    color:#cbd4e3 !important;
+    font-weight: bold !important;
 }
 
 /* Dynamic icons for all ERPNext modules */
