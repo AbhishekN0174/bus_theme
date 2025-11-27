@@ -496,6 +496,8 @@ span.text-muted{
 
 #navbar-breadcrumbs > li > a:hover {
     color: #e2e7f1 !important;
+    background:noner !important;
+    text-decoration:none !important;
 }
 
 #navbar-breadcrumbs > li > a{
