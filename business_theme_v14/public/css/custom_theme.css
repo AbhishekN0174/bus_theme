@@ -515,7 +515,7 @@ span.text-muted{
 /* Add slash separator between breadcrumb items - more specific targeting */
 #navbar-breadcrumbs li:not(:last-child)::after {
     content: " / " !important;
-    color: #6b7280 !important;
+    color: #f2f4f9 !important;
     margin: 0 4px !important;
     font-weight: normal !important;
     display: inline !important;
@@ -4187,7 +4187,7 @@ element.style {
 /* Add slash separator between breadcrumb items - more specific targeting */
 #navbar-breadcrumbs li:not(:last-child)::after {
     content: " / " !important;
-    color: #6b7280 !important;
+    color: #f2f4f9 !important;
     margin: 0 4px !important;
     font-weight: normal !important;
     display: inline !important;
