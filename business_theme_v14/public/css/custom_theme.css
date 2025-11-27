@@ -495,11 +495,15 @@ span.text-muted{
 }
 
 #navbar-breadcrumbs > li > a {
-    color: #6b7280 !important;
+    color: #e2e7f1 !important;
     display: flex !important;
     align-items: center !important;
     gap: 6px !important;
     text-decoration: none !important;
+}
+
+#navbar-breadcrumbs > li > a: hover{
+    color:#e2e7f1 !important;
 }
 
 /* Add slash separator between breadcrumb items - more specific targeting */
@@ -4165,13 +4169,13 @@ element.style {
     align-items: center !important;
 }
 
-#navbar-breadcrumbs > li > a {
+/* #navbar-breadcrumbs > li > a {
     color: #6b7280 !important;
     display: flex !important;
     align-items: center !important;
     gap: 6px !important;
     text-decoration: none !important;
-}
+} */
 
 
 /* Add slash separator between breadcrumb items - more specific targeting */
