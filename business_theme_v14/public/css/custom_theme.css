@@ -1,9 +1,10 @@
-.edit-profile-link,
-.stat-value,
-.stat-label,
-.Details {
+.edit-profile-link *,
+.stat-value *,
+.stat-label *,
+.Details * {
     color: #ffffff !important;
 }
+
 
 
 navbar-breadcrumbs  li:last-child  a {
