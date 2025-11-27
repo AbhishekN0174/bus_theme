@@ -494,17 +494,15 @@ span.text-muted{
     align-items: center !important;
 }
 
-#navbar-breadcrumbs > li > a {
+#navbar-breadcrumbs > li > a:hover {
     color: #e2e7f1 !important;
-    display: flex !important;
-    align-items: center !important;
-    gap: 6px !important;
+    background: transparent !important;
     text-decoration: none !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
-#navbar-breadcrumbs > li > a: hover{
-    color:#e2e7f1 !important;
-}
+
 
 /* Add slash separator between breadcrumb items - more specific targeting */
 #navbar-breadcrumbs li:not(:last-child)::after {
