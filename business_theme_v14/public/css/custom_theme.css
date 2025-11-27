@@ -1,3 +1,7 @@
+.edit-profile-link{
+    color:white !important;
+}
+
 navbar-breadcrumbs  li:last-child  a {
     font-weight: bold !important;
    color: white !important;
